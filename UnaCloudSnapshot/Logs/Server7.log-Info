@@ -1,0 +1,5 @@
+05-01-2017 17:33:53,535 INFO  Process7:Process 7 is running ...
+05-01-2017 17:34:07,761 INFO  Process7:Received: TAKE_SNAPSHOT 0
+05-01-2017 17:34:08,700 INFO  Process7:Starting the local snapShot of vmtest03
+05-01-2017 17:34:19,232 INFO  Process7:Ending the local snapShot of vmtest03
+05-01-2017 17:34:19,896 INFO  Process7:Sent: DONE 7 to: 0:128.213.23.13:2000

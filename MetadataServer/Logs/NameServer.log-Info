@@ -1,0 +1,57 @@
+05-01-2017 17:32:43,093 INFO  NameServer:Name Server is running ...
+05-01-2017 17:33:27,645 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-01-2017 17:33:27,646 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-01-2017 17:33:29,916 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.23.13 - 2001
+05-01-2017 17:33:29,917 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001}
+05-01-2017 17:33:32,589 INFO  NameServer:Sent: OK. ProcessId = 2 name - 128.213.23.13 - 2002
+05-01-2017 17:33:32,589 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002}
+05-01-2017 17:33:35,792 INFO  NameServer:Sent: OK. ProcessId = 3 name - 128.213.23.13 - 2003
+05-01-2017 17:33:35,792 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.23.13:2003, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002}
+05-01-2017 17:33:40,995 INFO  NameServer:Sent: OK. ProcessId = 4 name - 128.213.48.218 - 2004
+05-01-2017 17:33:40,995 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.23.13:2003, serv#4=4:128.213.48.218:2004, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002}
+05-01-2017 17:33:43,734 INFO  NameServer:Sent: OK. ProcessId = 5 name - 128.213.48.218 - 2005
+05-01-2017 17:33:43,735 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.23.13:2003, serv#4=4:128.213.48.218:2004, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002, serv#5=5:128.213.48.218:2005}
+05-01-2017 17:33:46,676 INFO  NameServer:Sent: OK. ProcessId = 6 name - 128.213.48.218 - 2006
+05-01-2017 17:33:46,677 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.23.13:2003, serv#4=4:128.213.48.218:2004, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002, serv#5=5:128.213.48.218:2005, serv#6=6:128.213.48.218:2006}
+05-01-2017 17:33:53,218 INFO  NameServer:Sent: OK. ProcessId = 7 name - 128.213.48.218 - 2007
+05-01-2017 17:33:53,218 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.23.13:2003, serv#4=4:128.213.48.218:2004, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.23.13:2002, serv#7=7:128.213.48.218:2007, serv#5=5:128.213.48.218:2005, serv#6=6:128.213.48.218:2006}
+05-02-2017 07:00:05,097 INFO  NameServer:Name Server is running ...
+05-02-2017 07:01:40,351 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-02-2017 07:01:40,369 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-02-2017 07:01:43,046 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.23.13 - 2001
+05-02-2017 07:01:43,046 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001}
+05-02-2017 07:01:48,716 INFO  NameServer:Sent: OK. ProcessId = 2 name - 128.213.48.218 - 2002
+05-02-2017 07:01:48,717 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 07:01:51,350 INFO  NameServer:Sent: OK. ProcessId = 3 name - 128.213.48.218 - 2003
+05-02-2017 07:01:51,350 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.48.218:2003, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 07:06:02,064 INFO  NameServer:Name Server is running ...
+05-02-2017 07:06:40,456 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-02-2017 07:06:40,457 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-02-2017 07:06:45,964 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.23.13 - 2001
+05-02-2017 07:06:45,965 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001}
+05-02-2017 07:06:58,196 INFO  NameServer:Sent: OK. ProcessId = 2 name - 128.213.48.218 - 2002
+05-02-2017 07:06:58,196 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 07:07:01,212 INFO  NameServer:Sent: OK. ProcessId = 3 name - 128.213.48.218 - 2003
+05-02-2017 07:07:01,213 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.48.218:2003, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 07:21:21,722 INFO  NameServer:Name Server is running ...
+05-02-2017 07:22:45,943 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-02-2017 07:22:45,944 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-02-2017 07:22:52,044 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.48.218 - 2001
+05-02-2017 07:22:52,065 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.48.218:2001}
+05-02-2017 07:31:39,468 INFO  NameServer:Name Server is running ...
+05-02-2017 07:32:18,364 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-02-2017 07:32:18,364 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-02-2017 07:32:26,763 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.48.218 - 2001
+05-02-2017 07:32:26,763 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.48.218:2001}
+05-02-2017 07:42:26,018 INFO  NameServer:Name Server is running ...
+05-02-2017 07:59:08,287 INFO  NameServer:Name Server is running ...
+05-02-2017 08:01:11,794 INFO  NameServer:Name Server is running ...
+05-02-2017 08:01:47,823 INFO  NameServer:Sent: OK. ProcessId = 0 name - 128.213.23.13 - 2000
+05-02-2017 08:01:47,872 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000}
+05-02-2017 08:01:50,813 INFO  NameServer:Sent: OK. ProcessId = 1 name - 128.213.23.13 - 2001
+05-02-2017 08:01:50,813 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001}
+05-02-2017 08:01:58,819 INFO  NameServer:Sent: OK. ProcessId = 2 name - 128.213.48.218 - 2002
+05-02-2017 08:01:58,819 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 08:02:01,619 INFO  NameServer:Sent: OK. ProcessId = 3 name - 128.213.48.218 - 2003
+05-02-2017 08:02:01,620 INFO  NameServer:Directory state: {serv#0=0:128.213.23.13:2000, serv#3=3:128.213.48.218:2003, serv#1=1:128.213.23.13:2001, serv#2=2:128.213.48.218:2002}
+05-02-2017 08:29:22,258 INFO  NameServer:Name Server is running ...

@@ -1,0 +1,156 @@
+Comments and ToDo's de la aplicación UnaCloud Snapshot
+
+Cómo se corre una prueba (Snapshot Global)
+
+Revisar bien las propiedades. El offset debe estar ajustado.
+
+1) Se pone en ejecución el RingNameServer
+2) Se ponen en ejecución las aplicaciones en las VMs: java -jar RTPLauncher.jar > salida.txt &
+3) Se espera un momento mientras se conforma el anillo. 20 seg. 
+   Con el comando tail Logs/Process.log-Info se puede ver si ya empezó la prueba
+   Con el comando cat salida.txt se puede ver si ya se creó el anillo.
+4) Se pone en ejecución el NameServer.
+5) Se corren las instancias del proceso UnaloudSnapshot, uno por cada VM.
+
+
+
+
+
+Asuntos generales:
+
+Por agregar:
+
+Poner una propiedad que permita establecer un mensaje al inicio de la prueba.
+
+1. Corregir el detalle de la configuración de la ruta de VirtualBox.
+
+2. Corregir el detalle de la configuración del log de DEBUG y si es así, planear los mensajes
+   de ese log, y limpiar los logs.
+
+3. Revisar los mensajes que salen en el log.
+
+4. Pensar que sacar mensajes en el log en la aplicación puede ser inconveniente por el 
+   desempeño general de la aplicación.
+
+5. Mirar cómo sería implementar que un proceso inicie el snapshot local cuando reciba
+    un mensaje POST
+    
+6. Analizar las conexiones TCP.
+
+7. Darle una revisada a la clase RingNameServer.
+   Revisar los métodos de la clase NamesUtil para que no haya confusión entre lo que hace
+   NameServer y RingNameServer. Eventualmente se pueden unificar.
+
+8. Verificar dónde se ponen los tiempos de inicio y fin, especialmente en inicio del proceso.
+
+9. Analizar la fecha y hora que aparece en el nombre archivo de snapshot y lo que aparece 
+   en el log de VBox y el log del programa. Debe tratarse del momento en que el snapshot
+   inicia.
+
+10. Revisar la documentación del proyecto RTP.
+
+11. Hacer una prueba de correctitud.
+
+12. Buscar al menos una aplicación más para correr en las VMs.
+
+13. Mirar las conexiones TCP en el proyecto RTP.
+
+14. Usar un framework de gestion de argumentos de la CLI
+
+
+Para tener en cuenta:
+1. La clase Benchmarking del paquete benchmark no se está utilizando, sin embargo va a servir
+   más adelante.
+   El paquete benchmark hace referencia a pruebas de carga en el host para ver qué tanto 
+   puede afectar la ejecución de las VMs a una ejecución en el host. Si bien esto no le
+   importa al dueño de las VMs, le puede importar a UnaCloud ya que el usuario del host
+   debe ser afectado lo menos posible, o de manera que no sienta que se degrada el servicio
+   que está recibiendo del computador.
+   
+
+
+Prueba de marcación y filtrado de paquetes
+
+Caso dos VMs, una con Debian y otra con Mint.
+
+Prueba: 
+1. En Debian: Iniciar el servidor: java -jar Server.jar &
+2. En Debian: Verificar las reglas: iptables -L
+              Observar si hay una regla que descarta (DROP) lo que haga match con DSCP 0x10
+
+3. En Mint: Ver las reglas de la tabla mangle: iptables -t mangle -L
+4. En Mint: Verificar que esté la regla para la marca 0x20.
+            Si no está, agregarla (-A) o insertarla (-I). Si es distinta, reemplazarla (-R).
+            iptables -t mangle -R OUTPUT 1 -p tcp -j DSCP --set-dscp 32
+
+5. En Mint: Verificar que la regla haya quedado bien.
+6. En Mint: Iniciar el cliente. java -jar Client.jar
+            Observar el comportamiento normal.
+
+7. En Mint: Cambiar la regla
+            iptables -t mangle -R OUTPUT 1 -p tcp -j DSCP --set-dscp 16
+            Observar el comportamiento de la aplicación. Debe empezar a rechazar los paquetes.
+
+8. En Mint: Cambiar la regla
+            iptables -t mangle -R OUTPUT 1 -p tcp -j DSCP --set-dscp 32
+            Observar el comportamiento de la aplicación. Debe empezar a recibir los paquetes.
+            Hay una demora mientras la toma en cuenta.
+            
+
+
+
+
+
+Partes que se borraron:
+
+Todo lo que se borró está en el proyecto ViolinOld
+1. La clase TakeSnapshot en el paquete main.
+2. La variable snapshotFlag.
+3. El método setFlag.
+4. La segunda fase del algoritmo en el método run.
+5. El método markAck.
+6. El método isACked.
+7. El método numberOfAck.
+8. El método takeSnapshot.
+9. El método getLocalState.
+10. La clase OnePhase.
+11. La clase SecondPhase.
+
+
+
+
+
+
+
+   
+   
+
+
+
+Con respecto a la aplicación que corre en las VMs.
+
+Faltan algunos detalles de configuración para que la aplicación sea intensiva en disco:
+	Cada token generado se escribe en un archivo log.
+	Para poder controlar que la aplicación haya trabajado correctamente, se puede llevar
+		la cuenta de la cantidad de tokens por instancia.
+	Desarrollar un método para que la aplicación sea intensiva en memoria.
+	El comportamiento debe ser configurable a partir de las propiedades del archivo de
+		configuración y/o entradas por la línea de comandos.
+	Establecer métricas en la aplicaión que resalten su importancia frente a otras aplicaciones
+		conocidas.
+	
+Buscar aplicaciones de benchmarking que ayuden a verificar el comportamiento del proyecto.
+
+El snapshot local del coordinador debe ser realizado en paralelo, es decir, en un thread aparte.
+
+Ver cómo se puede automatizar el inicio de la tarea, especialmente por el tiempo que tarda
+pausada la aplcacion que corre en las VMs mientras entran al anillo los demás participantes.
+
+
+
+
+Ver cómo se puede hacer una prueba en varios hosts.
+
+Archivos de un snapshot
+-rw-------  1 carlos  staff  125640976 Apr  2 14:12 2017-04-02T18-12-41-179282000Z.sav
+-rw-------  1 carlos  staff   17825792 Apr  2 14:18 {159a1711-839e-410d-8e29-7440ffe3cda3}.vdi

@@ -1,0 +1,19 @@
+05-02-2017 07:22:52,319 INFO  Process1:Process 1 is running ...
+05-02-2017 07:23:26,040 INFO  Process1:Received: TAKE_SNAPSHOT 0
+05-02-2017 07:23:26,717 INFO  Process1:Starting the local snapShot of vmtest0-1
+05-02-2017 07:23:26,771 INFO  Process1:Ending the local snapShot of vmtest0-1
+05-02-2017 07:23:26,857 INFO  Process1:Sent: DONE 1 to: 0:128.213.23.13:2000
+05-02-2017 07:32:26,976 INFO  Process1:Process 1 is running ...
+05-02-2017 07:32:58,429 INFO  Process1:Received: TAKE_SNAPSHOT 0
+05-02-2017 07:32:59,254 INFO  Process1:Starting the local snapShot of vmtest00
+05-02-2017 07:33:06,619 INFO  Process1:Ending the local snapShot of vmtest00
+05-02-2017 07:33:07,046 INFO  Process1:Sent: DONE 1 to: 0:128.213.23.13:2000
+06-06-2017 17:35:17,650 INFO  Process1:Process 1 is running ...
+06-06-2017 17:36:40,407 INFO  Process1:Process 1 is running ...
+06-06-2017 17:38:50,892 INFO  Process1:Process 1 is running ...
+06-06-2017 17:39:27,476 INFO  Process1:Received: TAKE_SNAPSHOT 0
+06-06-2017 17:39:27,728 INFO  Process1:Starting the local snapShot of vmtest01
+06-06-2017 17:39:30,330 INFO  Process1:Ending the local snapShot of vmtest01
+06-06-2017 17:39:30,425 INFO  Process1:Sent: DONE 1 to: 0:localhost:2000
+06-12-2017 11:59:55,768 INFO  Process1:Process 1 is running ...
+06-12-2017 12:00:32,720 INFO  Process1:Received: TAKE_SNAPSHOT 0

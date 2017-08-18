@@ -1,0 +1,31 @@
+Observaciones
+
+Después de la ejecución del primer proceso, espera 30 segundos mientras ingresan los
+demás procesos.
+
+
+
+El objetivo del programa es la ejecucion de una solucion de Ring Token Passing en la cual
+varios procesos se comunican en un anillo lógico. Cada proceso le envía un token numerado
+al siguiente proceso, incrementando el valor en 1 en cada paso.
+
+Se utiliza un servidor de nombres para que maneje la informacion de los procesos que
+se han unido al sistema.
+
+Cada servidor se registra en el servidor de nombres al ingresar al sistema. El sistema le asigna 
+un identificador (número entero), iniciando en 0, de acuerdo con el orden de llegada,
+utilizando numeros de identificacion consecutivos.
+
+Un servidor consulta al servidor de nombres quien es el siguiente con base en un identificador
+del servidor. 
+
+No considera la salida de los servidores antes de tiempo ni la entrada de ellos despues de
+iniciada la ejecucion.
+
+Despues de un numero limite, se envia un mensaje que indica que se va a terminar la ejecucion.
+
+LAS CONEXIONES NO SE MANTIENEN ABIERTAS. El servidor que recibe un token contesta con OK y
+se cierra la conexion.
+
+Se utiliza un archivo de propiedades para configurar la aplicación.
+

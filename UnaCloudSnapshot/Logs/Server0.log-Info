@@ -1,0 +1,27 @@
+06-06-2017 17:34:12,308 INFO  Process0:Process 0 is running ...
+06-06-2017 17:35:14,065 INFO  Process0:Process 0 is running ...
+06-06-2017 17:35:54,097 INFO  Process0:Starting the global snapShot
+06-06-2017 17:35:54,101 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+06-06-2017 17:35:54,104 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:128.213.48.218:2001
+06-06-2017 17:35:54,978 INFO  Process0:Starting the local snapShot of vmtest0-2
+06-06-2017 17:35:55,022 INFO  Process0:Ending the local snapShot of vmtest0-2
+06-06-2017 17:36:37,161 INFO  Process0:Process 0 is running ...
+06-06-2017 17:37:17,165 INFO  Process0:Starting the global snapShot
+06-06-2017 17:37:17,167 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+06-06-2017 17:37:17,168 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:128.213.48.218:2001
+06-06-2017 17:37:17,377 INFO  Process0:Starting the local snapShot of vmtest00
+06-06-2017 17:37:21,346 INFO  Process0:Ending the local snapShot of vmtest00
+06-06-2017 17:38:47,462 INFO  Process0:Process 0 is running ...
+06-06-2017 17:39:27,467 INFO  Process0:Starting the global snapShot
+06-06-2017 17:39:27,471 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+06-06-2017 17:39:27,474 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+06-06-2017 17:39:27,730 INFO  Process0:Starting the local snapShot of vmtest00
+06-06-2017 17:39:28,281 INFO  Process0:Ending the local snapShot of vmtest00
+06-06-2017 17:39:30,427 INFO  Process0:Received: DONE 1
+06-06-2017 17:39:30,428 INFO  Process0:The global snapshot has finished.
+06-12-2017 11:59:52,669 INFO  Process0:Process 0 is running ...
+06-12-2017 12:00:32,715 INFO  Process0:Starting the global snapShot
+06-12-2017 12:00:32,717 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+06-12-2017 12:00:32,719 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+06-12-2017 12:00:34,184 INFO  Process0:Starting the local snapShot of vmtest00
+06-12-2017 12:00:42,917 INFO  Process0:Ending the local snapShot of vmtest00
