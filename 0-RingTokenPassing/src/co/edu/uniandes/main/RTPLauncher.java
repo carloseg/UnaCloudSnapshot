@@ -44,6 +44,7 @@ public class RTPLauncher {
 				CommunicationsUtil.myIP(), 
 				configuration.getNameServerHostName(), 
 				configuration.getNameServerPort());
+		//System.out.println(answer);
 		
 		int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
 		System.out.println("My process Id is: " + processId);

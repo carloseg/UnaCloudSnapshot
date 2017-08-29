@@ -60,9 +60,9 @@ public class CommunicationsUtil {
 
 	// hay que revisar que entregue la IP adecuada. 
 	// Por ahora solo entrega la primera y esto puede fallar.
+	// Esto esta fallando
 	public static String myIP() {
 		String result = "";
-		int n = 0;
 		try {
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
             while (interfaces.hasMoreElements()) {
@@ -72,13 +72,16 @@ public class CommunicationsUtil {
                     continue;
                 }
                 Enumeration<InetAddress> direccion = interfaz.getInetAddresses();
+                
                 while (direccion.hasMoreElements()) {
                     InetAddress ip = direccion.nextElement();
                     // Solo IPv4
+                    
                     if (ip instanceof Inet6Address) {
                         continue;
                     }
-                    result += ip.getHostAddress();
+                    
+                    result = ip.getHostAddress();
                     break;
                 }
                 break;
@@ -87,6 +90,7 @@ public class CommunicationsUtil {
             System.out.println(e);
         }
 		
-		return result;
+		//return result;
+		return "localhost";
 	}
 }
