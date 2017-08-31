@@ -49,10 +49,11 @@ public class RingTokenPassingMultiLauncher {
 					configuration.getNameServerHostName(),
 					configuration.getNameServerPort());
 
-			processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
-
+			processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
+			int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
+			int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
 			// creating the processes and the threads
-			p[i] = new Process(processId, configuration);
+			p[i] = new Process(processId,maxToken,maxBenchmark, configuration);
 			t[i] = new Thread(p[i]);
 		}
 

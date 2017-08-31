@@ -17,8 +17,6 @@ import java.util.Properties;
 public class RingTokenPassingConfiguration {
 	private String nameServerHostName;
 	private int nameServerPort;
-	private int maxTokenValue;
-	private int maxBenchmarkValue;
 	private int pauseMS;
 	private int base;
 	private String labelLogFile;
@@ -45,8 +43,6 @@ public class RingTokenPassingConfiguration {
 
 			nameServerHostName = p.getProperty("nameServerHostName");
 			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
-			maxTokenValue = Integer.parseInt(p.getProperty("maxTokenValue"));
-			maxBenchmarkValue = Integer.parseInt(p.getProperty("maxTokenValue"));
 			base = Integer.parseInt(p.getProperty("base"));
 			labelLogFile = p.getProperty("labelLogFile");
 			pathLog = p.getProperty("pathLog");
@@ -76,23 +72,6 @@ public class RingTokenPassingConfiguration {
 		return nameServerPort;
 	}
 
-	/**
-	 * This method returns the base port number.
-	 * 
-	 * @return int The base port number.
-	 */
-	public int getMaxTokenValue() {
-		return maxTokenValue;
-	}
-
-	/**
-	 * This method returns the base port number.
-	 * 
-	 * @return int The base port number.
-	 */
-	public int getMaxBenchmarkValue() {
-		return maxBenchmarkValue;
-	}
 
 	/**
 	 * This method returns the value of the pauseMS attribute, which is used

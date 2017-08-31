@@ -46,13 +46,16 @@ public class RTPLauncher {
 				configuration.getNameServerPort());
 		//System.out.println(answer);
 		
-		int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
+		int processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
+		int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
+		int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
+		
 		System.out.println("My process Id is: " + processId);
 		
 		System.out.println("My IP address is  (ID:" + processId + "): " + CommunicationsUtil.myIP());
 
 		// creating the process
-		process = new Process (processId, configuration);
+		process = new Process (processId,maxToken,maxBenchmark, configuration);
 		
 		// if the processId == 0, setting up the flag after a pause while the other processes are running
 		if (processId == 0) {
