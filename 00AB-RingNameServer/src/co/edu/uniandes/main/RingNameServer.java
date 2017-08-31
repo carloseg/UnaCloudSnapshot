@@ -39,8 +39,12 @@ public class RingNameServer {
 	private BufferedReader reader;
 	private PrintWriter writer;
 	private HashMap<String, String> directory;
-	private HashMap<String, TestTime> testTime;
 	private Logger log;
+	
+	private long timeInitRing;
+	private long timeFinRing;
+	private int maxTokenValue;
+	private int maxBenchmarkValue;
 	private int registerExit;
 
 	/**
@@ -52,11 +56,15 @@ public class RingNameServer {
 
 		// logger setup
 		loggerSetUp();
+		maxTokenValue = configuration.getMaxTokenValue();
+		maxBenchmarkValue = configuration.getMaxBenchmarkValue();
+		
 
 		log.info("Name Server is running ...");
 		directory = new HashMap<String, String>();
-		testTime = new HashMap<String, TestTime>();
-		registerExit =0;
+		
+		timeInitRing = Long.MAX_VALUE;
+		timeFinRing =0;
 	}
 
 	/**
@@ -131,7 +139,7 @@ public class RingNameServer {
 		String answer = "";
 
 		// iterating over the hashmap
-		Iterator<Map.Entry<String, TestTime>> it = testTime.entrySet()
+		/**Iterator<Map.Entry<String, TestTime>> it = testTime.entrySet()
 				.iterator();
 		while (it.hasNext()) {
 			Map.Entry<String, TestTime> e = (Map.Entry<String, TestTime>) it
@@ -144,35 +152,24 @@ public class RingNameServer {
 			double duration = (t2 - t1) / 1000000000.0;
 			answer += "La prueba de " + temp + " durÃ³: " + duration
 					+ " segundos" + Constants.SEMICOLON;
-		}
-
+		}*/
+		double duration = (timeFinRing-timeInitRing) / 1000000000.0;
+		answer += "La prueba duró: " + duration
+				+ " segundos" + Constants.SEMICOLON;
 		System.out.println(answer + "\n");
 		return answer;
 	}
-
 	private String allInitialTime(String line) {
 		String answer = "";
-
 		long time = System.nanoTime();
 
-		// iterating over the hashmap
-		Iterator<Map.Entry<String, String>> it = directory.entrySet()
-				.iterator();
-		while (it.hasNext()) {
-			Map.Entry<String, String> e = (Map.Entry<String, String>) it.next();
-
-			TestTime t = new TestTime();
-			t.setInitialTime(time);
-
-			String temp = e.getKey() + "";
-
-			testTime.put(temp, t);
-		}
+		timeInitRing = time;
 
 		System.out.println(answer + "\n");
 		return answer;
 	}
-
+	
+	//nunca se llama a este metodo
 	private String initialTime(String line) {
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
@@ -184,7 +181,10 @@ public class RingNameServer {
 		long time = System.nanoTime();
 		TestTime t = new TestTime();
 		t.setInitialTime(time);
-		testTime.put(name, t);
+		//testTime.put(name, t);
+		if(time < timeInitRing){
+			timeInitRing = time;
+		}
 		answer = "OK. Initial Time " + time + " Registered for ProcessId = "
 				+ sender;
 		return answer;
@@ -199,8 +199,11 @@ public class RingNameServer {
 		String name = "serv#" + sender;
 
 		long time = System.nanoTime();
-		TestTime t = testTime.get(name);
-		t.setEndTime(time);
+		//TestTime t = testTime.get(name);
+		//t.setEndTime(time);
+		if(time > timeFinRing){
+			timeFinRing = time;
+		}
 		answer = "OK. End Time " + time + " Registered for ProcessId = "
 				+ sender;
 
@@ -222,28 +225,9 @@ public class RingNameServer {
 	 * With current date
 	 */
 	private void printTotalTime(){
-		long smallest = Long.MAX_VALUE;
-		long biggest =  Long.MIN_VALUE;
-
-		Iterator<Map.Entry<String, TestTime>> it = testTime.entrySet()
-				.iterator();
-		while (it.hasNext()) {
-			Map.Entry<String, TestTime> e = (Map.Entry<String, TestTime>) it
-					.next();
-
-			String temp = e.getKey() + "";
-			long t1 = testTime.get(temp).getInitialTime();
-			long t2 = testTime.get(temp).getEndTime();
-
-			if(smallest > t1){
-				smallest = t1;
-			}
-			if(biggest < t2){
-				biggest = t2;
-			}
-		}
-		double duration = (biggest - smallest ) / 1000000000.0;
-		String result = duration+" s";
+		double duration = (timeFinRing-timeInitRing) / 1000000000.0;
+		
+		String result = duration+" s.     MaxTokenValue: "+maxTokenValue+". MaxBenchmarkValue: "+maxBenchmarkValue;
 		System.out.println(result);
 		File log = new File("TIMES of RTP.txt");
 		try{
@@ -287,7 +271,7 @@ public class RingNameServer {
 			directory.put(name, processId + Constants.COLON + address
 					+ Constants.COLON + localPort);
 
-			answer = "OK. ProcessId = " + processId;
+			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue;
 			log.info("Sent: " + answer);
 		}
 		return answer;
@@ -398,8 +382,11 @@ public class RingNameServer {
 	 */
 	private String reset() {
 
-		directory = new HashMap<String, String>();
-		testTime = new HashMap<String, TestTime>();
+		directory.clear();
+		
+		timeInitRing = Long.MAX_VALUE;
+		timeFinRing =0;
+		
 		registerExit =0;
 
 		log.info("Name server reset");

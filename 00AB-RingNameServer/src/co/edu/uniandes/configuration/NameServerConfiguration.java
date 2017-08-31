@@ -23,6 +23,9 @@ public class NameServerConfiguration {
 	private String pathLog;
 	private String logFileName;
 	private String logType;
+	
+	private int maxTokenValue;
+	private int maxBenchmarkValue;
 
 	/**
 	 * This is the constructor.
@@ -47,6 +50,9 @@ public class NameServerConfiguration {
 			pathLog = p.getProperty("pathLog");
 			logFileName = p.getProperty("logFileName");
 			logType = p.getProperty("logType");
+			
+			maxTokenValue = Integer.parseInt(p.getProperty("maxTokenValue"));
+			maxBenchmarkValue =  Integer.parseInt(p.getProperty("maxBenchmarckValue"));
 
 		} catch (IOException e) {
 		}
@@ -122,6 +128,23 @@ public class NameServerConfiguration {
 	 */
 	public String getLogType() {
 		return logType;
+	}
+	
+	/**
+	 * This method returns the max token value.
+	 * 
+	 * @return int The type of the max token value.
+	 */
+	public int getMaxTokenValue() {
+		return maxTokenValue;
+	}
+	/**
+	 * This method returns the max benchmark value.
+	 * 
+	 * @return int The type of the max bechmark value.
+	 */
+	public int getMaxBenchmarkValue() {
+		return maxBenchmarkValue;
 	}
 
 }
