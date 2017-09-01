@@ -45,7 +45,7 @@ public class CommunicationsUtil {
 			w.close();
 			socket.close();
 		} catch (IOException e) {
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 		
 		return true;

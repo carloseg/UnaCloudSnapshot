@@ -70,21 +70,4 @@ public class Util {
 			e.printStackTrace();
 		}
 	}
-	
-	/**
-	 * This method produces a String with the content of a boolean array separated by
-	 * tabs grouped by 10 values in each line.
-	 * @param a It is the array to print. 
-	 * @return String It is the String with the content of the array, ready to print it.
-	 */
-	public static String printArray(boolean a[]) {
-		String answer = "";
-		for (int i=0; i<a.length; i++) {
-			answer = "[" + i + "]: " + a[i] + "\t";
-			if (i % 10 == 9) {
-				answer += "\n";
-			}
-		}
-		return answer;
-	}
 }
