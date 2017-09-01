@@ -18,3 +18,7 @@
 ******* Thu Aug 31 00:38:42 COT 2017******* 1.704901794 s
 
 ******* Thu Aug 31 00:41:26 COT 2017******* 1.606187102 s
+
+******* Fri Sep 01 11:30:16 COT 2017******* 1.662413844 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Fri Sep 01 11:38:00 COT 2017******* 1.952642915 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100

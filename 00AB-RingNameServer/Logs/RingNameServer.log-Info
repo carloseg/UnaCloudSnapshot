@@ -1,1 +1,21 @@
 
+09-01-2017 11:30:05,734 INFO  RingNameServer:Name Server is running ...
+09-01-2017 11:30:12,752 INFO  RingNameServer:Sent: OK. ProcessId:0:10000:100
+09-01-2017 11:30:13,236 INFO  RingNameServer:Sent: OK. ProcessId:1:10000:100
+09-01-2017 11:30:13,485 INFO  RingNameServer:Sent: OK. ProcessId:2:10000:100
+09-01-2017 11:30:13,706 INFO  RingNameServer:Sent: OK. ProcessId:3:10000:100
+09-01-2017 11:30:13,938 INFO  RingNameServer:Sent: OK. ProcessId:4:10000:100
+09-01-2017 11:30:14,202 INFO  RingNameServer:Sent: OK. ProcessId:5:10000:100
+09-01-2017 11:30:14,456 INFO  RingNameServer:Sent: OK. ProcessId:6:10000:100
+09-01-2017 11:30:14,675 INFO  RingNameServer:Sent: OK. ProcessId:7:10000:100
+09-01-2017 11:30:16,734 INFO  RingNameServer:Name server reset
+09-01-2017 11:37:49,954 INFO  RingNameServer:Name Server is running ...
+09-01-2017 11:37:56,156 INFO  RingNameServer:Sent: OK. ProcessId:0:10000:100
+09-01-2017 11:37:56,601 INFO  RingNameServer:Sent: OK. ProcessId:1:10000:100
+09-01-2017 11:37:56,857 INFO  RingNameServer:Sent: OK. ProcessId:2:10000:100
+09-01-2017 11:37:57,126 INFO  RingNameServer:Sent: OK. ProcessId:3:10000:100
+09-01-2017 11:37:57,356 INFO  RingNameServer:Sent: OK. ProcessId:4:10000:100
+09-01-2017 11:37:57,608 INFO  RingNameServer:Sent: OK. ProcessId:5:10000:100
+09-01-2017 11:37:57,864 INFO  RingNameServer:Sent: OK. ProcessId:6:10000:100
+09-01-2017 11:37:58,097 INFO  RingNameServer:Sent: OK. ProcessId:7:10000:100
+09-01-2017 11:38:00,686 INFO  RingNameServer:Name server reset

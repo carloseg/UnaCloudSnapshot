@@ -32,6 +32,14 @@ import co.edu.uniandes.tests.TestTime;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.LoggerUtil;
 
+
+import jxl.*;
+import jxl.write.Label;
+import jxl.write.Number;
+import jxl.write.WritableCell;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+
 public class RingNameServer {
 	private NameServerConfiguration configuration;
 	private ServerSocket listener;
@@ -241,6 +249,38 @@ public class RingNameServer {
 			out.close();
 		}catch(IOException e){
 			System.out.println("COULD NOT LOG!!");
+		}
+		try{
+			WritableWorkbook workbook = Workbook.createWorkbook(new File("resultados-Name-Server.xls"));
+
+			WritableSheet sheet = workbook.createSheet("Pruebas", 0);
+
+			//						C  F   M
+			Label label = new Label(0, 0, "Max token value"); 
+			sheet.addCell(label); 
+			label = new Label(1, 0, "Max benchmark value"); 
+			sheet.addCell(label); 
+			label = new Label(2, 0, "Duración en segundos"); 
+			sheet.addCell(label);
+			int row = 1;
+			int size =1;
+			while(size >0){
+				//test current = tests.poll();
+				
+				label = new Label( 0, row, maxTokenValue+""); 
+				sheet.addCell(label); 
+				label = new Label( 1, row, maxBenchmarkValue+""); 
+				sheet.addCell(label); 
+				label = new Label( 2, row, duration+""); 
+				sheet.addCell(label); 
+				size--;
+				row++;
+			}
+			workbook.write();
+	        workbook.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 	/**
