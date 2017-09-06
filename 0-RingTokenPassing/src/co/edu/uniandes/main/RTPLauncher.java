@@ -59,7 +59,7 @@ public class RTPLauncher {
 		
 		// if the processId == 0, setting up the flag after a pause while the other processes are running
 		if (processId == 0) {
-			Util.pause(40);
+			Util.pause(20);
 			process.setFlag(true);
 		}
 

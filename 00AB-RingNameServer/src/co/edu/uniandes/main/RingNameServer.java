@@ -314,6 +314,8 @@ public class RingNameServer {
 			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue;
 			log.info("Sent: " + answer);
 		}
+		
+		System.out.println(directory.toString());
 		return answer;
 	}
 

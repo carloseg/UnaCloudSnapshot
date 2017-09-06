@@ -119,6 +119,7 @@ public class CoordinatorProcess implements Runnable {
 				// The process is blocked waiting for a message from a peer
 				Socket socket = listener.accept();
 
+				// Ver si se puede hacer una sola vez. EVALUAR
 				reader = new BufferedReader(new InputStreamReader(
 						socket.getInputStream()));
 
@@ -393,6 +394,8 @@ public class CoordinatorProcess implements Runnable {
 			e.printStackTrace();
 		}
 	}	
+	
+	/////// QUITAR -p tcp
 	
 	// 1. 
 	private String markPre(String vmname, String user, String password) {

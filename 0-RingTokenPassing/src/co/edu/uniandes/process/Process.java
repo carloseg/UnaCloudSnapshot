@@ -276,6 +276,8 @@ public class Process implements Runnable {
 		next = NamesUtil.nameQueryNextNode(processId,
 				configuration.getNameServerHostName(),
 				configuration.getNameServerPort());
+		
+		System.out.println(next);
 	}
 
 	/**
@@ -293,12 +295,14 @@ public class Process implements Runnable {
 					configuration.getNameServerHostName(), 
 					configuration.getNameServerPort());
 			
+			// Solicita al NameServer el tamaño del anillo (ya entraron todos los participantes)
 			systemSize = Integer.parseInt(
 					NamesUtil.nameQuerySize(
 							processId, 
 							configuration.getNameServerHostName(), 
 							configuration.getNameServerPort()));
 
+			// Para validar si la ejecución va bien
 			// 0 is the first value for the token
 			int value = 0;
 			if (value != expectedValue) {
