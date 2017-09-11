@@ -20,6 +20,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -146,21 +147,6 @@ public class RingNameServer {
 	private String queryTime() {
 		String answer = "";
 
-		// iterating over the hashmap
-		/**Iterator<Map.Entry<String, TestTime>> it = testTime.entrySet()
-				.iterator();
-		while (it.hasNext()) {
-			Map.Entry<String, TestTime> e = (Map.Entry<String, TestTime>) it
-					.next();
-
-			String temp = e.getKey() + "";
-			long t1 = testTime.get(temp).getInitialTime();
-			long t2 = testTime.get(temp).getEndTime();
-
-			double duration = (t2 - t1) / 1000000000.0;
-			answer += "La prueba de " + temp + " durÃ³: " + duration
-					+ " segundos" + Constants.SEMICOLON;
-		}*/
 		double duration = (timeFinRing-timeInitRing) / 1000000000.0;
 		answer += "La prueba duró: " + duration
 				+ " segundos" + Constants.SEMICOLON;
@@ -251,33 +237,67 @@ public class RingNameServer {
 			System.out.println("COULD NOT LOG!!");
 		}
 		try{
-			WritableWorkbook workbook = Workbook.createWorkbook(new File("resultados-Name-Server.xls"));
+			Workbook workbook = null;
+			try{
+				workbook = Workbook.getWorkbook(new File("resultados-Name-Server.xls"));
+			}catch(Exception e){}
+			
+			ArrayList <String> previousValues = new ArrayList<String>();
+            if (workbook != null) {
+            	Sheet sheet = workbook.getSheet(0);
+            	
+            	int row =1;
+            	Cell actualCell = sheet.getCell(0, row);
+                //System.out.print(actualCell.getContents() + ":");  
+            	while(!actualCell.getContents().equals("-1")){
+            		previousValues.add(actualCell.getContents()+"-"
+            				+sheet.getCell(1, row).getContents()+"-"
+            				+sheet.getCell(2, row).getContents());
+            		row++;
+            		actualCell = sheet.getCell(0,row);
+            	}
+                
+                workbook.close();
+            }
+            
+            WritableWorkbook workbookF = Workbook.createWorkbook(new File("resultados-Name-Server.xls"));
 
-			WritableSheet sheet = workbook.createSheet("Pruebas", 0);
+			WritableSheet sheetF = workbookF.createSheet("Pruebas", 0);
 
 			//						C  F   M
 			Label label = new Label(0, 0, "Max token value"); 
-			sheet.addCell(label); 
+			sheetF.addCell(label); 
 			label = new Label(1, 0, "Max benchmark value"); 
-			sheet.addCell(label); 
+			sheetF.addCell(label); 
 			label = new Label(2, 0, "Duración en segundos"); 
-			sheet.addCell(label);
-			int row = 1;
-			int size =1;
-			while(size >0){
-				//test current = tests.poll();
+			sheetF.addCell(label);
+			
+			//add the previous values
+			for(int i=0; i< previousValues.size();i++){
+				String [] parts = previousValues.get(i).split("-");
+				label = new Label(0,i+1 ,parts[0]);
+				sheetF.addCell(label); 
+				label = new Label(1,i+1 ,parts[1]);
+				sheetF.addCell(label); 
+				label = new Label(2,i+1 ,parts[2]);
+				sheetF.addCell(label); 
 				
-				label = new Label( 0, row, maxTokenValue+""); 
-				sheet.addCell(label); 
-				label = new Label( 1, row, maxBenchmarkValue+""); 
-				sheet.addCell(label); 
-				label = new Label( 2, row, duration+""); 
-				sheet.addCell(label); 
-				size--;
-				row++;
 			}
-			workbook.write();
-	        workbook.close();
+			int size =1+previousValues.size();
+			label = new Label( 0, size, maxTokenValue+""); 
+			sheetF.addCell(label); 
+			label = new Label( 1, size, maxBenchmarkValue+""); 
+			sheetF.addCell(label); 
+			label = new Label( 2, size, duration+""); 
+			sheetF.addCell(label);
+			
+			//end of document
+			label = new Label( 0, size+1, "-1"); 
+			sheetF.addCell(label);
+			
+			
+			workbookF.write();
+	        workbookF.close();
 		}
 		catch(Exception e){
 			e.printStackTrace();
