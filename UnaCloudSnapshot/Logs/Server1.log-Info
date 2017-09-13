@@ -17,3 +17,22 @@
 06-06-2017 17:39:30,425 INFO  Process1:Sent: DONE 1 to: 0:localhost:2000
 06-12-2017 11:59:55,768 INFO  Process1:Process 1 is running ...
 06-12-2017 12:00:32,720 INFO  Process1:Received: TAKE_SNAPSHOT 0
+09-13-2017 15:48:59,515 INFO  Process1:Process 1 is running ...
+09-13-2017 16:17:00,410 INFO  Process1:Process 1 is running ...
+09-13-2017 16:17:00,503 INFO  Process1:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:17:00,508 INFO  Process1:Starting the local snapShot of null
+09-13-2017 16:17:00,510 INFO  Process1:Local Snapshot time: 0.001465828 s
+09-13-2017 16:17:00,510 INFO  Process1:Ending the local snapShot of null
+09-13-2017 16:17:00,514 INFO  Process1:Sent: DONE 1 1465828 to: 0:localhost:2000
+09-13-2017 16:19:49,885 INFO  Process1:Process 1 is running ...
+09-13-2017 16:19:49,978 INFO  Process1:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:19:50,631 INFO  Process1:Starting the local snapShot of null
+09-13-2017 16:19:50,941 INFO  Process1:Local Snapshot time: 0.309264182 s
+09-13-2017 16:19:50,941 INFO  Process1:Ending the local snapShot of null
+09-13-2017 16:19:51,545 INFO  Process1:Sent: DONE 1 309264182 to: 0:localhost:2000
+09-13-2017 16:25:08,042 INFO  Process1:Process 1 is running ...
+09-13-2017 16:25:08,133 INFO  Process1:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:25:08,783 INFO  Process1:Starting the local snapShot of template
+09-13-2017 16:25:09,801 INFO  Process1:Local Snapshot time: 1.017424826 s
+09-13-2017 16:25:09,801 INFO  Process1:Ending the local snapShot of template
+09-13-2017 16:25:10,400 INFO  Process1:Sent: DONE 1 1017424826 to: 0:localhost:2000

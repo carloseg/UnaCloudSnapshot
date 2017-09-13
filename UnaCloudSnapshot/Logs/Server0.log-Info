@@ -25,3 +25,43 @@
 06-12-2017 12:00:32,719 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
 06-12-2017 12:00:34,184 INFO  Process0:Starting the local snapShot of vmtest00
 06-12-2017 12:00:42,917 INFO  Process0:Ending the local snapShot of vmtest00
+09-13-2017 15:39:59,066 INFO  Process0:Process 0 is running ...
+09-13-2017 15:48:19,375 INFO  Process0:Process 0 is running ...
+09-13-2017 15:48:59,376 INFO  Process0:Starting the global snapShot
+09-13-2017 15:48:59,379 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+09-13-2017 15:48:59,387 INFO  Process0:Starting the local snapShot of null
+09-13-2017 15:48:59,390 INFO  Process0:Local Snapshot time: 6.36018E-4 s
+09-13-2017 15:48:59,390 INFO  Process0:Ending the local snapShot of null
+09-13-2017 16:17:00,322 INFO  Process0:Process 0 is running ...
+09-13-2017 16:17:00,501 INFO  Process0:Starting the global snapShot
+09-13-2017 16:17:00,502 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+09-13-2017 16:17:00,503 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+09-13-2017 16:17:00,503 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+09-13-2017 16:17:00,507 INFO  Process0:Starting the local snapShot of null
+09-13-2017 16:17:00,509 INFO  Process0:Local Snapshot time: 7.24462E-4 s
+09-13-2017 16:17:00,509 INFO  Process0:Ending the local snapShot of null
+09-13-2017 16:17:00,515 INFO  Process0:Received: DONE 1 1465828
+09-13-2017 16:17:00,515 INFO  Process0:Received: DONE 2 1697656
+09-13-2017 16:17:00,515 INFO  Process0:The global snapshot has finished.
+09-13-2017 16:17:00,515 INFO  Process0:Global Snapshot time: 0.014206705 s
+09-13-2017 16:19:49,797 INFO  Process0:Process 0 is running ...
+09-13-2017 16:19:49,975 INFO  Process0:Starting the global snapShot
+09-13-2017 16:19:49,976 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+09-13-2017 16:19:49,977 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+09-13-2017 16:19:49,978 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+09-13-2017 16:19:50,678 INFO  Process0:Starting the local snapShot of null
+09-13-2017 16:19:50,990 INFO  Process0:Local Snapshot time: 0.311417042 s
+09-13-2017 16:19:50,990 INFO  Process0:Ending the local snapShot of null
+09-13-2017 16:19:51,546 INFO  Process0:Received: DONE 1 309264182
+09-13-2017 16:19:51,612 INFO  Process0:Received: DONE 2 307680628
+09-13-2017 16:19:51,612 INFO  Process0:The global snapshot has finished.
+09-13-2017 16:19:51,612 INFO  Process0:Global Snapshot time: 1.636327194 s
+09-13-2017 16:25:07,953 INFO  Process0:Process 0 is running ...
+09-13-2017 16:25:08,131 INFO  Process0:Starting the global snapShot
+09-13-2017 16:25:08,132 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+09-13-2017 16:25:08,132 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+09-13-2017 16:25:08,133 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+09-13-2017 16:25:08,803 INFO  Process0:Starting the local snapShot of MachineTest1
+09-13-2017 16:25:09,796 INFO  Process0:Local Snapshot time: 0.991728452 s
+09-13-2017 16:25:09,797 INFO  Process0:Ending the local snapShot of MachineTest1
+09-13-2017 16:25:10,401 INFO  Process0:Received: DONE 1 1017424826

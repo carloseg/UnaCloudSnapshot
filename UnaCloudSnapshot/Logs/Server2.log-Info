@@ -13,3 +13,19 @@
 05-02-2017 08:02:28,833 INFO  Process2:Starting the local snapShot of vmtest00
 05-02-2017 08:02:49,845 INFO  Process2:Ending the local snapShot of vmtest00
 05-02-2017 08:02:50,272 INFO  Process2:Sent: DONE 2 to: 0:128.213.23.13:2000
+09-13-2017 15:48:59,617 INFO  Process2:Process 2 is running ...
+09-13-2017 16:17:00,500 INFO  Process2:Process 2 is running ...
+09-13-2017 16:17:00,504 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:17:00,509 INFO  Process2:Starting the local snapShot of null
+09-13-2017 16:17:00,511 INFO  Process2:Local Snapshot time: 0.001697656 s
+09-13-2017 16:17:00,511 INFO  Process2:Ending the local snapShot of null
+09-13-2017 16:17:00,514 INFO  Process2:Sent: DONE 2 1697656 to: 0:localhost:2000
+09-13-2017 16:19:49,975 INFO  Process2:Process 2 is running ...
+09-13-2017 16:19:49,978 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:19:50,689 INFO  Process2:Starting the local snapShot of null
+09-13-2017 16:19:50,997 INFO  Process2:Local Snapshot time: 0.307680628 s
+09-13-2017 16:19:50,997 INFO  Process2:Ending the local snapShot of null
+09-13-2017 16:19:51,611 INFO  Process2:Sent: DONE 2 307680628 to: 0:localhost:2000
+09-13-2017 16:25:08,130 INFO  Process2:Process 2 is running ...
+09-13-2017 16:25:08,134 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:25:08,814 INFO  Process2:Starting the local snapShot of Ubuntu

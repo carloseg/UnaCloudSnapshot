@@ -90,7 +90,7 @@ public class CoordinatorProcess implements Runnable {
 		} else {
 			vmname = configuration.getVmname() + vmNumber;
 		}*/
-		vmname = vmName;
+		this.vmname = vmName;
 				
 //		vmname = configuration.getVmname();
 		

@@ -25,6 +25,11 @@ public class GSLauncher {
 
 		String [] namesOfVM = getNamesOfVMs();
 		
+		CoordinatorProcess[] p = new CoordinatorProcess[namesOfVM.length];
+		Thread[] tPool = new Thread[namesOfVM.length];
+		
+		CoordinatorProcess id0 = null;
+		
 		for(int i=0; i< namesOfVM.length;i++){
 			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
 					configuration.getNameServerHostName(),
@@ -32,15 +37,21 @@ public class GSLauncher {
 
 			int pause = configuration.getPause();
 			int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
-			process = new CoordinatorProcess (processId, configuration, namesOfVM[i]);
+			p[i]  = new CoordinatorProcess (processId, configuration, namesOfVM[i]);
 
-			Thread t = new Thread(process);
-			t.start();
+			Thread t = new Thread(p[i]);
+			tPool[i] = t;
+			
 			
 			if ( processId == 0) {
-				Util.pause(pause);
-				process.getGlobalState();
+				id0= p[i];
 			}
+		}
+		for (int i=0; i<p.length; i++) {
+			tPool[i].start();
+		}
+		if(id0 != null){
+			id0.getGlobalState();
 		}
 		
 	}
@@ -63,6 +74,9 @@ public class GSLauncher {
 		
 		
 		String [] namesVMs = new String[names.size()];
+		for(int i=0; i< names.size();i++){
+			namesVMs[i] = names.get(i);
+		}
 		return namesVMs;
 	}
 	
