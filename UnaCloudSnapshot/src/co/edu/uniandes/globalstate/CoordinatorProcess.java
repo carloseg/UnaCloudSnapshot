@@ -416,6 +416,9 @@ public class CoordinatorProcess implements Runnable {
 		return s;
 	}
 
+	
+	/////// Incluir en la documentacion algo acerca de la sintaxis de iptables
+	/////// para entender el codigo. Revisar -R, quitar -p tcp
 	// 4. 	
 	private String markPost(String vmname, String user, String password) {
 		String s;
