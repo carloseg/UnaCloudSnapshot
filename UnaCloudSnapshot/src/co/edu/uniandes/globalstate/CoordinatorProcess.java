@@ -75,7 +75,7 @@ public class CoordinatorProcess implements Runnable {
 	 * @param configuration It is the general configuration of the application.
 	 * It includes the values contained in the properties file.
 	 */
-	public CoordinatorProcess(int processId, Configuration configuration) {
+	public CoordinatorProcess(int processId, Configuration configuration,String vmName) {
 		this.configuration = configuration;
 		this.processId = processId;
 		
@@ -85,11 +85,12 @@ public class CoordinatorProcess implements Runnable {
 		
 		int vmNumber = offset + processId;
 		
-		if (vmNumber<10) {
+		/**if (vmNumber<10) {
 			vmname = configuration.getVmname() + "0" + vmNumber;
 		} else {
 			vmname = configuration.getVmname() + vmNumber;
-		}
+		}*/
+		vmname = vmName;
 				
 //		vmname = configuration.getVmname();
 		

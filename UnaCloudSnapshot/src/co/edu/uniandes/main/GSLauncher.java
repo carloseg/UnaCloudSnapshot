@@ -1,5 +1,11 @@
 package co.edu.uniandes.main;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import co.edu.uniandes.configuration.Configuration;
 import co.edu.uniandes.globalstate.CoordinatorProcess;
 import co.edu.uniandes.util.CommunicationsUtil;
@@ -16,31 +22,48 @@ public class GSLauncher {
 	}
 
 	public void init() {
-//		String answer = NamesUtil.nameInsert(configuration.getMyIP(),
-		String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
-				configuration.getNameServerHostName(),
-				configuration.getNameServerPort());
 
-		int pause = configuration.getPause();
-		int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
-
-//		long initTime = System.nanoTime();
-//		long endTime = System.nanoTime();
-//		
-//		long elapsedTime = endTime-initTime;
-//		
-//		System.out.println("Elapsed Time: " + elapsedTime);
-//		System.out.println("Tiempo de encendido de la VM - Elapsed Time: " + elapsedTime/1000000000.0 + " s");
+		String [] namesOfVM = getNamesOfVMs();
 		
-		process = new CoordinatorProcess (processId, configuration);
+		for(int i=0; i< namesOfVM.length;i++){
+			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
+					configuration.getNameServerHostName(),
+					configuration.getNameServerPort());
 
-		Thread t = new Thread(process);
-		t.start();
-		
-		if ( processId == 0) {
-			Util.pause(pause);
-			process.getGlobalState();
+			int pause = configuration.getPause();
+			int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
+			process = new CoordinatorProcess (processId, configuration, namesOfVM[i]);
+
+			Thread t = new Thread(process);
+			t.start();
+			
+			if ( processId == 0) {
+				Util.pause(pause);
+				process.getGlobalState();
+			}
 		}
+		
+	}
+	
+	public String [] getNamesOfVMs(){
+		ArrayList<String> names = new ArrayList<String>();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("nombresMaquinasVM.txt"));
+		    String line = br.readLine();
+		    
+		    while (line != null) {
+		        names.add(line);
+		        System.out.println(line);
+		        line = br.readLine();
+		    }
+		    
+		    br.close();
+		} 
+		catch(Exception e){}
+		
+		
+		String [] namesVMs = new String[names.size()];
+		return namesVMs;
 	}
 	
 	public static void main(String[] args) {
@@ -48,6 +71,8 @@ public class GSLauncher {
 		p.init();
 	}
 }
+
+
 
 /*
  * Los cambios para duplicar el proceso: 
