@@ -36,3 +36,9 @@
 09-13-2017 16:25:09,801 INFO  Process1:Local Snapshot time: 1.017424826 s
 09-13-2017 16:25:09,801 INFO  Process1:Ending the local snapShot of template
 09-13-2017 16:25:10,400 INFO  Process1:Sent: DONE 1 1017424826 to: 0:localhost:2000
+09-13-2017 16:29:28,427 INFO  Process1:Process 1 is running ...
+09-13-2017 16:29:28,519 INFO  Process1:Received: TAKE_SNAPSHOT 0
+09-13-2017 16:29:29,142 INFO  Process1:Starting the local snapShot of template
+09-13-2017 16:29:30,322 INFO  Process1:Local Snapshot time: 1.180210589 s
+09-13-2017 16:29:30,322 INFO  Process1:Ending the local snapShot of template
+09-13-2017 16:29:30,893 INFO  Process1:Sent: DONE 1 1180210589 to: 0:localhost:2000

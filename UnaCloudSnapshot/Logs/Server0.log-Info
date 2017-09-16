@@ -65,3 +65,12 @@
 09-13-2017 16:25:09,796 INFO  Process0:Local Snapshot time: 0.991728452 s
 09-13-2017 16:25:09,797 INFO  Process0:Ending the local snapShot of MachineTest1
 09-13-2017 16:25:10,401 INFO  Process0:Received: DONE 1 1017424826
+09-13-2017 16:29:28,339 INFO  Process0:Process 0 is running ...
+09-13-2017 16:29:28,516 INFO  Process0:Starting the global snapShot
+09-13-2017 16:29:28,517 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+09-13-2017 16:29:28,518 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+09-13-2017 16:29:28,519 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+09-13-2017 16:29:29,163 INFO  Process0:Starting the local snapShot of MachineTest1
+09-13-2017 16:29:29,789 INFO  Process0:Local Snapshot time: 0.624234108 s
+09-13-2017 16:29:29,789 INFO  Process0:Ending the local snapShot of MachineTest1
+09-13-2017 16:29:30,894 INFO  Process0:Received: DONE 1 1180210589
