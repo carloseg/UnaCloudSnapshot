@@ -67,9 +67,12 @@ public class RingTokenPassingMultiLauncher {
 		}
 
 		// if the processId == 0, it needs a pause while the other processes are running
-		if (processId==0) {
+		//Esto no esta haciendo la pausa
+		/**if (processId==0) {
 			Util.pause(pauseToStartRing);
-		}
+		}*/
+		//esto va a hacer la pausa del proceso 0
+		Util.pause(pauseToStartRing);
 		// setting up the flag
 		p[0].setFlag(true);
 		

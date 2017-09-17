@@ -62,3 +62,11 @@
 ******* Sat Sep 16 20:35:12 COT 2017******* 2.146084399 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
 
 ******* Sat Sep 16 21:15:29 COT 2017******* 1.969605932 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 22:11:37 COT 2017******* 1.829201719 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 22:23:47 COT 2017******* 1.88822185 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 22:28:56 COT 2017******* 2.051198618 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 22:30:06 COT 2017******* 1.631740875 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100

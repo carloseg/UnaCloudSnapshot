@@ -1,13 +1,14 @@
 package co.edu.uniandes.main;
 
 /**
- * This application offers a name server service.
+ * This application offers a manager service to an RTP application.
  * 
  * A process (server) registers itself at the name server giving its ip address.
  * The name server assigns it a processId, which is returned into the answer.
  * The properties have read from a properties file. This is the main class. 
  * 
  * @author Carlos Eduardo Gomez Montoya
+ * 		   Jose Gabriel Tamura L
  * 
  * 2017
  */
@@ -58,6 +59,8 @@ public class RTPTestManager {
 	private int pauseToStartRing;
 	private int pauseBenchmark;
 	private int basePort;
+	
+	private boolean blockEntryToDirectory;
 
 	/**
 	 * This is the constructor
@@ -79,6 +82,8 @@ public class RTPTestManager {
 		
 		timeInitRing = Long.MAX_VALUE;
 		timeFinRing =0;
+		
+		blockEntryToDirectory=false;
 	}
 
 	/**
@@ -164,7 +169,9 @@ public class RTPTestManager {
 
 		timeInitRing = time;
 
-		System.out.println(answer + "\n");
+		System.out.println("\n" + "Se inicia el anillo con: "+directory.size()+" RTPs.");
+		blockEntryToDirectory = true;
+		log.info("Se inicia el anillo con: "+directory.size()+" RTPs.");
 		return answer;
 	}
 	
@@ -209,7 +216,7 @@ public class RTPTestManager {
 
 		registerExit++;
 		if(registerExit == directory.size()){
-			System.out.println("All finished");
+			System.out.println("\n All finished");
 
 			printTotalTime();
 			reset();
@@ -316,6 +323,9 @@ public class RTPTestManager {
 	 * @return answer
 	 */
 	private String insert(String line) {
+		if(blockEntryToDirectory){
+			return "The time to register has expired.";
+		}
 		System.out.println("Method insert receives line: "+ line);
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
@@ -455,6 +465,7 @@ public class RTPTestManager {
 		timeFinRing =0;
 		
 		registerExit =0;
+		blockEntryToDirectory = false;
 
 		log.info("Name server reset");
 

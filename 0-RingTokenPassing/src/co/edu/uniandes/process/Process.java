@@ -356,7 +356,7 @@ public class Process implements Runnable {
 			b = r.nextDouble();
 			c = a * b;
 		}		
-		//Util.pause(pauseMS);
+		Util.pause(pauseMS);
 	}
 	
 	/**
