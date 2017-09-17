@@ -31,3 +31,21 @@
 09-13-2017 16:25:08,814 INFO  Process2:Starting the local snapShot of Ubuntu
 09-13-2017 16:29:28,516 INFO  Process2:Process 2 is running ...
 09-13-2017 16:29:28,520 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-16-2017 15:53:21,795 INFO  Process2:Process 2 is running ...
+09-16-2017 15:53:21,807 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-16-2017 15:53:24,003 INFO  Process2:Starting the local snapShot of test3
+09-16-2017 15:53:25,269 INFO  Process2:Local Snapshot time: 1.244575154 s
+09-16-2017 15:53:25,270 INFO  Process2:Ending the local snapShot of test3
+09-16-2017 15:53:26,101 INFO  Process2:Sent: DONE 2 1244575154 to: 0:localhost:2000
+09-16-2017 16:26:46,752 INFO  Process2:Process 2 is running ...
+09-16-2017 16:26:46,766 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-16-2017 16:26:49,834 INFO  Process2:Starting the local snapShot of test3
+09-16-2017 16:26:50,760 INFO  Process2:Local Snapshot time: 0.92487689 s
+09-16-2017 16:26:50,760 INFO  Process2:Ending the local snapShot of test3
+09-16-2017 16:26:51,105 INFO  Process2:Sent: DONE 2 924876890 to: 0:localhost:2000
+09-16-2017 19:50:58,940 INFO  Process2:Process 2 is running ...
+09-16-2017 19:50:58,951 INFO  Process2:Received: TAKE_SNAPSHOT 0
+09-16-2017 19:51:09,451 INFO  Process2:Starting the local snapShot of test3
+09-16-2017 19:51:10,185 INFO  Process2:Local Snapshot time: 0.714635342 s
+09-16-2017 19:51:10,186 INFO  Process2:Ending the local snapShot of test3
+09-16-2017 19:51:10,741 INFO  Process2:Sent: DONE 2  VM Name:test3 714635342 to: 0:localhost:2000

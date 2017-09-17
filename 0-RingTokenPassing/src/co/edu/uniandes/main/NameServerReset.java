@@ -45,13 +45,16 @@ public class NameServerReset {
 		int processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
 		int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
 		int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
+		int pauseToStartRing = Integer.parseInt(answer.split(Constants.COLON)[4]);
+		int pauseBenchmark = Integer.parseInt(answer.split(Constants.COLON)[5]);
+		int basePort = Integer.parseInt(answer.split(Constants.COLON)[6]);
 		
 		// creating the process
-		process = new Process (processId,maxToken,maxBenchmark, configuration);
+		process = new Process (processId,maxToken,maxBenchmark,pauseBenchmark,basePort, configuration);
 		
 		// if the processId == 0, setting up the flag after a pause while the other processes are running
 		if (processId == 0) {
-			Util.pause(20);
+			Util.pause(pauseToStartRing);
 			process.setFlag(true);
 		}
 		// starting the execution of the thread of the process

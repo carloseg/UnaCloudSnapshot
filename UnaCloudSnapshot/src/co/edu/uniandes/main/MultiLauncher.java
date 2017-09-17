@@ -4,6 +4,11 @@ import co.edu.uniandes.configuration.Configuration;
 import co.edu.uniandes.util.CommunicationsUtil;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.NamesUtil;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
 import co.edu.uniandes.benchmark.Benchmarking;
 import co.edu.uniandes.globalstate.CoordinatorProcess;
 
@@ -19,6 +24,8 @@ public class MultiLauncher {
 		
 		int numberOfProcesses = 100;
 		
+		String [] namesOfVM = getNamesOfVMs();
+		
 		CoordinatorProcess[] p = new CoordinatorProcess[numberOfProcesses];
 		Thread[] t = new Thread[numberOfProcesses];
 		
@@ -31,8 +38,13 @@ public class MultiLauncher {
 			int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
 
 			//Util.pause(1);
-
-			p[i] = new CoordinatorProcess(processId, configuration);
+			if(i< namesOfVM.length){
+				p[i] = new CoordinatorProcess(processId, configuration, namesOfVM[i]);
+			}
+			else{
+				p[i] = new CoordinatorProcess(processId, configuration, "VM"+i);
+			}
+			
 			t[i] = new Thread(p[i]);
 		}
 
@@ -53,6 +65,29 @@ public class MultiLauncher {
 //		long elapsedTime = endTime-initTime;
 //		System.out.println("Snapshot time: " + elapsedTime/1000000000.0 + " s");
 
+	}
+	public String [] getNamesOfVMs(){
+		ArrayList<String> names = new ArrayList<String>();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("nombresMaquinasVM.txt"));
+		    String line = br.readLine();
+		    
+		    while (line != null) {
+		        names.add(line);
+		        System.out.println(line);
+		        line = br.readLine();
+		    }
+		    
+		    br.close();
+		} 
+		catch(Exception e){}
+		
+		
+		String [] namesVMs = new String[names.size()];
+		for(int i=0; i< names.size();i++){
+			namesVMs[i] = names.get(i);
+		}
+		return namesVMs;
 	}
 	
 	public static void main(String[] args) {

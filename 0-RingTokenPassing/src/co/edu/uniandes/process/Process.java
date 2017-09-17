@@ -81,7 +81,7 @@ public class Process implements Runnable {
 	/**
 	 * This is the constructor
 	 */
-	public Process(int processId,int maxToken,int maxBenchmark, RingTokenPassingConfiguration configuration) {
+	public Process(int processId,int maxToken,int maxBenchmark,int pauseBenchmark,int basePort, RingTokenPassingConfiguration configuration) {
 		// These two values are assigned from the launcher. If processId == 0, 
 		// this process is the initiator.
 		this.processId = processId;
@@ -90,9 +90,9 @@ public class Process implements Runnable {
 		// the maximum token value is specified in the properties file
 		maxTokenValue = maxToken;
 		maxBenchmarkValue = maxBenchmark;
-		pauseMS = configuration.getPauseMS();
+		pauseMS = pauseBenchmark;
 
-		localPort = configuration.getBase() + processId;
+		localPort = basePort + processId;
 		loggerSetUp(processId, configuration);
 		System.out.println("My local port is  (ID:" + processId + "): " + localPort);
 		log.info("Server " + processId + " is running ...");
@@ -356,6 +356,7 @@ public class Process implements Runnable {
 			b = r.nextDouble();
 			c = a * b;
 		}		
+		//Util.pause(pauseMS);
 	}
 	
 	/**

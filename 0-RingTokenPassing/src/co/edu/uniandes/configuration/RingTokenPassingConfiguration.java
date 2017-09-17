@@ -17,8 +17,7 @@ import java.util.Properties;
 public class RingTokenPassingConfiguration {
 	private String nameServerHostName;
 	private int nameServerPort;
-	private int pauseMS;
-	private int base;
+	
 	private String labelLogFile;
 	private String pathLog;
 	private String logFileName;
@@ -43,7 +42,6 @@ public class RingTokenPassingConfiguration {
 
 			nameServerHostName = p.getProperty("nameServerHostName");
 			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
-			base = Integer.parseInt(p.getProperty("base"));
 			labelLogFile = p.getProperty("labelLogFile");
 			pathLog = p.getProperty("pathLog");
 			logFileName = p.getProperty("logFileName");
@@ -72,25 +70,6 @@ public class RingTokenPassingConfiguration {
 		return nameServerPort;
 	}
 
-
-	/**
-	 * This method returns the value of the pauseMS attribute, which is used
-	 * to slowdown the execution.
-	 * 
-	 * @return int The base port number.
-	 */
-	public int getPauseMS() {
-		return pauseMS;
-	}
-
-	/**
-	 * This method returns the base port number.
-	 * 
-	 * @return int The base port number.
-	 */
-	public int getBase() {
-		return base;
-	}
 
 	/**
 	 * This method returns the label of each entry in the log file.

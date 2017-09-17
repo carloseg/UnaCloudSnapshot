@@ -55,19 +55,24 @@ public class RingNameServer {
 	private int maxTokenValue;
 	private int maxBenchmarkValue;
 	private int registerExit;
+	private int pauseToStartRing;
+	private int pauseBenchmark;
+	private int basePort;
 
 	/**
 	 * This is the constructor
 	 */
 	public RingNameServer() {
 		// reading the configuration properties
-		configuration = new NameServerConfiguration("nameServer.properties");
+		configuration = new NameServerConfiguration("RTPTestManager.properties");
 
 		// logger setup
 		loggerSetUp();
 		maxTokenValue = configuration.getMaxTokenValue();
 		maxBenchmarkValue = configuration.getMaxBenchmarkValue();
-		
+		pauseToStartRing = configuration.getPauseToStartRing();
+		pauseBenchmark = configuration.getPauseBenchmark();
+		basePort  = configuration.getBasePort();
 
 		log.info("Name Server is running ...");
 		directory = new HashMap<String, String>();
@@ -320,7 +325,7 @@ public class RingNameServer {
 		String address = m[1];
 
 		String name = configuration.getProcessHostnamePrefix() + processId;
-		int localPort = configuration.getBase() + processId;
+		int localPort = configuration.getBasePort() + processId;
 
 		if (directory.containsKey(name)) {
 			answer = "The server name is already registered.";
@@ -331,7 +336,7 @@ public class RingNameServer {
 			directory.put(name, processId + Constants.COLON + address
 					+ Constants.COLON + localPort);
 
-			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue;
+			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue+":"+pauseToStartRing+":"+pauseBenchmark+":"+basePort;
 			log.info("Sent: " + answer);
 		}
 		

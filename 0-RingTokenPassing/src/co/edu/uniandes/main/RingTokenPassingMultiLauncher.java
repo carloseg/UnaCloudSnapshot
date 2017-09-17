@@ -42,7 +42,7 @@ public class RingTokenPassingMultiLauncher {
 
 		Process[] p = new Process[numberOfProcesses];
 		Thread[] t = new Thread[numberOfProcesses];
-		
+		int pauseToStartRing =0;
 		for (int i = 0; i < p.length; i++) {
 			// registering the process at the name server to obtain the processId
 			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
@@ -52,8 +52,12 @@ public class RingTokenPassingMultiLauncher {
 			processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
 			int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
 			int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
+			pauseToStartRing = Integer.parseInt(answer.split(Constants.COLON)[4]);
+			int pauseBenchmark = Integer.parseInt(answer.split(Constants.COLON)[5]);
+			int basePort = Integer.parseInt(answer.split(Constants.COLON)[6]);
+			
 			// creating the processes and the threads
-			p[i] = new Process(processId,maxToken,maxBenchmark, configuration);
+			p[i] = new Process(processId,maxToken,maxBenchmark,pauseBenchmark,basePort, configuration);
 			t[i] = new Thread(p[i]);
 		}
 
@@ -64,7 +68,7 @@ public class RingTokenPassingMultiLauncher {
 
 		// if the processId == 0, it needs a pause while the other processes are running
 		if (processId==0) {
-			Util.pause(20);
+			Util.pause(pauseToStartRing);
 		}
 		// setting up the flag
 		p[0].setFlag(true);

@@ -891,3 +891,15 @@
 09-13-2017 16:29:28,274 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
 09-13-2017 16:29:28,425 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
 09-13-2017 16:29:28,513 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+09-16-2017 15:52:25,584 INFO  MetadataServer:Metadata Server is running ...
+09-16-2017 15:53:20,544 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+09-16-2017 15:53:21,557 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+09-16-2017 15:53:21,793 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+09-16-2017 16:26:30,629 INFO  MetadataServer:Metadata Server is running ...
+09-16-2017 16:26:45,925 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+09-16-2017 16:26:46,524 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+09-16-2017 16:26:46,750 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+09-16-2017 19:50:51,471 INFO  MetadataServer:Metadata Server is running ...
+09-16-2017 19:50:58,161 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+09-16-2017 19:50:58,728 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+09-16-2017 19:50:58,938 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002

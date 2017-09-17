@@ -81,15 +81,6 @@ public class CoordinatorProcess implements Runnable {
 		
 		this.vm = new VM(configuration);
 		
-		int offset = configuration.getOffset();		
-		
-		int vmNumber = offset + processId;
-		
-		/**if (vmNumber<10) {
-			vmname = configuration.getVmname() + "0" + vmNumber;
-		} else {
-			vmname = configuration.getVmname() + vmNumber;
-		}*/
 		this.vmname = vmName;
 				
 //		vmname = configuration.getVmname();
@@ -153,7 +144,7 @@ public class CoordinatorProcess implements Runnable {
 //							configuration.getNameServerPort(), 1);
 					
 					// It sends a DONE message to the starter process
-					String done = Constants.DONE + Constants.SPACE + processId + Constants.SPACE + t;
+					String done = Constants.DONE + Constants.SPACE + processId+Constants.SPACE + " VM Name:"+ vmname + Constants.SPACE + t;
 					
 					// It queries the starter process network information.
 					starter = NamesUtil.nameQuery(

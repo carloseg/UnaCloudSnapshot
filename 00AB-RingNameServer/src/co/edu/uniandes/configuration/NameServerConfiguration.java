@@ -26,7 +26,8 @@ public class NameServerConfiguration {
 	
 	private int maxTokenValue;
 	private int maxBenchmarkValue;
-
+	private int pauseToStartRing;
+	private int pauseBenchmark;
 	/**
 	 * This is the constructor.
 	 * 
@@ -53,6 +54,8 @@ public class NameServerConfiguration {
 			
 			maxTokenValue = Integer.parseInt(p.getProperty("maxTokenValue"));
 			maxBenchmarkValue =  Integer.parseInt(p.getProperty("maxBenchmarckValue"));
+			pauseToStartRing  =  Integer.parseInt(p.getProperty("pauseToStartRing"));
+			pauseBenchmark  =  Integer.parseInt(p.getProperty("pauseBenchmark"));
 
 		} catch (IOException e) {
 		}
@@ -63,7 +66,7 @@ public class NameServerConfiguration {
 	 * 
 	 * @return int The base port number.
 	 */
-	public int getBase() {
+	public int getBasePort() {
 		return base;
 	}
 
@@ -146,5 +149,22 @@ public class NameServerConfiguration {
 	public int getMaxBenchmarkValue() {
 		return maxBenchmarkValue;
 	}
+	/**
+	 * This method returns the pause to start the ring
+	 * 
+	 * @return int 
+	 */
+	public int getPauseToStartRing() {
+		return pauseToStartRing;
+	}
+	/**
+	 * This method returns the pause of the benchmark value.
+	 * 
+	 * @return int The type of the pause of the bechmark value.
+	 */
+	public int getPauseBenchmark() {
+		return pauseBenchmark;
+	}
+
 
 }

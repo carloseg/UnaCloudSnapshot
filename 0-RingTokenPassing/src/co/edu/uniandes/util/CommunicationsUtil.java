@@ -90,7 +90,7 @@ public class CommunicationsUtil {
             System.out.println(e);
         }
 		
-		return result;
-		//return "localhost";
+		//return result;
+		return "localhost";
 	}
 }
