@@ -1,0 +1,64 @@
+
+******* Tue Aug 29 00:21:23 COT 2017******* 3.745568443 s
+
+******* Tue Aug 29 00:21:36 COT 2017******* 3.645345533 s
+
+******* Tue Aug 29 00:21:50 COT 2017******* 4.029381272 s
+
+******* Thu Aug 31 00:18:24 COT 2017******* 4.119027359 s
+
+******* Thu Aug 31 00:19:44 COT 2017******* 3.682638737 s
+
+******* Thu Aug 31 00:20:58 COT 2017******* 3.854763209 s
+
+******* Thu Aug 31 00:27:31 COT 2017******* 3.608480035 s
+
+******* Thu Aug 31 00:38:29 COT 2017******* 1.732375959 s
+
+******* Thu Aug 31 00:38:42 COT 2017******* 1.704901794 s
+
+******* Thu Aug 31 00:41:26 COT 2017******* 1.606187102 s
+
+******* Fri Sep 01 11:30:16 COT 2017******* 1.662413844 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Fri Sep 01 11:38:00 COT 2017******* 1.952642915 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 13:15:47 COT 2017******* 1.969148358 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 13:20:41 COT 2017******* 2.398416818 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 13:52:55 COT 2017******* 1.521073272 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 13:53:31 COT 2017******* 2.500404489 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 14:09:58 COT 2017******* 1.716980568 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Tue Sep 05 17:07:08 COT 2017******* 2.593847783 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:45:42 COT 2017******* 1.82837937 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:47:05 COT 2017******* 1.658707989 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:47:51 COT 2017******* 1.744717219 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:47:59 COT 2017******* 1.540766967 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:48:29 COT 2017******* 1.52514789 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:48:36 COT 2017******* 1.640881471 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:52:21 COT 2017******* 1.662579702 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:52:42 COT 2017******* 1.790742886 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:53:06 COT 2017******* 1.768669055 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:53:22 COT 2017******* 1.723701796 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:53:39 COT 2017******* 1.690084074 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Sep 06 18:54:00 COT 2017******* 1.798731961 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 20:35:12 COT 2017******* 2.146084399 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Sat Sep 16 21:15:29 COT 2017******* 1.969605932 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
