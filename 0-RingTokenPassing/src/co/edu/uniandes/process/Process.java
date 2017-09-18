@@ -210,6 +210,8 @@ public class Process implements Runnable {
 							configuration.getNameServerHostName(), 
 							configuration.getNameServerPort());
 
+					///// Notificar al TestManager el número de errores si es diferente de 0.
+					
 					Util.pause(4);
 					if (clientSideSocket != null)
 						clientSideSocket.close();
@@ -356,7 +358,7 @@ public class Process implements Runnable {
 			b = r.nextDouble();
 			c = a * b;
 		}		
-		Util.pause(pauseMS);
+		Util.pauseMS(pauseMS);
 	}
 	
 	/**

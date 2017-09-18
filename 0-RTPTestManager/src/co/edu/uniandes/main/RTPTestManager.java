@@ -169,9 +169,8 @@ public class RTPTestManager {
 
 		timeInitRing = time;
 
-		System.out.println("\n" + "Se inicia el anillo con: "+directory.size()+" RTPs.");
 		blockEntryToDirectory = true;
-		log.info("Se inicia el anillo con: "+directory.size()+" RTPs.");
+		log.info("Se inicia el anillo con: "+directory.size()+" participantes.");
 		return answer;
 	}
 	
@@ -216,7 +215,7 @@ public class RTPTestManager {
 
 		registerExit++;
 		if(registerExit == directory.size()){
-			System.out.println("\n All finished");
+			System.out.println("\nAll finished");
 
 			printTotalTime();
 			reset();
@@ -347,10 +346,10 @@ public class RTPTestManager {
 					+ Constants.COLON + localPort);
 
 			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue+":"+pauseToStartRing+":"+pauseBenchmark+":"+basePort;
-			log.info("Sent: " + answer);
+			log.info("Sent: " + answer);	
 		}
 		
-		System.out.println(directory.toString());
+		//System.out.println(directory.toString());
 		return answer;
 	}
 
