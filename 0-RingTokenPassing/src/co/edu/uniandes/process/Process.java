@@ -208,7 +208,7 @@ public class Process implements Runnable {
 					answer = NamesUtil.nameRingEndTime(
 							processId, 
 							configuration.getNameServerHostName(), 
-							configuration.getNameServerPort());
+							configuration.getNameServerPort(), errors);
 
 					///// Notificar al TestManager el número de errores si es diferente de 0.
 					

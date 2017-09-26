@@ -30,7 +30,7 @@ public class RingTokenPassingMultiLauncher {
 	/**
 	 * This method initiates the execution of the application
 	 */
-	public void init() {
+	public void init() throws Exception {
 		// reseting the name server
 //		NamesUtil.nameServerRingReset(
 //				configuration.getNameServerHostName(),
@@ -48,7 +48,10 @@ public class RingTokenPassingMultiLauncher {
 			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
 					configuration.getNameServerHostName(),
 					configuration.getNameServerPort());
-
+			
+			if(answer.equals(Constants.RING_IN_PROGRESS)){
+				throw new Exception("This instance couldn't join the ring because there is already a ring in current execution");
+			}
 			processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
 			int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
 			int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
@@ -86,6 +89,10 @@ public class RingTokenPassingMultiLauncher {
 	public static void main(String[] args) {
 		System.out.println("Prueba 2");
 		RingTokenPassingMultiLauncher p = new RingTokenPassingMultiLauncher();
-		p.init();
+		try {
+			p.init();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

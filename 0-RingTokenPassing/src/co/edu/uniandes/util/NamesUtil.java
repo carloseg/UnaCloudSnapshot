@@ -277,12 +277,12 @@ public class NamesUtil {
 	 * @param port It is the port number used by the name server to listen to.
 	 * @return String It is the answer sent by the name server.
 	 */
-	public static String nameRingEndTime(int clientId, String nameServer, int port) {
+	public static String nameRingEndTime(int clientId, String nameServer, int port, int errors) {
 		// a: answer; r: reader; w: writer
 		String a = "";
 
 		String m = "END_TIME"  + Constants.SPACE +
-				clientId;
+				clientId+ Constants.SPACE +errors;
 
 		a = sendMessage(nameServer, port, m);
 		

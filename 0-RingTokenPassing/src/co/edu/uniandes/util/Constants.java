@@ -13,4 +13,5 @@ public class Constants {
 	public static final String COLON = ":";
 	public static final String SEMICOLON = ";";
 	public static final String LINE="-";
+	public static final String RING_IN_PROGRESS = "RING_IN_PROGRESS";
 }

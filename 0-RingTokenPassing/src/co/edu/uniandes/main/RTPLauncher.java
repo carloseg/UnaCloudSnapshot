@@ -38,14 +38,16 @@ public class RTPLauncher {
 	/**
 	 * This method initiates the execution of the application
 	 */
-	public void init() {
+	public void init() throws Exception {
 		// registering the process at the name server to obtain the processId
 		String answer = NamesUtil.nameInsert(
 				CommunicationsUtil.myIP(), 
 				configuration.getNameServerHostName(), 
 				configuration.getNameServerPort());
 		//System.out.println(answer);
-		
+		if(answer.equals(Constants.RING_IN_PROGRESS)){
+			throw new Exception("This instance couldn't join the ring because there is already a ring in current execution");
+		}
 		int processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
 		int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
 		int maxBenchmark = Integer.parseInt(answer.split(Constants.COLON)[3]);
@@ -83,6 +85,10 @@ public class RTPLauncher {
 			System.out.println("Prueba Ring Token Passing");
 		}
 		RTPLauncher p = new RTPLauncher();
-		p.init();
+		try {
+			p.init();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
