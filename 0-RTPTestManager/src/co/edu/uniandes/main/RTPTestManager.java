@@ -59,8 +59,10 @@ public class RTPTestManager {
 	private int pauseToStartRing;
 	private int pauseBenchmark;
 	private int basePort;
+	private String testLabel;
 	
 	private boolean blockEntryToDirectory;
+	private String errorsOfTheCurrentRing;
 
 	/**
 	 * This is the constructor
@@ -76,7 +78,7 @@ public class RTPTestManager {
 		pauseToStartRing = configuration.getPauseToStartRing();
 		pauseBenchmark = configuration.getPauseBenchmark();
 		basePort  = configuration.getBasePort();
-
+		testLabel = configuration.getTestLabel();
 		log.info("Name Server is running ...");
 		directory = new HashMap<String, String>();
 		
@@ -84,6 +86,7 @@ public class RTPTestManager {
 		timeFinRing =0;
 		
 		blockEntryToDirectory=false;
+		errorsOfTheCurrentRing = "";
 	}
 
 	/**
@@ -202,6 +205,11 @@ public class RTPTestManager {
 		// sender (clientId) --> 1
 		String sender = m[1];
 		String name = "serv#" + sender;
+		
+		String errors = m[2];
+		if(!errors.equals("0")){
+			errorsOfTheCurrentRing += name+":"+errors+" ";
+		}
 
 		long time = System.nanoTime();
 		//TestTime t = testTime.get(name);
@@ -216,12 +224,35 @@ public class RTPTestManager {
 		registerExit++;
 		if(registerExit == directory.size()){
 			System.out.println("\nAll finished");
-
+			
+			printErrors();
 			printTotalTime();
 			reset();
 		}
 
 		return answer;
+	}
+	/**
+	 * 
+	 */
+	private void printErrors(){
+		if(errorsOfTheCurrentRing.equals("")){
+			return;
+		}
+		
+		File errors = new File(testLabel+" Errors.txt");
+		try{
+			if(errors.exists()==false){
+				System.out.println("We had to make a new file.");
+				errors.createNewFile();
+			}
+			PrintWriter out = new PrintWriter(new FileWriter(errors, true));
+			out.append("\n"+"******* " + new Date().toString() +"******* " );
+			out.append(errorsOfTheCurrentRing+ "\n");
+			out.close();
+		}catch(IOException e){
+			System.out.println("COULD NOT PRINT ERRORS");
+		}
 	}
 
 	/**
@@ -241,7 +272,7 @@ public class RTPTestManager {
 				log.createNewFile();
 			}
 			PrintWriter out = new PrintWriter(new FileWriter(log, true));
-			out.append("\n"+"******* " + new Date().toString() +"******* " );
+			out.append("\n"+"******* " + new Date().toString()+"     " +testLabel +"******* " );
 			out.append(result+ "\n");
 			out.close();
 		}catch(IOException e){
@@ -263,7 +294,9 @@ public class RTPTestManager {
             	while(!actualCell.getContents().equals("-1")){
             		previousValues.add(actualCell.getContents()+"-"
             				+sheet.getCell(1, row).getContents()+"-"
-            				+sheet.getCell(2, row).getContents());
+            				+sheet.getCell(2, row).getContents()+"-"
+            				+sheet.getCell(3, row).getContents()+"-"
+            				+sheet.getCell(4, row).getContents());
             		row++;
             		actualCell = sheet.getCell(0,row);
             	}
@@ -282,6 +315,10 @@ public class RTPTestManager {
 			sheetF.addCell(label); 
 			label = new Label(2, 0, "Duración en segundos"); 
 			sheetF.addCell(label);
+			label = new Label(3, 0, "Label"); 
+			sheetF.addCell(label);
+			label = new Label(4, 0, "Fecha de prueba"); 
+			sheetF.addCell(label);
 			
 			//add the previous values
 			for(int i=0; i< previousValues.size();i++){
@@ -292,6 +329,10 @@ public class RTPTestManager {
 				sheetF.addCell(label); 
 				label = new Label(2,i+1 ,parts[2]);
 				sheetF.addCell(label); 
+				label = new Label(3,i+1 ,parts[3]);
+				sheetF.addCell(label); 
+				label = new Label(4,i+1 ,parts[4]);
+				sheetF.addCell(label); 
 				
 			}
 			int size =1+previousValues.size();
@@ -300,6 +341,10 @@ public class RTPTestManager {
 			label = new Label( 1, size, maxBenchmarkValue+""); 
 			sheetF.addCell(label); 
 			label = new Label( 2, size, duration+""); 
+			sheetF.addCell(label);
+			label = new Label( 3, size, testLabel); 
+			sheetF.addCell(label);
+			label = new Label( 4, size, new Date().toString()); 
 			sheetF.addCell(label);
 			
 			//end of document
@@ -323,7 +368,7 @@ public class RTPTestManager {
 	 */
 	private String insert(String line) {
 		if(blockEntryToDirectory){
-			return "The time to register has expired.";
+			return Constants.RING_IN_PROGRESS;
 		}
 		System.out.println("Method insert receives line: "+ line);
 		String answer = "";
@@ -465,6 +510,7 @@ public class RTPTestManager {
 		
 		registerExit =0;
 		blockEntryToDirectory = false;
+		errorsOfTheCurrentRing = "";
 
 		log.info("Name server reset");
 

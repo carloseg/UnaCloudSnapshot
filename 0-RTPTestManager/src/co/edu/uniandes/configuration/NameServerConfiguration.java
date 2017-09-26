@@ -28,6 +28,8 @@ public class NameServerConfiguration {
 	private int maxBenchmarkValue;
 	private int pauseToStartRing;
 	private int pauseBenchmark;
+	
+	private String testLabel;
 	/**
 	 * This is the constructor.
 	 * 
@@ -45,6 +47,7 @@ public class NameServerConfiguration {
 			p.load(is);
 
 			base = Integer.parseInt(p.getProperty("base"));
+			testLabel = p.getProperty("testLabel");
 			processHostnamePrefix = p.getProperty("processHostnamePrefix");
 			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
 			labelLogFile = p.getProperty("labelLogFile");
@@ -164,6 +167,15 @@ public class NameServerConfiguration {
 	 */
 	public int getPauseBenchmark() {
 		return pauseBenchmark;
+	}
+	
+	/**
+	 * This method returns the Label to be printed in the excel as a message
+	 * 
+	 * @return String test label
+	 */
+	public String getTestLabel() {
+		return testLabel;
 	}
 
 
