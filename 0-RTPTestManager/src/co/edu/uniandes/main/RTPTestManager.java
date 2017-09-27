@@ -233,7 +233,7 @@ public class RTPTestManager {
 		return answer;
 	}
 	/**
-	 * 
+	 * This method creates a new file with name : Label TODO
 	 */
 	private void printErrors(){
 		if(errorsOfTheCurrentRing.equals("")){

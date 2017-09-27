@@ -46,7 +46,7 @@ public class RTPLauncher {
 				configuration.getNameServerPort());
 		//System.out.println(answer);
 		if(answer.equals(Constants.RING_IN_PROGRESS)){
-			throw new Exception("This instance couldn't join the ring because there is already a ring in current execution");
+			throw new Exception("This instance couldn't join the ring because there is already a ring in a current execution");
 		}
 		int processId = Integer.parseInt(answer.split(Constants.COLON)[1]);
 		int maxToken = Integer.parseInt(answer.split(Constants.COLON)[2]);
