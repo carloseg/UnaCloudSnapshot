@@ -49,6 +49,7 @@ public class RTPTestManager {
 	private BufferedReader reader;
 	private PrintWriter writer;
 	private HashMap<String, String> directory;
+	private HashMap<String, Integer> howManyFromThisIP;
 	private Logger log;
 	
 	private long timeInitRing;
@@ -81,6 +82,8 @@ public class RTPTestManager {
 		testLabel = configuration.getTestLabel();
 		log.info("Name Server is running ...");
 		directory = new HashMap<String, String>();
+		
+		howManyFromThisIP = new HashMap<String,Integer>();
 		
 		timeInitRing = Long.MAX_VALUE;
 		timeFinRing =0;
@@ -377,20 +380,39 @@ public class RTPTestManager {
 		// address --> 1
 		int processId = directory.size();
 		String address = m[1];
-
+		
+		//Serv#0
 		String name = configuration.getProcessHostnamePrefix() + processId;
-		int localPort = configuration.getBasePort() + processId;
+		
+		
 
 		if (directory.containsKey(name)) {
 			answer = "The server name is already registered.";
 		} else {
+			
+			int localPort = basePort;
+			
+			try{
+				int howManyFromIp = howManyFromThisIP.get(address);
+				
+				localPort += howManyFromIp+1;
+				
+				howManyFromThisIP.put(address, howManyFromIp+1);
+			}
+			catch(Exception e){
+				//There is no resource from that ip yet
+				
+				howManyFromThisIP.put(address, 0);
+				
+			}
+			
 			// The name server store a key-value pair
 			// key = the name of the process
 			// value = processId:address:localPort
 			directory.put(name, processId + Constants.COLON + address
 					+ Constants.COLON + localPort);
 
-			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue+":"+pauseToStartRing+":"+pauseBenchmark+":"+basePort;
+			answer = "OK. ProcessId:" + processId+ ":"+maxTokenValue+":"+maxBenchmarkValue+":"+pauseToStartRing+":"+pauseBenchmark+":"+localPort;
 			log.info("Sent: " + answer);	
 		}
 		
@@ -450,6 +472,7 @@ public class RTPTestManager {
 		String name = "serv#" + next;
 
 		answer = directory.get(name);
+		System.out.println("Next to: "+line+"  is "+answer);
 		return answer;
 	}
 
@@ -504,6 +527,7 @@ public class RTPTestManager {
 	private String reset() {
 
 		directory.clear();
+		howManyFromThisIP.clear();
 		
 		timeInitRing = Long.MAX_VALUE;
 		timeFinRing =0;
