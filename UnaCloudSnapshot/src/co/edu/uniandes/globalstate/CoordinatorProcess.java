@@ -68,6 +68,11 @@ public class CoordinatorProcess implements Runnable {
 	
 	private Logger serverLog;
 	private VM vm;
+	
+	private String timesOfGS;
+	
+	
+	private String metadataServer;
 
 	/**
 	 * This is the constructor.
@@ -82,6 +87,8 @@ public class CoordinatorProcess implements Runnable {
 		this.vm = new VM(configuration);
 		
 		this.vmname = vmName;
+		
+		timesOfGS = "";
 				
 //		vmname = configuration.getVmname();
 		
@@ -89,8 +96,11 @@ public class CoordinatorProcess implements Runnable {
 
 		loggerSetUp(processId);
 		serverLog.info("Process " + processId + " is running ...");
-
+		
+		// SHOULD BE ONLY BASE. Because one machine per coordinator process
 		localPort = configuration.getBase() + processId;
+		
+		metadataServer = configuration.getNameServerHostName();
 	}
 
 
@@ -135,7 +145,7 @@ public class CoordinatorProcess implements Runnable {
 					
 					// ***** modificar para que retorne el tiempo y enviar el tiempo local
 					// con el mensaje DONE
-					long t = step1();
+					double t = step1();
 					
 					// Registrar el tiempo de terminación del snapshot
 //					answer = NamesUtil.nameEndTime(
@@ -144,7 +154,7 @@ public class CoordinatorProcess implements Runnable {
 //							configuration.getNameServerPort(), 1);
 					
 					// It sends a DONE message to the starter process
-					String done = Constants.DONE + Constants.SPACE + processId+Constants.SPACE + " VM Name:"+ vmname + Constants.SPACE + t;
+					String done = Constants.DONE + Constants.SPACE + processId+Constants.SPACE + "VM Name:"+ vmname + Constants.SPACE + t;
 					
 					// It queries the starter process network information.
 					starter = NamesUtil.nameQuery(
@@ -162,9 +172,11 @@ public class CoordinatorProcess implements Runnable {
 				} else {
 					// If the message is a DONE. 
 					// This is only applicable for the starter process
-					if (line.startsWith(Constants.DONE) == true) {
+					if (line.startsWith(Constants.DONE)) {
 						// It marks the sender process of the message
 						markDone(sender);
+						
+						timesOfGS += line.split(" ")[4]+";";
 						
 						// If all peers are marked, it execute the step 2.
 						if (numberOfDone() == systemSize - 1) {
@@ -174,7 +186,15 @@ public class CoordinatorProcess implements Runnable {
 							endTime = System.nanoTime();
 							long elapsedTime = endTime-initTime;
 //							System.out.println("Global Snapshot time: " + elapsedTime/1000000000.0 + " s");
-							serverLog.info("Global Snapshot time: " + elapsedTime/1000000000.0 + " s");
+							
+							double elapsedTimeInSeconds=elapsedTime/1000000000.0 ;
+							serverLog.info("Global Snapshot time: " + elapsedTimeInSeconds+ " s");
+							
+							timesOfGS+= elapsedTimeInSeconds;
+							
+							System.out.println("Sending times: "+timesOfGS);
+							
+							notifyEnd();
 							
 //							elapsedTime = ta-initTime;
 //							System.out.println("Antes del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
@@ -206,7 +226,7 @@ public class CoordinatorProcess implements Runnable {
 	 * @param message The message to send.
 	 */
 	public void broadcast(String message) {
-		String list = NamesUtil.nameQueryList(processId, configuration.getNameServerHostName(),
+		String list = NamesUtil.nameQueryList(processId, metadataServer,
 				configuration.getNameServerPort());
 
 		if (list.equals("") == false) {
@@ -216,6 +236,16 @@ public class CoordinatorProcess implements Runnable {
 				send(server[i], message);
 			}
 		}
+	}
+	
+	/**
+	 * This method notify the data to the meta data server: global time. small times.
+	 * 
+	 */
+	public void notifyEnd() {
+		NamesUtil.nameQueryEnding(timesOfGS, metadataServer,
+				configuration.getNameServerPort());
+
 	}
 
 	/**
@@ -323,7 +353,7 @@ public class CoordinatorProcess implements Runnable {
 //				configuration.getNameServerPort(), 1);
 	}
 
-	private long step1() {
+	private double step1() {
 		String s;
 		//1. mark PRE 
 		s = markPre(vmname, "root", "carlos");
@@ -361,7 +391,12 @@ public class CoordinatorProcess implements Runnable {
 		s = acceptPost(vmname, "root", "carlos");
 //		tc = System.nanoTime();
 //		serverLog.info("Time after local snapShot of "+ vmname);
-		return elapsedTime;
+		
+		
+		//if it is the process 0 it will add to the times his time
+		double timeOfThisProcess = elapsedTime/1000000000.0;
+		timesOfGS += timeOfThisProcess+";";
+		return timeOfThisProcess;
 	}
 	
 	private void step2() {

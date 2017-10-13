@@ -82,6 +82,12 @@ public class NamesUtil {
 		// clientId:address:localPort
 		return a;
 	}
+	
+	public static void  nameQueryEnding(String times, String nameServer, int port){
+		
+		String m = "QUERY_END_GS" + Constants.SEMICOLON + times;
+		sendMessage(nameServer, port, m);
+	}
 
 	/**
 	 * This method sends a query message to a specified name server. The request is for the

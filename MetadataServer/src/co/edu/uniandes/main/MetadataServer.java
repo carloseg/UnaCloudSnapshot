@@ -13,11 +13,14 @@ package co.edu.uniandes.main;
  */
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -92,6 +95,9 @@ public class MetadataServer {
 				} else if (line.trim().startsWith("RESET")) {
 					answer = reset();
 				}
+				else if(line.trim().startsWith("QUERY_END_GS")){
+					endOfGS(line);
+				}
 				
 				// elimination of the ; at the end of the string
 				if (answer.endsWith(Constants.SEMICOLON) == true) {
@@ -110,6 +116,36 @@ public class MetadataServer {
 		} finally {
 			closeConnection();
 		}
+	}
+	
+	private void endOfGS(String times){
+		System.out.println("\nThe GS finished.");
+		
+		String [] timesS = times.split(";");
+		
+		String localTimes = "";
+		for(int i=1;i< timesS.length-1;i++){
+			localTimes+= timesS[i]+";";
+		}
+		
+		String result = "Local times: "+localTimes+". GS time: "+timesS[timesS.length-1];
+		System.out.println(result);
+		File log = new File("TIMES of GS.txt");
+		try{
+			if(log.exists()==false){
+				System.out.println("We had to make a new file.");
+				log.createNewFile();
+			}
+			PrintWriter out = new PrintWriter(new FileWriter(log, true));
+			out.append("\n"+"******* " + new Date().toString()+"     ******* " );
+			out.append("\n"+result);
+			out.close();
+		}catch(IOException e){
+			System.out.println("COULD NOT LOG!!");
+		}
+		
+		
+		reset();
 	}
 	
 	/**
