@@ -139,6 +139,11 @@ public class RTPTestManager {
 				} else if (line.trim().startsWith("All_INITIAL_TIME")) {
 					answer = allInitialTime(line);
 				}
+				
+				else if(line.trim().startsWith("RING_PROGRESS")){
+					answer = "OK";
+					System.out.println("\n"+line.split(";")[1]);
+				}
 
 				// elimination of the ; at the end of the string
 				if (answer.endsWith(Constants.SEMICOLON) == true) {
@@ -176,7 +181,7 @@ public class RTPTestManager {
 		timeInitRing = time;
 
 		blockEntryToDirectory = true;
-		log.info("Se inicia el anillo con: "+directory.size()+" participantes.");
+		log.info("\nThe ring just started. The ring is composed by "+directory.size() +" instances.");
 		return answer;
 	}
 	
@@ -472,7 +477,7 @@ public class RTPTestManager {
 		String name = "serv#" + next;
 
 		answer = directory.get(name);
-		System.out.println("Next to: "+line+"  is "+answer);
+		System.out.println("ID "+line.split(" ")[1]+"  is asking his next. Answer: "+answer);
 		return answer;
 	}
 

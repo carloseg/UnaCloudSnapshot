@@ -101,3 +101,198 @@
 09-26-2017 15:23:40,208 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2000
 09-26-2017 15:23:50,213 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
 09-26-2017 15:23:51,679 INFO  RTPTestManager:Name server reset
+10-15-2017 16:24:50,238 INFO  RTPTestManager:Name Server is running ...
+10-15-2017 16:24:57,683 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:24:58,182 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:24:58,446 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:24:58,692 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:24:58,931 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:24:59,168 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:24:59,405 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:24:59,651 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:25:09,664 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:25:12,869 INFO  RTPTestManager:Name server reset
+10-15-2017 16:26:13,113 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:26:13,643 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:26:13,884 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:26:14,120 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:26:14,359 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:26:14,603 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:26:14,841 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:26:15,075 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:26:25,086 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:26:27,691 INFO  RTPTestManager:Name server reset
+10-15-2017 16:27:34,439 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:27:34,869 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:27:35,130 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:27:35,382 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:27:35,625 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:27:35,876 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:27:36,114 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:27:36,350 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:27:46,362 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:27:48,745 INFO  RTPTestManager:Name server reset
+10-15-2017 16:28:53,018 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:28:53,477 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:28:53,741 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:28:53,977 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:28:54,216 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:28:54,455 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:28:54,702 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:28:54,945 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:29:04,953 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:29:08,673 INFO  RTPTestManager:Name server reset
+10-15-2017 16:31:42,698 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:31:43,247 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:31:43,529 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:31:43,770 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:31:44,016 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:31:44,249 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:31:44,486 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:31:44,722 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:31:54,735 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:31:57,110 INFO  RTPTestManager:Name server reset
+10-15-2017 16:34:02,496 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:34:02,923 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:34:03,184 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:34:03,439 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:34:03,689 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:34:03,938 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:34:04,189 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:34:04,430 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:34:14,439 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:34:16,726 INFO  RTPTestManager:Name server reset
+10-15-2017 16:35:26,343 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:35:26,881 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:35:27,124 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:35:27,364 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:35:27,610 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:35:27,844 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:35:28,076 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:35:28,310 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:35:38,321 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:35:40,651 INFO  RTPTestManager:Name server reset
+10-15-2017 16:38:21,237 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:38:21,753 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:38:22,010 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:38:22,260 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:38:22,510 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:38:22,746 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:38:22,982 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:38:23,223 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:38:33,232 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:38:35,883 INFO  RTPTestManager:Name server reset
+10-15-2017 16:39:32,560 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:39:33,157 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:39:33,451 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:39:33,745 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:39:34,053 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:39:34,352 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:39:34,651 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:39:34,946 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:39:44,960 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:39:50,145 INFO  RTPTestManager:Name server reset
+10-15-2017 16:40:53,153 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:40:53,613 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:40:53,900 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:40:54,163 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:40:54,460 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:40:54,723 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:40:54,984 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:40:55,347 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:41:05,360 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:41:09,136 INFO  RTPTestManager:Name server reset
+10-15-2017 16:43:09,271 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:43:09,738 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:43:10,089 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:43:10,368 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:43:10,604 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:43:10,854 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:43:11,090 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:43:11,361 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:43:21,372 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:43:25,125 INFO  RTPTestManager:Name server reset
+10-15-2017 16:44:37,009 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:44:37,586 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:44:37,844 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:44:38,113 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:44:38,380 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:44:38,634 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:44:38,898 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:44:39,207 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:44:49,216 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:44:53,128 INFO  RTPTestManager:Name server reset
+10-15-2017 16:51:30,986 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:51:31,582 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:51:31,880 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:51:32,168 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:51:32,433 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:51:32,724 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:51:32,994 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:51:33,251 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:51:43,267 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:51:51,973 INFO  RTPTestManager:Name server reset
+10-15-2017 16:53:18,506 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:53:19,180 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:53:19,499 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:53:19,852 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:53:20,135 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:53:20,454 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:53:20,742 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:53:21,005 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:53:31,015 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:53:35,540 INFO  RTPTestManager:Name server reset
+10-15-2017 16:55:14,304 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:55:14,769 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:55:15,018 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:55:15,256 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:55:15,495 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:55:15,734 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:55:15,971 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:55:16,204 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:55:26,248 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:55:28,802 INFO  RTPTestManager:Name server reset
+10-15-2017 16:56:30,310 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 16:56:30,862 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 16:56:31,130 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 16:56:31,378 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 16:56:31,616 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 16:56:31,854 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 16:56:32,101 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 16:56:32,337 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 16:56:42,346 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 16:56:45,580 INFO  RTPTestManager:Name server reset
+10-15-2017 17:04:09,143 INFO  RTPTestManager:Name Server is running ...
+10-15-2017 17:04:12,370 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 17:04:12,863 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 17:04:13,108 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 17:04:13,363 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 17:04:13,610 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 17:04:13,851 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 17:04:14,090 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 17:04:14,333 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 17:04:24,345 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 17:04:28,684 INFO  RTPTestManager:Name server reset
+10-15-2017 17:05:35,842 INFO  RTPTestManager:Name Server is running ...
+10-15-2017 17:05:38,629 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 17:05:39,067 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 17:05:39,339 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 17:05:39,578 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 17:05:39,825 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 17:05:40,070 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 17:05:40,313 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 17:05:40,559 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 17:05:50,567 INFO  RTPTestManager:Se inicia el anillo con: 8 participantes.
+10-15-2017 17:05:54,360 INFO  RTPTestManager:Name server reset
+10-15-2017 17:11:05,941 INFO  RTPTestManager:Name Server is running ...
+10-15-2017 17:11:12,058 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:10:0:2000
+10-15-2017 17:11:12,618 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:10:0:2001
+10-15-2017 17:11:12,872 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:10:0:2002
+10-15-2017 17:11:13,132 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:10:0:2003
+10-15-2017 17:11:13,401 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:10:0:2004
+10-15-2017 17:11:13,645 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:10:0:2005
+10-15-2017 17:11:13,914 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:10:0:2006
+10-15-2017 17:11:14,157 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:10:0:2007
+10-15-2017 17:11:24,167 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
+10-15-2017 17:11:28,530 INFO  RTPTestManager:Name server reset

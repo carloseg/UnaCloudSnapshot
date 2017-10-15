@@ -104,6 +104,13 @@ public class NamesUtil {
 		
 		return a;
 	}
+	
+	public static void nameRingProgress(String nameServer, int port, String progress){
+		String m = "RING_PROGRESS" + Constants.SEMICOLON +
+				progress;
+		
+		sendMessage(nameServer, port, m);
+	}
 
 	/**
 	 * This method sends a query message to a specified name server. The request is for the

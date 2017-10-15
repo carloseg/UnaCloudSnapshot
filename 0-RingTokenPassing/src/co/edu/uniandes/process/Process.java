@@ -144,15 +144,28 @@ public class Process implements Runnable {
 				String line = serverSideBufferedReader.readLine();
 				log.info("Message received: " + line);
 				serverSidePrintWriter.println("OK");
+				
 
 				// parsing the token
 				String[] parts = line.split(Constants.SPACE);
 				String m1 = parts[0];
-				int value = Integer.parseInt(parts[1]);
+				double value = Double.parseDouble(parts[1]);
 				String m2 = parts[2];
 
 				// incrementing the value
 				value++;
+				
+				System.out.println("Current value: "+ value);
+				
+				double progress = value / maxTokenValue ;
+				if(progress == 0.1  || progress == 0.2 || progress == 0.3 || progress == 0.4 || progress == 0.5
+						||progress == 0.6 || progress == 0.7 || progress == 0.8 || progress == 0.9 || progress == 1){
+					String progressM = "Progress: "+progress*100 +"%. Target: "+maxTokenValue+". current value: "+ value;
+					NamesUtil.nameRingProgress(
+							configuration.getNameServerHostName(), 
+							configuration.getNameServerPort(), progressM);
+					
+				}
 
 				// calculating the next expected value
 				if (value != expectedValue) {
