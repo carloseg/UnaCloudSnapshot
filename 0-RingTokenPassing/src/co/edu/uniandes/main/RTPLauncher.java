@@ -24,6 +24,7 @@ public class RTPLauncher {
 	 */
 	public RTPLauncher() {
 		// reading the configuration properties
+		System.out.println("Instance RTP running...");
 		configuration = new RingTokenPassingConfiguration ("rtp.properties");
 	}
 	

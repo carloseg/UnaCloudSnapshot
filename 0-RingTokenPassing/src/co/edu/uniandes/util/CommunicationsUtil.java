@@ -14,9 +14,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Inet6Address;
 import java.net.InetAddress;
+import java.net.MalformedURLException;
 import java.net.NetworkInterface;
 import java.net.Socket;
 import java.net.SocketException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.Enumeration;
 
 import org.apache.log4j.Logger;
@@ -63,7 +66,7 @@ public class CommunicationsUtil {
 	// Esto esta fallando
 	public static String myIP() {
 		String result = "";
-		try {
+		/**try {
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
             while (interfaces.hasMoreElements()) {
                 NetworkInterface interfaz = interfaces.nextElement();
@@ -88,9 +91,28 @@ public class CommunicationsUtil {
             }
         } catch(SocketException e) {
             System.out.println(e);
-        }
+        }*/
 		
 		//return result;
-		return "localhost";
+		
+		String ip ="";
+		
+		try {
+			URL whatismyip = new URL("http://checkip.amazonaws.com/");
+			URLConnection connection = whatismyip.openConnection();
+		    connection.addRequestProperty("Protocol", "Http/1.1");
+		    connection.addRequestProperty("Connection", "keep-alive");
+		    connection.addRequestProperty("Keep-Alive", "1000");
+		    connection.addRequestProperty("User-Agent", "Web-Agent");
+
+		    BufferedReader in = 
+		        new BufferedReader(new InputStreamReader(connection.getInputStream()));
+
+		    ip = in.readLine();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	    return ip;
+	  //return "localhost";
 	}
 }
