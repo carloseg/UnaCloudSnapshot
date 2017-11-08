@@ -59,7 +59,7 @@ public class GSLauncher {
 	public String [] getNamesOfVMs(){
 		ArrayList<String> names = new ArrayList<String>();
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("nombresMaquinasVM.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("vmnames.txt"));
 		    String line = br.readLine();
 		    
 		    while (line != null) {

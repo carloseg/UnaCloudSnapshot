@@ -30,6 +30,8 @@ public class NameServerConfiguration {
 	private int pauseBenchmark;
 	
 	private String testLabel;
+	
+	private String AdressAndPortOfMetaDataServer;
 	/**
 	 * This is the constructor.
 	 * 
@@ -59,9 +61,15 @@ public class NameServerConfiguration {
 			maxBenchmarkValue =  Integer.parseInt(p.getProperty("maxBenchmarckValue"));
 			pauseToStartRing  =  Integer.parseInt(p.getProperty("pauseToStartRing"));
 			pauseBenchmark  =  Integer.parseInt(p.getProperty("pauseBenchmark"));
+			
+			AdressAndPortOfMetaDataServer = p.getProperty("AdressAndPortOfMetaDataServer");
 
 		} catch (IOException e) {
 		}
+	}
+	
+	public String getAdressAndPortOfMetaDataServer(){
+		return AdressAndPortOfMetaDataServer;
 	}
 
 	/**

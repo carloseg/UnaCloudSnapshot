@@ -142,7 +142,16 @@ public class RTPTestManager {
 				
 				else if(line.trim().startsWith("RING_PROGRESS")){
 					answer = "OK";
-					System.out.println("\n"+line.split(";")[1]);
+					String base = line.split(";")[1];
+					System.out.println("\n"+base);
+					
+					if(base.split(":")[1].split("%")[0].trim().equals("40.0")){
+						String [] dir =configuration.getAdressAndPortOfMetaDataServer().split("-");
+						sendMessage(dir[0], Integer.parseInt(dir[1]), "StartGS");
+						log.debug("GS  starting ");
+						System.out.println("Message sent to GS MetadataServer");
+					}
+					
 				}
 
 				// elimination of the ; at the end of the string
@@ -592,6 +601,25 @@ public class RTPTestManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	private static String sendMessage(String address, int port,String m) {
+		String a = "";
+		try {
+			Socket socket = new Socket(address, port);
+			BufferedReader r = new BufferedReader(new InputStreamReader(
+					socket.getInputStream()));
+			PrintWriter w = new PrintWriter(socket.getOutputStream(), true);
+			w.println(m);
+			a = r.readLine();
+			r.close();
+			w.close();
+			socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return a;
 	}
 
 	/**

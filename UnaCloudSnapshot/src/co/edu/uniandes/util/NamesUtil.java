@@ -36,6 +36,14 @@ public class NamesUtil {
 		
 		return a;
 	}
+	
+	public static String notifyProcessOisReady(String address, String nameServer, int port){
+		
+		String m = "Process0 is ready." + Constants.SPACE +address;
+		
+		return sendMessage(nameServer, port, m);
+		
+	}
 
 	/**
 	 * This method sends a query message to a specified name server. The request is for a
@@ -211,4 +219,6 @@ public class NamesUtil {
 		}
 		return a;
 	}
+	
+	
 }

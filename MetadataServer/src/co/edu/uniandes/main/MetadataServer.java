@@ -41,6 +41,8 @@ public class MetadataServer {
 	private HashMap<String, String> directory;
 	private HashMap<String, TestTime> testTime;
 	private Logger log;
+	
+	private PrintWriter printToProcess0;
 
 	/**
 	 * This is the constructor
@@ -53,6 +55,8 @@ public class MetadataServer {
 		log.info("Metadata Server is running ...");
 		directory = new HashMap<String, String>();
 		testTime = new HashMap<String, TestTime>();
+		
+		printToProcess0 = null;
 	}
 
 	/**
@@ -76,6 +80,8 @@ public class MetadataServer {
 				log.debug("Received: " + line);
 
 				String answer = "";
+				
+				boolean answerNow = true;
 
 				// messages processing
 				if (line.trim().startsWith("INSERT")) {
@@ -98,18 +104,32 @@ public class MetadataServer {
 				else if(line.trim().startsWith("QUERY_END_GS")){
 					endOfGS(line);
 				}
+				else if(line.trim().startsWith("Process0 is ready.")){
+					answerNow = false;
+					log.debug("The process 0 is ready to start the GS");
+					printToProcess0 = writer;
+					//the process 0 keeps waiting
+				}
+				else if(line.trim().startsWith("StartGS")){
+					System.out.println("Message STARTGS received. Starting GS");
+					printToProcess0.println("START");
+				}
 				
-				// elimination of the ; at the end of the string
-				if (answer.endsWith(Constants.SEMICOLON) == true) {
-					answer = answer.substring(0, answer.length() - 1);
+				if(answerNow){
+					// elimination of the ; at the end of the string
+					if (answer.endsWith(Constants.SEMICOLON) == true) {
+						answer = answer.substring(0, answer.length() - 1);
+					}
+					writer.println(answer);
+					log.debug("Sent: " + answer);
+					if (directory.isEmpty()==true){
+						log.debug("Directory is empty.");
+					} else {
+						log.debug("Directory content: " + directory.toString());
+					}
 				}
-				writer.println(answer);
-				log.debug("Sent: " + answer);
-				if (directory.isEmpty()==true){
-					log.debug("Directory is empty.");
-				} else {
-					log.debug("Directory content: " + directory.toString());
-				}
+				
+				
 			}
 		} catch (Exception e) {
 			System.err.println("Exception caught:" + e);
@@ -359,6 +379,7 @@ public class MetadataServer {
 	private String reset() {
 		directory.clear();	
 		testTime.clear();
+		printToProcess0 = null;
 		log.info("Name server reset");
 
 		return "OK";

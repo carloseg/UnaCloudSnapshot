@@ -66,34 +66,6 @@ public class CommunicationsUtil {
 	// Esto esta fallando
 	public static String myIP() {
 		String result = "";
-		/**try {
-            Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
-            while (interfaces.hasMoreElements()) {
-                NetworkInterface interfaz = interfaces.nextElement();
-                // No necesitamos el Loopback
-                if (interfaz.isLoopback()) {
-                    continue;
-                }
-                Enumeration<InetAddress> direccion = interfaz.getInetAddresses();
-                
-                while (direccion.hasMoreElements()) {
-                    InetAddress ip = direccion.nextElement();
-                    // Solo IPv4
-                    
-                    if (ip instanceof Inet6Address) {
-                        continue;
-                    }
-                    
-                    result = ip.getHostAddress();
-                    break;
-                }
-                break;
-            }
-        } catch(SocketException e) {
-            System.out.println(e);
-        }*/
-		
-		//return result;
 		
 		String ip ="";
 		
@@ -112,7 +84,7 @@ public class CommunicationsUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	    return ip;
-	  //return "localhost";
+	    //return ip;
+	  return "localhost";
 	}
 }

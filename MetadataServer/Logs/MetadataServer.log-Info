@@ -903,3 +903,117 @@
 09-16-2017 19:50:58,161 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
 09-16-2017 19:50:58,728 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
 09-16-2017 19:50:58,938 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 17:53:58,136 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 17:54:07,771 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 17:54:08,397 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 17:54:08,834 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 17:54:09,316 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - localhost - 2003
+11-07-2017 17:54:09,691 INFO  MetadataServer:Sent: OK. ProcessId = 4 name - localhost - 2004
+11-07-2017 17:54:10,056 INFO  MetadataServer:Sent: OK. ProcessId = 5 name - localhost - 2005
+11-07-2017 17:54:10,420 INFO  MetadataServer:Sent: OK. ProcessId = 6 name - localhost - 2006
+11-07-2017 17:54:10,785 INFO  MetadataServer:Sent: OK. ProcessId = 7 name - localhost - 2007
+11-07-2017 17:54:11,154 INFO  MetadataServer:Sent: OK. ProcessId = 8 name - localhost - 2008
+11-07-2017 17:54:11,515 INFO  MetadataServer:Sent: OK. ProcessId = 9 name - localhost - 2009
+11-07-2017 17:54:11,877 INFO  MetadataServer:Sent: OK. ProcessId = 10 name - localhost - 2010
+11-07-2017 17:54:12,333 INFO  MetadataServer:Sent: OK. ProcessId = 11 name - localhost - 2011
+11-07-2017 17:54:12,776 INFO  MetadataServer:Sent: OK. ProcessId = 12 name - localhost - 2012
+11-07-2017 17:54:13,217 INFO  MetadataServer:Sent: OK. ProcessId = 13 name - localhost - 2013
+11-07-2017 17:54:13,589 INFO  MetadataServer:Sent: OK. ProcessId = 14 name - localhost - 2014
+11-07-2017 17:54:13,956 INFO  MetadataServer:Sent: OK. ProcessId = 15 name - localhost - 2015
+11-07-2017 17:54:14,327 INFO  MetadataServer:Sent: OK. ProcessId = 16 name - localhost - 2016
+11-07-2017 17:54:14,690 INFO  MetadataServer:Sent: OK. ProcessId = 17 name - localhost - 2017
+11-07-2017 17:54:15,057 INFO  MetadataServer:Sent: OK. ProcessId = 18 name - localhost - 2018
+11-07-2017 17:54:15,430 INFO  MetadataServer:Sent: OK. ProcessId = 19 name - localhost - 2019
+11-07-2017 17:54:15,802 INFO  MetadataServer:Sent: OK. ProcessId = 20 name - localhost - 2020
+11-07-2017 17:54:16,167 INFO  MetadataServer:Sent: OK. ProcessId = 21 name - localhost - 2021
+11-07-2017 17:54:16,526 INFO  MetadataServer:Sent: OK. ProcessId = 22 name - localhost - 2022
+11-07-2017 17:54:16,890 INFO  MetadataServer:Sent: OK. ProcessId = 23 name - localhost - 2023
+11-07-2017 17:54:17,252 INFO  MetadataServer:Sent: OK. ProcessId = 24 name - localhost - 2024
+11-07-2017 17:54:17,630 INFO  MetadataServer:Sent: OK. ProcessId = 25 name - localhost - 2025
+11-07-2017 17:54:17,994 INFO  MetadataServer:Sent: OK. ProcessId = 26 name - localhost - 2026
+11-07-2017 17:54:18,351 INFO  MetadataServer:Sent: OK. ProcessId = 27 name - localhost - 2027
+11-07-2017 17:54:18,716 INFO  MetadataServer:Sent: OK. ProcessId = 28 name - localhost - 2028
+11-07-2017 17:54:19,082 INFO  MetadataServer:Sent: OK. ProcessId = 29 name - localhost - 2029
+11-07-2017 17:54:19,444 INFO  MetadataServer:Sent: OK. ProcessId = 30 name - localhost - 2030
+11-07-2017 17:54:19,806 INFO  MetadataServer:Sent: OK. ProcessId = 31 name - localhost - 2031
+11-07-2017 17:54:20,172 INFO  MetadataServer:Sent: OK. ProcessId = 32 name - localhost - 2032
+11-07-2017 17:54:20,547 INFO  MetadataServer:Sent: OK. ProcessId = 33 name - localhost - 2033
+11-07-2017 17:54:20,903 INFO  MetadataServer:Sent: OK. ProcessId = 34 name - localhost - 2034
+11-07-2017 17:54:21,293 INFO  MetadataServer:Sent: OK. ProcessId = 35 name - localhost - 2035
+11-07-2017 17:54:21,675 INFO  MetadataServer:Sent: OK. ProcessId = 36 name - localhost - 2036
+11-07-2017 17:54:22,044 INFO  MetadataServer:Sent: OK. ProcessId = 37 name - localhost - 2037
+11-07-2017 17:54:22,408 INFO  MetadataServer:Sent: OK. ProcessId = 38 name - localhost - 2038
+11-07-2017 17:54:22,775 INFO  MetadataServer:Sent: OK. ProcessId = 39 name - localhost - 2039
+11-07-2017 17:54:23,138 INFO  MetadataServer:Sent: OK. ProcessId = 40 name - localhost - 2040
+11-07-2017 17:54:23,520 INFO  MetadataServer:Sent: OK. ProcessId = 41 name - localhost - 2041
+11-07-2017 17:54:23,953 INFO  MetadataServer:Sent: OK. ProcessId = 42 name - localhost - 2042
+11-07-2017 17:54:24,368 INFO  MetadataServer:Sent: OK. ProcessId = 43 name - localhost - 2043
+11-07-2017 17:54:24,719 INFO  MetadataServer:Sent: OK. ProcessId = 44 name - localhost - 2044
+11-07-2017 17:54:25,040 INFO  MetadataServer:Sent: OK. ProcessId = 45 name - localhost - 2045
+11-07-2017 17:54:25,359 INFO  MetadataServer:Sent: OK. ProcessId = 46 name - localhost - 2046
+11-07-2017 17:54:25,677 INFO  MetadataServer:Sent: OK. ProcessId = 47 name - localhost - 2047
+11-07-2017 17:54:25,996 INFO  MetadataServer:Sent: OK. ProcessId = 48 name - localhost - 2048
+11-07-2017 17:54:26,327 INFO  MetadataServer:Sent: OK. ProcessId = 49 name - localhost - 2049
+11-07-2017 17:54:26,651 INFO  MetadataServer:Sent: OK. ProcessId = 50 name - localhost - 2050
+11-07-2017 17:54:26,972 INFO  MetadataServer:Sent: OK. ProcessId = 51 name - localhost - 2051
+11-07-2017 17:54:27,284 INFO  MetadataServer:Sent: OK. ProcessId = 52 name - localhost - 2052
+11-07-2017 17:54:27,602 INFO  MetadataServer:Sent: OK. ProcessId = 53 name - localhost - 2053
+11-07-2017 17:54:27,918 INFO  MetadataServer:Sent: OK. ProcessId = 54 name - localhost - 2054
+11-07-2017 17:54:28,245 INFO  MetadataServer:Sent: OK. ProcessId = 55 name - localhost - 2055
+11-07-2017 17:54:28,558 INFO  MetadataServer:Sent: OK. ProcessId = 56 name - localhost - 2056
+11-07-2017 17:54:28,881 INFO  MetadataServer:Sent: OK. ProcessId = 57 name - localhost - 2057
+11-07-2017 17:54:29,210 INFO  MetadataServer:Sent: OK. ProcessId = 58 name - localhost - 2058
+11-07-2017 17:54:29,535 INFO  MetadataServer:Sent: OK. ProcessId = 59 name - localhost - 2059
+11-07-2017 17:54:29,858 INFO  MetadataServer:Sent: OK. ProcessId = 60 name - localhost - 2060
+11-07-2017 17:54:30,184 INFO  MetadataServer:Sent: OK. ProcessId = 61 name - localhost - 2061
+11-07-2017 17:54:30,513 INFO  MetadataServer:Sent: OK. ProcessId = 62 name - localhost - 2062
+11-07-2017 17:54:30,837 INFO  MetadataServer:Sent: OK. ProcessId = 63 name - localhost - 2063
+11-07-2017 17:54:31,162 INFO  MetadataServer:Sent: OK. ProcessId = 64 name - localhost - 2064
+11-07-2017 17:54:31,482 INFO  MetadataServer:Sent: OK. ProcessId = 65 name - localhost - 2065
+11-07-2017 17:54:31,797 INFO  MetadataServer:Sent: OK. ProcessId = 66 name - localhost - 2066
+11-07-2017 17:54:52,758 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 17:54:55,261 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 17:54:55,879 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 17:54:56,236 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 17:55:03,299 INFO  MetadataServer:Name server reset
+11-07-2017 17:55:23,377 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 17:55:26,478 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 17:55:27,156 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 17:55:27,517 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 17:55:29,330 INFO  MetadataServer:Name server reset
+11-07-2017 17:59:59,681 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:00:00,545 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:00:00,917 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:00:03,161 INFO  MetadataServer:Name server reset
+11-07-2017 18:00:35,585 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:00:36,187 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:00:36,544 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:00:38,746 INFO  MetadataServer:Name server reset
+11-07-2017 18:04:41,049 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:04:41,685 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:04:42,094 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:05:04,300 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - localhost - 2003
+11-07-2017 18:05:04,888 INFO  MetadataServer:Sent: OK. ProcessId = 4 name - localhost - 2004
+11-07-2017 18:05:05,302 INFO  MetadataServer:Sent: OK. ProcessId = 5 name - localhost - 2005
+11-07-2017 18:06:11,332 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 18:06:17,165 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:06:17,771 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:06:18,187 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:06:20,531 INFO  MetadataServer:Name server reset
+11-07-2017 18:30:36,472 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 18:30:41,660 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:30:42,164 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:30:42,499 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:54:00,295 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 18:54:05,276 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:54:05,783 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:54:06,111 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 18:55:48,315 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 18:55:53,155 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 18:55:53,654 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 18:55:53,975 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 19:00:43,496 INFO  MetadataServer:Metadata Server is running ...
+11-07-2017 19:00:47,889 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - localhost - 2000
+11-07-2017 19:00:48,386 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
+11-07-2017 19:00:48,721 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
+11-07-2017 19:01:09,874 INFO  MetadataServer:Name server reset

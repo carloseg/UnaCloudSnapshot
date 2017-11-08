@@ -175,8 +175,8 @@ public class CoordinatorProcess implements Runnable {
 					if (line.startsWith(Constants.DONE)) {
 						// It marks the sender process of the message
 						markDone(sender);
-						
-						timesOfGS += line.split(" ")[4]+";";
+						String [] values = line.split(" "); 
+						timesOfGS += values[3].split(":")[1]+":"+values[4]+";";
 						
 						// If all peers are marked, it execute the step 2.
 						if (numberOfDone() == systemSize - 1) {
@@ -325,7 +325,7 @@ public class CoordinatorProcess implements Runnable {
 	public void getGlobalState() {
 		String s = "";
 
-		serverLog.info("Starting the global snapShot");
+		
 		initTime = System.nanoTime();
 		
 		// It queries the number of processes in the system
@@ -337,20 +337,20 @@ public class CoordinatorProcess implements Runnable {
 		
 		String takeSnapshot = Constants.TAKE_SNAPSHOT + Constants.SPACE + processId;
 		
-//		String answer = NamesUtil.nameInitialTime(
-//				processId,
-//				configuration.getNameServerHostName(), 
-//				configuration.getNameServerPort(), 1);
 
-		serverLog.info("Broadcasting " + takeSnapshot);
-		broadcast(takeSnapshot);
+		//Before start broadcasting, the process must wait for the authorization to start
+		String confirmation =  NamesUtil.notifyProcessOisReady(CommunicationsUtil.myIP(),
+				configuration.getNameServerHostName(),
+				configuration.getNameServerPort());
 		
-		step1();
-		// Registrar el tiempo de terminación del snapshot
-//		answer = NamesUtil.nameEndTime(
-//				processId, 
-//				configuration.getNameServerHostName(), 
-//				configuration.getNameServerPort(), 1);
+		if(confirmation.equals("START")){
+			serverLog.info("Starting the global snapShot");
+			serverLog.info("Broadcasting " + takeSnapshot);
+			broadcast(takeSnapshot);
+			
+			step1();
+		}
+		
 	}
 
 	private double step1() {
@@ -395,7 +395,7 @@ public class CoordinatorProcess implements Runnable {
 		
 		//if it is the process 0 it will add to the times his time
 		double timeOfThisProcess = elapsedTime/1000000000.0;
-		timesOfGS += timeOfThisProcess+";";
+		timesOfGS += vmname+":"+timeOfThisProcess+";";
 		return timeOfThisProcess;
 	}
 	
