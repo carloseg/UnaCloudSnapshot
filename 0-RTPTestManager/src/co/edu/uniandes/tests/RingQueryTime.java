@@ -8,11 +8,11 @@ package co.edu.uniandes.tests;
  * 2017
  */
 
-import co.edu.uniandes.configuration.NameServerConfiguration;
+import co.edu.uniandes.configuration.RTPTestManagerConfiguration;
 import co.edu.uniandes.util.NamesUtil;
 
 public class RingQueryTime {	
-	private NameServerConfiguration configuration;
+	private RTPTestManagerConfiguration configuration;
 	private Process process;
 	
 	/**
@@ -20,7 +20,7 @@ public class RingQueryTime {
 	 */
 	public RingQueryTime() {
 		// reading the configuration properties
-		configuration = new NameServerConfiguration ("nameServer.properties");
+		configuration = new RTPTestManagerConfiguration ("nameServer.properties");
 	}
 	
 	/**

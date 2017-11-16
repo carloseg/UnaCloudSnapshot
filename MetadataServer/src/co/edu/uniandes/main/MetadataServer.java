@@ -27,13 +27,13 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import co.edu.uniandes.configuration.NameServerConfiguration;
+import co.edu.uniandes.configuration.MetadataServerConfiguration;
 import co.edu.uniandes.tests.TestTime;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.LoggerUtil;
 
 public class MetadataServer {
-	private NameServerConfiguration configuration;
+	private MetadataServerConfiguration configuration;
 	private ServerSocket listener;
 	private Socket client;
 	private BufferedReader reader;
@@ -49,7 +49,7 @@ public class MetadataServer {
 	 */
 	public MetadataServer() {
 		// reading the configuration properties
-		configuration = new NameServerConfiguration("metadataServer.properties");
+		configuration = new MetadataServerConfiguration("metadataServer.properties");
 		loggerSetUp();
 
 		log.info("Metadata Server is running ...");
@@ -148,17 +148,24 @@ public class MetadataServer {
 			localTimes+= timesS[i]+";";
 		}
 		
-		String result = "Local times: "+localTimes+". GS time: "+timesS[timesS.length-1];
+		//String result = "Local times: "+localTimes+". GS time: "+timesS[timesS.length-1];
+		String result = "\n"+ (timesS.length-2)+","+configuration.getPhysicalMachines()+","+
+				(timesS.length-2)/configuration.getPhysicalMachines()+","+
+				timesS[timesS.length-1]+",";
+		
 		System.out.println(result);
 		File log = new File("TIMES of GS.txt");
 		try{
 			if(log.exists()==false){
 				System.out.println("We had to make a new file.");
 				log.createNewFile();
+				
 			}
 			PrintWriter out = new PrintWriter(new FileWriter(log, true));
-			out.append("\n"+"******* " + new Date().toString()+"     ******* " );
-			out.append("\n"+result);
+			for(int i=0; i< (timesS.length-2);i++){
+				out.append(result+timesS[i+1].split(":")[1]);
+			}
+			
 			out.close();
 		}catch(IOException e){
 			System.out.println("COULD NOT LOG!!");

@@ -110,3 +110,39 @@
 09-16-2017 19:51:10,810 INFO  Process0:Received: DONE 1  VM Name:test2 697578825
 09-16-2017 19:51:10,817 INFO  Process0:The global snapshot has finished.
 09-16-2017 19:51:10,818 INFO  Process0:Global Snapshot time: 11.875212594 s
+11-15-2017 23:45:30,835 INFO  Process0:Process 0 in charge of VM: test1 is running ...
+11-15-2017 23:46:03,213 INFO  Process0:Starting the global snapShot
+11-15-2017 23:46:03,214 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+11-15-2017 23:46:03,218 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+11-15-2017 23:46:03,218 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+11-15-2017 23:46:08,106 INFO  Process0:Starting the local snapShot of test1
+11-15-2017 23:46:09,329 INFO  Process0:Local Snapshot time: 1.219702574 s
+11-15-2017 23:46:09,329 INFO  Process0:Ending the local snapShot of test1
+11-15-2017 23:46:09,596 INFO  Process0:Received: DONE 2 VM Name:test3 1.220047398
+11-15-2017 23:46:09,627 INFO  Process0:Received: DONE 1 VM Name:test2 1.191344424
+11-15-2017 23:46:09,627 INFO  Process0:The global snapshot has finished.
+11-15-2017 23:46:09,627 INFO  Process0:Global Snapshot time: 38.168584948 s
+11-15-2017 23:58:39,014 INFO  Process0:Process 0 in charge of VM: test1 is running ...
+11-15-2017 23:58:56,156 INFO  Process0:Starting the global snapShot
+11-15-2017 23:58:56,158 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+11-15-2017 23:58:56,163 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+11-15-2017 23:58:56,163 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+11-15-2017 23:58:58,441 INFO  Process0:Starting the local snapShot of test1
+11-15-2017 23:58:59,347 INFO  Process0:Local Snapshot time: 0.895947158 s
+11-15-2017 23:58:59,347 INFO  Process0:Ending the local snapShot of test1
+11-15-2017 23:58:59,637 INFO  Process0:Received: DONE 1 VM Name:test2 0.828046044
+11-15-2017 23:58:59,637 INFO  Process0:Received: DONE 2 VM Name:test3 1.146518539
+11-15-2017 23:58:59,637 INFO  Process0:The global snapshot has finished.
+11-15-2017 23:58:59,637 INFO  Process0:Global Snapshot time: 20.073687306 s
+11-16-2017 00:09:00,950 INFO  Process0:Process 0 in charge of VM: test1 is running ...
+11-16-2017 00:09:16,085 INFO  Process0:Starting the global snapShot
+11-16-2017 00:09:16,085 INFO  Process0:Broadcasting TAKE_SNAPSHOT 0
+11-16-2017 00:09:16,090 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 1:localhost:2001
+11-16-2017 00:09:16,090 INFO  Process0:Sent: TAKE_SNAPSHOT 0 to: 2:localhost:2002
+11-16-2017 00:09:17,443 INFO  Process0:Starting the local snapShot of test1
+11-16-2017 00:09:18,501 INFO  Process0:Local Snapshot time: 1.051797014 s
+11-16-2017 00:09:18,501 INFO  Process0:Ending the local snapShot of test1
+11-16-2017 00:09:18,747 INFO  Process0:Received: DONE 2 VM Name:test3 0.867107964
+11-16-2017 00:09:18,758 INFO  Process0:Received: DONE 1 VM Name:test2 1.103465217
+11-16-2017 00:09:18,758 INFO  Process0:The global snapshot has finished.
+11-16-2017 00:09:18,758 INFO  Process0:Global Snapshot time: 17.34628007 s

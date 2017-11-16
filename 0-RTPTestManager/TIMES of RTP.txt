@@ -19,3 +19,11 @@
 ******* Tue Nov 07 18:58:56 COT 2017     Prueba 1, 2 VMs por host. hoy******* 3.483125024 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
 
 ******* Tue Nov 07 19:01:08 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.940801507 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Nov 15 23:43:34 COT 2017     Prueba 1, 2 VMs por host. hoy******* 5.263849071 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Nov 15 23:46:05 COT 2017     Prueba 1, 2 VMs por host. hoy******* 4.060776097 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Wed Nov 15 23:58:58 COT 2017     Prueba 1, 2 VMs por host. hoy******* 4.452045058 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+
+******* Thu Nov 16 00:09:17 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.801040397 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100

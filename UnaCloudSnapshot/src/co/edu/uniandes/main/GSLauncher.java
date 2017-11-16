@@ -64,7 +64,7 @@ public class GSLauncher {
 		    
 		    while (line != null) {
 		        names.add(line);
-		        System.out.println(line);
+		        //System.out.println(line);
 		        line = br.readLine();
 		    }
 		    

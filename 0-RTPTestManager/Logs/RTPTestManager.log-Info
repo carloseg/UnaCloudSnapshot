@@ -435,3 +435,51 @@ The ring just started. The ring is composed by 8 instances.
 11-07-2017 19:01:05,778 INFO  RTPTestManager:
 The ring just started. The ring is composed by 8 instances.
 11-07-2017 19:01:09,243 INFO  RTPTestManager:Name server reset
+11-15-2017 23:43:18,039 INFO  RTPTestManager:Name Server is running ...
+11-15-2017 23:43:26,554 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:2:0:3000
+11-15-2017 23:43:26,935 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:2:0:3001
+11-15-2017 23:43:27,045 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:2:0:3002
+11-15-2017 23:43:27,138 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:2:0:3003
+11-15-2017 23:43:27,248 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:2:0:3004
+11-15-2017 23:43:27,373 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:2:0:3005
+11-15-2017 23:43:27,482 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:2:0:3006
+11-15-2017 23:43:27,592 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:2:0:3007
+11-15-2017 23:43:29,677 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
+11-15-2017 23:43:35,789 INFO  RTPTestManager:Name server reset
+11-15-2017 23:45:50,846 INFO  RTPTestManager:Name Server is running ...
+11-15-2017 23:45:58,032 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:2:0:3000
+11-15-2017 23:45:58,390 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:2:0:3001
+11-15-2017 23:45:58,484 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:2:0:3002
+11-15-2017 23:45:58,578 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:2:0:3003
+11-15-2017 23:45:58,687 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:2:0:3004
+11-15-2017 23:45:58,781 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:2:0:3005
+11-15-2017 23:45:58,875 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:2:0:3006
+11-15-2017 23:45:58,953 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:2:0:3007
+11-15-2017 23:46:00,973 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
+11-15-2017 23:46:05,982 INFO  RTPTestManager:Name server reset
+11-15-2017 23:58:45,212 INFO  RTPTestManager:Name Server is running ...
+11-15-2017 23:58:50,951 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:2:0:3000
+11-15-2017 23:58:51,285 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:2:0:3001
+11-15-2017 23:58:51,394 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:2:0:3002
+11-15-2017 23:58:51,504 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:2:0:3003
+11-15-2017 23:58:51,598 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:2:0:3004
+11-15-2017 23:58:51,691 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:2:0:3005
+11-15-2017 23:58:51,785 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:2:0:3006
+11-15-2017 23:58:51,879 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:2:0:3007
+11-15-2017 23:58:53,883 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
+11-15-2017 23:58:58,988 INFO  RTPTestManager:Name server reset
+11-16-2017 00:09:07,079 INFO  RTPTestManager:Name Server is running ...
+11-16-2017 00:09:11,811 INFO  RTPTestManager:Sent: OK. ProcessId:0:10000:100:2:0:3000
+11-16-2017 00:09:12,032 INFO  RTPTestManager:Sent: OK. ProcessId:1:10000:100:2:0:3001
+11-16-2017 00:09:12,134 INFO  RTPTestManager:Sent: OK. ProcessId:2:10000:100:2:0:3002
+11-16-2017 00:09:12,244 INFO  RTPTestManager:Sent: OK. ProcessId:3:10000:100:2:0:3003
+11-16-2017 00:09:12,353 INFO  RTPTestManager:Sent: OK. ProcessId:4:10000:100:2:0:3004
+11-16-2017 00:09:12,431 INFO  RTPTestManager:Sent: OK. ProcessId:5:10000:100:2:0:3005
+11-16-2017 00:09:12,525 INFO  RTPTestManager:Sent: OK. ProcessId:6:10000:100:2:0:3006
+11-16-2017 00:09:12,619 INFO  RTPTestManager:Sent: OK. ProcessId:7:10000:100:2:0:3007
+11-16-2017 00:09:14,637 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
+11-16-2017 00:09:17,944 INFO  RTPTestManager:Name server reset

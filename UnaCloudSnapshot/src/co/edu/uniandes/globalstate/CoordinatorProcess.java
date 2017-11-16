@@ -95,7 +95,7 @@ public class CoordinatorProcess implements Runnable {
 		done = new boolean[configuration.getMax()];
 
 		loggerSetUp(processId);
-		serverLog.info("Process " + processId + " is running ...");
+		serverLog.info("Process " + processId + " in charge of VM: "+vmname+" is running ...");
 		
 		// SHOULD BE ONLY BASE. Because one machine per coordinator process
 		localPort = configuration.getBase() + processId;
@@ -179,7 +179,7 @@ public class CoordinatorProcess implements Runnable {
 						timesOfGS += values[3].split(":")[1]+":"+values[4]+";";
 						
 						// If all peers are marked, it execute the step 2.
-						if (numberOfDone() == systemSize - 1) {
+						if (numberOfDone() == systemSize) {
 //							step2();
 							serverLog.info("The global snapshot has finished.");
 
@@ -396,6 +396,7 @@ public class CoordinatorProcess implements Runnable {
 		//if it is the process 0 it will add to the times his time
 		double timeOfThisProcess = elapsedTime/1000000000.0;
 		timesOfGS += vmname+":"+timeOfThisProcess+";";
+		markDone(0);
 		return timeOfThisProcess;
 	}
 	

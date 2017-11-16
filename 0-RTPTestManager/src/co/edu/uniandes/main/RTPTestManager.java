@@ -29,7 +29,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import co.edu.uniandes.configuration.NameServerConfiguration;
+import co.edu.uniandes.configuration.RTPTestManagerConfiguration;
 import co.edu.uniandes.tests.TestTime;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.LoggerUtil;
@@ -43,7 +43,7 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
 public class RTPTestManager {
-	private NameServerConfiguration configuration;
+	private RTPTestManagerConfiguration configuration;
 	private ServerSocket listener;
 	private Socket client;
 	private BufferedReader reader;
@@ -70,7 +70,7 @@ public class RTPTestManager {
 	 */
 	public RTPTestManager() {
 		// reading the configuration properties
-		configuration = new NameServerConfiguration("RTPTestManager.properties");
+		configuration = new RTPTestManagerConfiguration("RTPTestManager.properties");
 
 		// logger setup
 		loggerSetUp();
@@ -145,7 +145,7 @@ public class RTPTestManager {
 					String base = line.split(";")[1];
 					System.out.println("\n"+base);
 					
-					if(base.split(":")[1].split("%")[0].trim().equals("40.0")){
+					if(base.split(":")[1].split("%")[0].trim().equals(configuration.getPercentageToStartGS())){
 						String [] dir =configuration.getAdressAndPortOfMetaDataServer().split("-");
 						sendMessage(dir[0], Integer.parseInt(dir[1]), "StartGS");
 						log.debug("GS  starting ");

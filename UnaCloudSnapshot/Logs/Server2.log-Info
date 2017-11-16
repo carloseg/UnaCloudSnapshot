@@ -49,3 +49,21 @@
 09-16-2017 19:51:10,185 INFO  Process2:Local Snapshot time: 0.714635342 s
 09-16-2017 19:51:10,186 INFO  Process2:Ending the local snapShot of test3
 09-16-2017 19:51:10,741 INFO  Process2:Sent: DONE 2  VM Name:test3 714635342 to: 0:localhost:2000
+11-15-2017 23:45:31,449 INFO  Process2:Process 2 in charge of VM: test3 is running ...
+11-15-2017 23:46:03,218 INFO  Process2:Received: TAKE_SNAPSHOT 0
+11-15-2017 23:46:08,106 INFO  Process2:Starting the local snapShot of test3
+11-15-2017 23:46:09,329 INFO  Process2:Local Snapshot time: 1.220047398 s
+11-15-2017 23:46:09,329 INFO  Process2:Ending the local snapShot of test3
+11-15-2017 23:46:09,596 INFO  Process2:Sent: DONE 2 VM Name:test3 1.220047398 to: 0:localhost:2000
+11-15-2017 23:58:39,568 INFO  Process2:Process 2 in charge of VM: test3 is running ...
+11-15-2017 23:58:56,163 INFO  Process2:Received: TAKE_SNAPSHOT 0
+11-15-2017 23:58:58,189 INFO  Process2:Starting the local snapShot of test3
+11-15-2017 23:58:59,347 INFO  Process2:Local Snapshot time: 1.146518539 s
+11-15-2017 23:58:59,347 INFO  Process2:Ending the local snapShot of test3
+11-15-2017 23:58:59,637 INFO  Process2:Sent: DONE 2 VM Name:test3 1.146518539 to: 0:localhost:2000
+11-16-2017 00:09:01,419 INFO  Process2:Process 2 in charge of VM: test3 is running ...
+11-16-2017 00:09:16,090 INFO  Process2:Received: TAKE_SNAPSHOT 0
+11-16-2017 00:09:17,631 INFO  Process2:Starting the local snapShot of test3
+11-16-2017 00:09:18,501 INFO  Process2:Local Snapshot time: 0.867107964 s
+11-16-2017 00:09:18,501 INFO  Process2:Ending the local snapShot of test3
+11-16-2017 00:09:18,745 INFO  Process2:Sent: DONE 2 VM Name:test3 0.867107964 to: 0:localhost:2000

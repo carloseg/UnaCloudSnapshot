@@ -8,11 +8,11 @@ package co.edu.uniandes.main;
  * 2017
  */
 
-import co.edu.uniandes.configuration.NameServerConfiguration;
+import co.edu.uniandes.configuration.MetadataServerConfiguration;
 import co.edu.uniandes.util.NamesUtil;
 
 public class QueryTime {	
-	private NameServerConfiguration configuration;
+	private MetadataServerConfiguration configuration;
 	private Process process;
 	
 	/**
@@ -20,7 +20,7 @@ public class QueryTime {
 	 */
 	public QueryTime() {
 		// reading the configuration properties
-		configuration = new NameServerConfiguration ("nameServer.properties");
+		configuration = new MetadataServerConfiguration ("nameServer.properties");
 	}
 	
 	/**
