@@ -1032,3 +1032,4 @@
 11-16-2017 00:09:01,184 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - localhost - 2001
 11-16-2017 00:09:01,403 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - localhost - 2002
 11-16-2017 00:09:18,771 INFO  MetadataServer:Name server reset
+11-21-2017 15:39:11,905 INFO  MetadataServer:Metadata Server is running ...

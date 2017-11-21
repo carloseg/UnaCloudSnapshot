@@ -84,7 +84,8 @@ public class CommunicationsUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	    //return ip;
-	  return "localhost";
+	  
+		return ip;
+		// return "localhost";
 	}
 }

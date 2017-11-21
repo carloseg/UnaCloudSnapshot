@@ -326,7 +326,7 @@ public class CoordinatorProcess implements Runnable {
 		String s = "";
 
 		
-		initTime = System.nanoTime();
+		
 		
 		// It queries the number of processes in the system
 		systemSize = Integer.parseInt(
@@ -344,6 +344,7 @@ public class CoordinatorProcess implements Runnable {
 				configuration.getNameServerPort());
 		
 		if(confirmation.equals("START")){
+			initTime = System.nanoTime();
 			serverLog.info("Starting the global snapShot");
 			serverLog.info("Broadcasting " + takeSnapshot);
 			broadcast(takeSnapshot);
