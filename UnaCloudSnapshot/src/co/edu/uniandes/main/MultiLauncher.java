@@ -30,8 +30,8 @@ public class MultiLauncher {
 		Thread[] t = new Thread[numberOfProcesses];
 		
 		for (int i=0; i<p.length; i++) {
-
-			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
+			int localPort = configuration.getBase() + i;
+			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),localPort,
 					configuration.getNameServerHostName(),
 					configuration.getNameServerPort());
 

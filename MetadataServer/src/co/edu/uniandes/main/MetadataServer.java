@@ -70,7 +70,7 @@ public class MetadataServer {
 				// blocking waiting for processes
 				client = listener.accept();
 				
-				String add = (client.getInetAddress()+"").substring(1);
+				String address = (client.getInetAddress()+"").substring(1);
 
 				// connections creation
 				plugIn();
@@ -85,7 +85,7 @@ public class MetadataServer {
 
 				// messages processing
 				if (line.trim().startsWith("INSERT")) {
-					answer = insert(line, add); 
+					answer = insert(line,address); 
 				} else if (line.startsWith("QUERY" + Constants.SPACE)) {
 					answer = query(line);
 				} else if (line.trim().startsWith("QUERY_LIST")) {
@@ -149,7 +149,7 @@ public class MetadataServer {
 		}
 		
 		//String result = "Local times: "+localTimes+". GS time: "+timesS[timesS.length-1];
-		String result = "\n"+ (timesS.length-2)+","+configuration.getPhysicalMachines()+","+
+		String result = (timesS.length-2)+","+configuration.getPhysicalMachines()+","+
 				(timesS.length-2)/configuration.getPhysicalMachines()+","+
 				timesS[timesS.length-1]+",";
 		
@@ -163,7 +163,7 @@ public class MetadataServer {
 			}
 			PrintWriter out = new PrintWriter(new FileWriter(log, true));
 			for(int i=0; i< (timesS.length-2);i++){
-				out.append(result+timesS[i+1].split(":")[1]);
+				out.append("\r\n"+ result+timesS[i+1].split(":")[1]);
 			}
 			
 			out.close();
@@ -182,24 +182,26 @@ public class MetadataServer {
 	 * @param line
 	 * @return answer
 	 */
-	private String insert(String line, String add) {
+	private String insert(String line,String address) {
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
 		// INSERT --> 0
-		// address --> 1
+		// address --> 1  not working
+		// localPort --> 2
 		int processId = directory.size();
 		
-		String address = "";
+		//String address = m[1];
+		int localPort = Integer.parseInt(m[2]);
 		
-		if (add.equals("127.0.0.1") == true) {
-			address = configuration.getMyIP();
-		} else {
-			address = add;
-		}
+//		if (add.equals("127.0.0.1") == true) {
+//			address = configuration.getMyIP();
+//		} else {
+//			address = add;
+//		}
 
 		String name = configuration.getProcessHostnamePrefix()
 				+ processId;
-		int localPort = configuration.getBase() + processId;
+//		int localPort = configuration.getBase() + processId;
 
 		if (directory.containsKey(name)) {
 			answer = "The server name is already registered.";

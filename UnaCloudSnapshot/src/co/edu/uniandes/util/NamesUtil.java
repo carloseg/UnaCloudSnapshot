@@ -25,12 +25,12 @@ public class NamesUtil {
 	 * @param port It is the port number used by the name server to listen to.
 	 * @return String It is the answer sent by the name server.
 	 */
-	public static String nameInsert(String address, String nameServer, int port) {
+	public static String nameInsert(String address, int localPort, String nameServer, int port) {
 		// a: answer; r: reader; w: writer
 		String a = "";
 
 		String m = "INSERT" + Constants.SPACE +
-				address;
+				address + Constants.SPACE + localPort;
 		
 		a = sendMessage(nameServer, port, m);
 		

@@ -17,12 +17,15 @@ public class GSLauncher {
 	private Configuration configuration;
 	private CoordinatorProcess process;
 
+	// El constructor carga las propiedades
 	public GSLauncher() {
 		configuration = new Configuration ("snapshot.properties");
 	}
 
+	
 	public void init() {
 
+		// carga los nombres de las VMs en un array
 		String [] namesOfVM = getNamesOfVMs();
 		
 		CoordinatorProcess[] p = new CoordinatorProcess[namesOfVM.length];
@@ -31,12 +34,26 @@ public class GSLauncher {
 		CoordinatorProcess id0 = null;
 		
 		for(int i=0; i< namesOfVM.length;i++){
-			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(),
+			
+			// hay un puerto local por cada VM
+			int localPort = configuration.getBase() + i;
+			
+			// para registrarse, cada thread envía la dirección IP del host y el puerto local
+			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(), localPort, 
 					configuration.getNameServerHostName(),
 					configuration.getNameServerPort());
 
+			// formato de la respuesta
+			// answer = "OK. ProcessId = " + processId + " name - " + address + " - " + localPort;
+			// [0] = "OK."
+			// [1] = "ProcessId"
+			// [2] = "="
+			// [3] = processId
+			// ...
+			
 			int pause = configuration.getPause();
 			int processId = Integer.parseInt(answer.split(Constants.SPACE)[3]);
+			
 			p[i]  = new CoordinatorProcess (processId, configuration, namesOfVM[i]);
 
 			Thread t = new Thread(p[i]);
@@ -86,11 +103,3 @@ public class GSLauncher {
 	}
 }
 
-
-
-/*
- * Los cambios para duplicar el proceso: 
- * 1) Cambiar el id del proceso
- * 2) Eliminar la pausa
- * 3) Eliminar el llamado a obtener el estado global
- */

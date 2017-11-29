@@ -26,22 +26,22 @@ public class QueryTime {
 	/**
 	 * This method initiates the execution of the application
 	 */
-	public void init() {
-		// reseting the name server
-		String r = NamesUtil.nameServerRingQueryTime(
-				configuration.getNameServerHostName(),
-				configuration.getNameServerPort());
-		
-		r = r.replace(';', '\n');
-		
-		System.out.println(r);
-	}
+//	public void init() {
+//		// reseting the name server
+//		String r = NamesUtil.nameServerRingQueryTime(
+//				configuration.getNameServerHostName(),
+//				configuration.getNameServerPort());
+//		
+//		r = r.replace(';', '\n');
+//		
+//		System.out.println(r);
+//	}
 	
 	/**
 	 * This is the main method to launch the application.
 	 */
 	public static void main(String[] args) {
 		QueryTime qt = new QueryTime();
-		qt.init();
+//		qt.init();
 	}
 }

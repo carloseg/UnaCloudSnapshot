@@ -122,8 +122,7 @@ public class CoordinatorProcess implements Runnable {
 				Socket socket = listener.accept();
 
 				// Ver si se puede hacer una sola vez. EVALUAR
-				reader = new BufferedReader(new InputStreamReader(
-						socket.getInputStream()));
+				reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
 				String line = reader.readLine();
 				serverLog.info("Received: " + line);
@@ -154,7 +153,8 @@ public class CoordinatorProcess implements Runnable {
 //							configuration.getNameServerPort(), 1);
 					
 					// It sends a DONE message to the starter process
-					String done = Constants.DONE + Constants.SPACE + processId+Constants.SPACE + "VM Name:"+ vmname + Constants.SPACE + t;
+					String done = Constants.DONE + Constants.SPACE + processId
+							+ Constants.SPACE + "VM Name:"+ vmname + Constants.SPACE + t;
 					
 					// It queries the starter process network information.
 					starter = NamesUtil.nameQuery(
@@ -201,7 +201,7 @@ public class CoordinatorProcess implements Runnable {
 							
 							
 //							elapsedTime = tc-tb;
-//							System.out.println("DespuÃ©s del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
+//							System.out.println("Después del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
 //							
 //							elapsedTime = endTime-tc;
 //							System.out.println("Tiempo de espera time: " + elapsedTime/1000000000.0 + " s");
@@ -398,6 +398,19 @@ public class CoordinatorProcess implements Runnable {
 		double timeOfThisProcess = elapsedTime/1000000000.0;
 		timesOfGS += vmname+":"+timeOfThisProcess+";";
 		markDone(0);
+		if (numberOfDone() == systemSize) {
+			serverLog.info("The global snapshot has finished.");
+			endTime = System.nanoTime();
+			elapsedTime = endTime-initTime;
+			double elapsedTimeInSeconds=elapsedTime/1000000000.0 ;
+			serverLog.info("Global Snapshot time: " + elapsedTimeInSeconds+ " s");
+			
+			timesOfGS+= elapsedTimeInSeconds;
+			System.out.println("Sending times: "+timesOfGS);
+			notifyEnd();	
+			Util.pause(5);
+			System.exit(0);
+		}
 		return timeOfThisProcess;
 	}
 	
@@ -424,14 +437,13 @@ public class CoordinatorProcess implements Runnable {
 		}
 	}	
 	
-	/////// QUITAR -p tcp
-	
 	// 1. 
 	private String markPre(String vmname, String user, String password) {
 		String s;
 		// pone la marca 0x10 (PRE)
 		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-				"-t mangle -A OUTPUT -p tcp -j DSCP --set-dscp 16");
+				"-t mangle -A OUTPUT -j DSCP --set-dscp 16");
+		//	"-t mangle -A OUTPUT -p tcp -j DSCP --set-dscp 16");
 		return s;
 	}
 
@@ -440,7 +452,8 @@ public class CoordinatorProcess implements Runnable {
 		String s;
 		// agrega la regla de descartar paquetes entrantes con la marca 0x10
 		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-				"-A INPUT -p tcp -m dscp --dscp 32 -j DROP");
+				"-A INPUT -m dscp --dscp 32 -j DROP");
+				//"-A INPUT -p tcp -m dscp --dscp 32 -j DROP");
 		return s;
 	}
 

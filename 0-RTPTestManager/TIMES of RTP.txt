@@ -1,29 +1,14 @@
 
+******* Tue Nov 28 12:04:09 COT 2017     Prueba funcional******* 23.869986284 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
 
-******* Tue Sep 26 15:20:56 COT 2017     Prueba 1, 2 VMs por host. hoy******* 3.291444825 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Tue Nov 28 15:47:08 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 101.130208113 s.     MaxTokenValue: 1000000. MaxBenchmarkValue: 600
 
-******* Tue Sep 26 15:23:51 COT 2017     Prueba 1, 2 VMs por host. hoy******* 1.413047625 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Tue Nov 28 15:54:12 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 113.034204476 s.     MaxTokenValue: 1000000. MaxBenchmarkValue: 600
 
-******* Tue Nov 07 18:41:00 COT 2017     Prueba 1, 2 VMs por host. hoy******* 3.916496867 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Tue Nov 28 15:56:13 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 2.620608111 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
 
-******* Tue Nov 07 18:43:53 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.605014702 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Wed Nov 29 12:09:39 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 0.378931554 s.     MaxTokenValue: 1000. MaxBenchmarkValue: 100
 
-******* Tue Nov 07 18:48:02 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.778815984 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Wed Nov 29 12:21:52 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 0.358790659 s.     MaxTokenValue: 1000. MaxBenchmarkValue: 100
 
-******* Tue Nov 07 18:50:46 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.871566086 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Tue Nov 07 18:51:57 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.637246861 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Tue Nov 07 18:56:16 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.617405548 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Tue Nov 07 18:58:56 COT 2017     Prueba 1, 2 VMs por host. hoy******* 3.483125024 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Tue Nov 07 19:01:08 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.940801507 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Wed Nov 15 23:43:34 COT 2017     Prueba 1, 2 VMs por host. hoy******* 5.263849071 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Wed Nov 15 23:46:05 COT 2017     Prueba 1, 2 VMs por host. hoy******* 4.060776097 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Wed Nov 15 23:58:58 COT 2017     Prueba 1, 2 VMs por host. hoy******* 4.452045058 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
-
-******* Thu Nov 16 00:09:17 COT 2017     Prueba 1, 2 VMs por host. hoy******* 2.801040397 s.     MaxTokenValue: 10000. MaxBenchmarkValue: 100
+******* Wed Nov 29 12:25:44 COT 2017     Prueba funcional GS 1 4vm 16pm (1000000 600)******* 0.365485877 s.     MaxTokenValue: 1000. MaxBenchmarkValue: 100

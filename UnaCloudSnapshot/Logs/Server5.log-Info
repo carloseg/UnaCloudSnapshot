@@ -1,5 +1,0 @@
-05-01-2017 17:33:44,170 INFO  Process5:Process 5 is running ...
-05-01-2017 17:34:07,764 INFO  Process5:Received: TAKE_SNAPSHOT 0
-05-01-2017 17:34:08,698 INFO  Process5:Starting the local snapShot of vmtest01
-05-01-2017 17:34:18,720 INFO  Process5:Ending the local snapShot of vmtest01
-05-01-2017 17:34:19,897 INFO  Process5:Sent: DONE 5 to: 0:128.213.23.13:2000

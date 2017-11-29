@@ -15,10 +15,10 @@ import java.util.Properties;
  */
 
 public class MetadataServerConfiguration {
-	private String myIP;
+//	private String myIP;
 	private int base;
 	private String processHostnamePrefix;
-	private String nameServerHostName;
+//	private String nameServerHostName;
 	private int nameServerPort;
 	private String labelLogFile;
 	private String pathLog;
@@ -42,9 +42,9 @@ public class MetadataServerConfiguration {
 
 			p.load(is);
 
-			myIP = p.getProperty("myIP");
+//			myIP = p.getProperty("myIP");
 			base = Integer.parseInt(p.getProperty("base"));
-			nameServerHostName = p.getProperty("nameServerHostName");
+//			nameServerHostName = p.getProperty("nameServerHostName");
 			processHostnamePrefix = p.getProperty("processHostnamePrefix");
 			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
 			labelLogFile = p.getProperty("labelLogFile");
@@ -57,26 +57,26 @@ public class MetadataServerConfiguration {
 		}
 	}
 
-	/**
-	 * This method returns the ip address of the process.
-	 * 
-	 * @return String The ip address of the physical machine.
-	 */
-	public String getMyIP() {
-		return myIP;
-	}
+//	/**
+//	 * This method returns the ip address of the process.
+//	 * 
+//	 * @return String The ip address of the physical machine.
+//	 */
+//	public String getMyIP() {
+//		return myIP;
+//	}
 	public int getPhysicalMachines(){
 		return physicalMachines;
 	}
 
-	/**
-	 * This method returns the name server hostname.
-	 * 
-	 * @return String The hostname prefix.
-	 */
-	public String getNameServerHostName() {
-		return nameServerHostName;
-	}
+//	/**
+//	 * This method returns the name server hostname.
+//	 * 
+//	 * @return String The hostname prefix.
+//	 */
+//	public String getNameServerHostName() {
+//		return nameServerHostName;
+//	}
 
 	/**
 	 * This method returns the base port number.
