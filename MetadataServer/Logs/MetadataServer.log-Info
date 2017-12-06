@@ -1,50 +1,6 @@
-12-04-2017 11:18:42,652 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 11:26:48,058 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 11:26:48,850 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.33 - 10028
-12-04-2017 11:26:49,629 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.35 - 10028
-12-04-2017 11:26:50,487 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.32 - 10028
-12-04-2017 11:29:13,179 INFO  MetadataServer:Name server reset
-12-04-2017 13:34:10,493 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 13:39:07,821 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 13:39:07,881 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.34 - 10029
-12-04-2017 13:39:08,601 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.33 - 10028
-12-04-2017 13:39:08,656 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.33 - 10029
-12-04-2017 13:39:09,361 INFO  MetadataServer:Sent: OK. ProcessId = 4 name - 157.253.239.35 - 10028
-12-04-2017 13:39:09,414 INFO  MetadataServer:Sent: OK. ProcessId = 5 name - 157.253.239.35 - 10029
-12-04-2017 13:39:10,144 INFO  MetadataServer:Sent: OK. ProcessId = 6 name - 157.253.239.32 - 10028
-12-04-2017 13:39:10,202 INFO  MetadataServer:Sent: OK. ProcessId = 7 name - 157.253.239.32 - 10029
-12-04-2017 13:50:19,602 INFO  MetadataServer:Sent: OK. ProcessId = 8 name - 157.253.239.34 - 10028
-12-04-2017 13:50:19,658 INFO  MetadataServer:Sent: OK. ProcessId = 9 name - 157.253.239.34 - 10029
-12-04-2017 13:50:20,359 INFO  MetadataServer:Sent: OK. ProcessId = 10 name - 157.253.239.33 - 10028
-12-04-2017 13:50:20,412 INFO  MetadataServer:Sent: OK. ProcessId = 11 name - 157.253.239.33 - 10029
-12-04-2017 13:50:21,114 INFO  MetadataServer:Sent: OK. ProcessId = 12 name - 157.253.239.35 - 10028
-12-04-2017 13:50:21,169 INFO  MetadataServer:Sent: OK. ProcessId = 13 name - 157.253.239.35 - 10029
-12-04-2017 13:50:21,878 INFO  MetadataServer:Sent: OK. ProcessId = 14 name - 157.253.239.32 - 10028
-12-04-2017 13:50:21,935 INFO  MetadataServer:Sent: OK. ProcessId = 15 name - 157.253.239.32 - 10029
-12-04-2017 13:58:16,565 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 14:02:10,783 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 14:02:10,844 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.34 - 10029
-12-04-2017 14:02:11,536 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.33 - 10028
-12-04-2017 14:02:11,590 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.33 - 10029
-12-04-2017 14:02:12,308 INFO  MetadataServer:Sent: OK. ProcessId = 4 name - 157.253.239.35 - 10028
-12-04-2017 14:02:12,366 INFO  MetadataServer:Sent: OK. ProcessId = 5 name - 157.253.239.35 - 10029
-12-04-2017 14:02:13,056 INFO  MetadataServer:Sent: OK. ProcessId = 6 name - 157.253.239.32 - 10028
-12-04-2017 14:02:13,110 INFO  MetadataServer:Sent: OK. ProcessId = 7 name - 157.253.239.32 - 10029
-12-04-2017 14:20:16,758 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 14:23:23,716 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 14:23:24,465 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.33 - 10028
-12-04-2017 14:23:25,230 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.35 - 10028
-12-04-2017 14:23:25,982 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.32 - 10028
-12-04-2017 14:29:25,651 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 14:32:41,795 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 14:32:42,544 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.33 - 10028
-12-04-2017 14:32:43,316 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.35 - 10028
-12-04-2017 14:32:44,144 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.32 - 10028
-12-04-2017 14:35:31,688 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 14:47:40,447 INFO  MetadataServer:Metadata Server is running ...
-12-04-2017 14:51:16,766 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
-12-04-2017 14:51:17,512 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.33 - 10028
-12-04-2017 14:51:18,327 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.35 - 10028
-12-04-2017 14:51:19,078 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.32 - 10028
-12-04-2017 16:51:38,866 INFO  MetadataServer:Metadata Server is running ...
-12-05-2017 10:14:34,923 INFO  MetadataServer:Metadata Server is running ...
+12-06-2017 14:07:25,266 INFO  MetadataServer:Metadata Server is running ...
+12-06-2017 14:20:44,335 INFO  MetadataServer:Sent: OK. ProcessId = 0 name - 157.253.239.34 - 10028
+12-06-2017 14:20:45,130 INFO  MetadataServer:Sent: OK. ProcessId = 1 name - 157.253.239.33 - 10028
+12-06-2017 14:20:45,903 INFO  MetadataServer:Sent: OK. ProcessId = 2 name - 157.253.239.35 - 10028
+12-06-2017 14:20:46,639 INFO  MetadataServer:Sent: OK. ProcessId = 3 name - 157.253.239.32 - 10028
+12-06-2017 14:26:18,001 INFO  MetadataServer:Name server reset

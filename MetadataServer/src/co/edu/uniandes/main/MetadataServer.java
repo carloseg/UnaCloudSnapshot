@@ -154,11 +154,15 @@ public class MetadataServer {
 				timesS[timesS.length-1]+",";
 		
 		System.out.println(result);
-		File log = new File("TIMES of GS.txt");
+		File log = new File("GStimes.txt");
 		try{
 			if(log.exists()==false){
 				System.out.println("We had to make a new file.");
 				log.createNewFile();
+				PrintWriter out = new PrintWriter(new FileWriter(log, true));
+				out.println("VM,PM,VM/PM,GSt,LSt");
+				
+				out.close();
 				
 			}
 			PrintWriter out = new PrintWriter(new FileWriter(log, true));
