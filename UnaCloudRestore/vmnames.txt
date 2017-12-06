@@ -1,0 +1,2 @@
+vmtest00
+template

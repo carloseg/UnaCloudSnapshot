@@ -49,7 +49,7 @@ public class MetadataServer {
 	 */
 	public MetadataServer() {
 		// reading the configuration properties
-		configuration = new MetadataServerConfiguration("metadataServer.properties");
+		configuration = new MetadataServerConfiguration("ms.properties");
 		loggerSetUp();
 
 		log.info("Metadata Server is running ...");

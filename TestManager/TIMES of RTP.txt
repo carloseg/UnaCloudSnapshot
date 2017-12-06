@@ -1,0 +1,12 @@
+
+******* Mon Dec 04 11:29:23 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 23.239362695 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
+
+******* Mon Dec 04 11:57:25 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 22.104719481 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
+
+******* Mon Dec 04 12:01:41 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 21.867796701 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
+
+******* Mon Dec 04 13:45:10 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 38.222691711 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
+
+******* Mon Dec 04 13:55:57 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 21.390746017 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100
+
+******* Mon Dec 04 14:08:14 COT 2017     Prueba funcional GS 4vm 4pm (100K 100)******* 22.251977619 s.     MaxTokenValue: 100000. MaxBenchmarkValue: 100

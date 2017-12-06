@@ -1,10 +1,9 @@
-package co.edu.uniandes.globalstate;
+package co.edu.uniandes.globalrestore;
 
 /*
  * CoordinatorProcess.java
  * 
- * This class implements an adaptation of the Violin Snapshot Algorithm, which is based on
- * the well known Mattern's Global Snapshot Algorithm.
+ * This class implements the global restoration algorithm.
  * 
  * This class corresponds a pure peer-to-peer system that depends of a name server to obtain
  * the processID and the port number of the other participants in the system.
@@ -107,7 +106,7 @@ public class CoordinatorProcess implements Runnable {
 
 	/**
 	 * This method starts the process server mode. It listens to a port waiting for
-	 * messages to implement the global snapshot algorithm.
+	 * messages to implement the global restore algorithm.
 	 */
 	public void run() {
 		try {
@@ -129,14 +128,14 @@ public class CoordinatorProcess implements Runnable {
 				serverLog.info("Received: " + line);
 
 				// A read message can be:
-				// TAKE_SNAPSHOT + SPACE + id or    
-				// DONE + SPACE + id
+				// RESTORE + SPACE + id or    
+				// RESTORE_DONE + SPACE + id
 				
 				// Sender identification no matter what kind of message has been received.
 				int sender = Integer.parseInt(line.split(Constants.SPACE)[1]);
 
-				// If it is the TAKE_SNAPSHOT message (it does not apply for the starter):
-				if (line.startsWith(Constants.TAKE_SNAPSHOT) == true) {
+				// If it is the RESTORE message (it does not apply for the starter):
+				if (line.startsWith(Constants.RESTORE) == true) {
 					
 //					String answer = NamesUtil.nameInitialTime(
 //							processId,
@@ -144,17 +143,17 @@ public class CoordinatorProcess implements Runnable {
 //							configuration.getNameServerPort(), 1);
 					
 					// ***** modificar para que retorne el tiempo y enviar el tiempo local
-					// con el mensaje DONE
+					// con el mensaje RESTORE_DONE
 					double t = step1();
 					
-					// Registrar el tiempo de terminaciÃ³n del snapshot
+					// Registrar el tiempo de terminaciÃ³n del restore
 //					answer = NamesUtil.nameEndTime(
 //							processId, 
 //							configuration.getNameServerHostName(), 
 //							configuration.getNameServerPort(), 1);
 					
 					// It sends a DONE message to the starter process
-					String done = Constants.DONE + Constants.SPACE + processId
+					String done = Constants.RESTORE_DONE + Constants.SPACE + processId
 							+ Constants.SPACE + "VM Name:"+ vmname + Constants.SPACE + t;
 					
 					// It queries the starter process network information.
@@ -173,7 +172,7 @@ public class CoordinatorProcess implements Runnable {
 				} else {
 					// If the message is a DONE. 
 					// This is only applicable for the starter process
-					if (line.startsWith(Constants.DONE)) {
+					if (line.startsWith(Constants.RESTORE_DONE)) {
 						// It marks the sender process of the message
 						markDone(sender);
 						String [] values = line.split(" "); 
@@ -182,14 +181,14 @@ public class CoordinatorProcess implements Runnable {
 						// If all peers are marked, it execute the step 2.
 						if (numberOfDone() == systemSize) {
 //							step2();
-							serverLog.info("The global snapshot has finished.");
+							serverLog.info("The global restore has finished.");
 
 							endTime = System.nanoTime();
 							long elapsedTime = endTime-initTime;
-//							System.out.println("Global Snapshot time: " + elapsedTime/1000000000.0 + " s");
+//							System.out.println("Global Restore time: " + elapsedTime/1000000000.0 + " s");
 							
 							double elapsedTimeInSeconds=elapsedTime/1000000000.0 ;
-							serverLog.info("Global Snapshot time: " + elapsedTimeInSeconds+ " s");
+							serverLog.info("Global Restore time: " + elapsedTimeInSeconds+ " s");
 							
 							timesOfGS+= elapsedTimeInSeconds;
 							
@@ -198,11 +197,11 @@ public class CoordinatorProcess implements Runnable {
 							notifyEnd();
 							
 //							elapsedTime = ta-initTime;
-//							System.out.println("Antes del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
+//							System.out.println("Antes del Local Restore time: " + elapsedTime/1000000000.0 + " s");
 							
 							
 //							elapsedTime = tc-tb;
-//							System.out.println("Después del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
+//							System.out.println("Después del Local Restore time: " + elapsedTime/1000000000.0 + " s");
 //							
 //							elapsedTime = endTime-tc;
 //							System.out.println("Tiempo de espera time: " + elapsedTime/1000000000.0 + " s");
@@ -276,17 +275,8 @@ public class CoordinatorProcess implements Runnable {
 		return b;
 	}
 	
-//	/**
-//	 * This method sets up the localStateFlag.
-//	 * 
-//	 * @param value The new value for the flag.
-//	 */
-//	public void setFlag(boolean value) {
-//		snapshotFlag = value;
-//	}
-
 	/**
-	 * This method marks a process indicating that its local snapshot is done.
+	 * This method marks a process indicating that its local restore is done.
 	 * 
 	 * @param index The process id.
 	 */
@@ -295,7 +285,7 @@ public class CoordinatorProcess implements Runnable {
 	}
 
 	/**
-	 * This method reports if the specified process has taken its local snapshot or not.
+	 * This method reports if the specified process has taken its local restore or not.
 	 * 
 	 * @param index The process id.
 	 *            
@@ -306,7 +296,7 @@ public class CoordinatorProcess implements Runnable {
 	}
 
 	/**
-	 * This method reports the number of processes that have taken their local snapshots.
+	 * This method reports the number of processes that have taken their local restore processes.
 	 * 
 	 * @return int The number of DONE messages received.
 	 */
@@ -336,7 +326,7 @@ public class CoordinatorProcess implements Runnable {
 						configuration.getNameServerHostName(), 
 						configuration.getNameServerPort()));
 		
-		String takeSnapshot = Constants.TAKE_SNAPSHOT + Constants.SPACE + processId;
+		String restore = Constants.RESTORE + Constants.SPACE + processId;
 		
 
 		//Before start broadcasting, the process must wait for the authorization to start
@@ -346,9 +336,9 @@ public class CoordinatorProcess implements Runnable {
 		
 		if(confirmation.equals("START")){
 			initTime = System.nanoTime();
-			serverLog.info("Starting the global snapShot");
-			serverLog.info("Broadcasting " + takeSnapshot);
-			broadcast(takeSnapshot);
+			serverLog.info("Starting the global restore");
+			serverLog.info("Broadcasting " + restore);
+			broadcast(restore);
 			
 			step1();
 		}
@@ -357,14 +347,8 @@ public class CoordinatorProcess implements Runnable {
 
 	private double step1() {
 		String s;
-		//1. mark PRE 
-		s = markPre(vmname, "root", "carlos");
-		
-		// 2. drop POST 
-		s = dropPost(vmname, "root", "carlos");
-		
-		// 3. take the local snapshot
-		serverLog.info("Starting the local snapShot of "+ vmname);
+		// 3. take the local restore
+		serverLog.info("Starting the restoration of "+ vmname);
 
 //		String answer = NamesUtil.nameInitialTime(
 //				processId,
@@ -372,39 +356,32 @@ public class CoordinatorProcess implements Runnable {
 //				configuration.getNameServerPort(), 1);
 		
 		ta = System.nanoTime();
-		s = vm.takeSnapshot(vmname, "snapshot");
+		s = vm.resume(vmname);
+
+		
 		tb = System.nanoTime();
 		
 		long elapsedTime = tb-ta;
 		
-//		System.out.println("Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
-		serverLog.info("Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
+//		System.out.println("Local Restore time: " + elapsedTime/1000000000.0 + " s");
+		serverLog.info("Restoration time: " + elapsedTime/1000000000.0 + " s");
 		//		answer = NamesUtil.nameEndTime(
 //				processId, 
 //				configuration.getNameServerHostName(), 
 //				configuration.getNameServerPort(), 1);
 
-		serverLog.info("Ending the local snapShot of "+ vmname);
-		
-		// 4. mark POST 
-		s = markPost(vmname, "root", "carlos");
-
-		// 5. accept POST
-		s = acceptPost(vmname, "root", "carlos");
-//		tc = System.nanoTime();
-//		serverLog.info("Time after local snapShot of "+ vmname);
-		
+		serverLog.info("Ending the restoration of "+ vmname);
 		
 		//if it is the process 0 it will add to the times his time
 		double timeOfThisProcess = elapsedTime/1000000000.0;
 		timesOfGS += vmname+":"+timeOfThisProcess+";";
 		markDone(0);
 		if (numberOfDone() == systemSize) {
-			serverLog.info("The global snapshot has finished.");
+			serverLog.info("The restoration has finished.");
 			endTime = System.nanoTime();
 			elapsedTime = endTime-initTime;
 			double elapsedTimeInSeconds=elapsedTime/1000000000.0 ;
-			serverLog.info("Global Snapshot time: " + elapsedTimeInSeconds+ " s");
+			serverLog.info("Global Restoration time: " + elapsedTimeInSeconds+ " s");
 			
 			timesOfGS+= elapsedTimeInSeconds;
 			System.out.println("Sending times: "+timesOfGS);
@@ -413,15 +390,6 @@ public class CoordinatorProcess implements Runnable {
 			System.exit(0);
 		}
 		return timeOfThisProcess;
-	}
-	
-	private void step2() {
-		String s;
-		//6. no mark.		
-		s = noMark("Mint", "root", "carlos");
-		
-		// 7. accept POST. It removes the rule.	
-		s = acceptPost("Mint", "root", "carlos");
 	}
 	
 	/**
@@ -438,54 +406,6 @@ public class CoordinatorProcess implements Runnable {
 		}
 	}	
 	
-	// 1. 
-	private String markPre(String vmname, String user, String password) {
-		String s;
-		// pone la marca 0x10 (PRE)
-		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-				"-t mangle -A OUTPUT -j DSCP --set-dscp 16");
-		//	"-t mangle -A OUTPUT -p tcp -j DSCP --set-dscp 16");
-		return s;
-	}
-
-	// 2. 
-	private String dropPost(String vmname, String user, String password) {
-		String s;
-		// agrega la regla de descartar paquetes entrantes con la marca 0x10
-		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-				"-A INPUT -m dscp --dscp 32 -j DROP");
-				//"-A INPUT -p tcp -m dscp --dscp 32 -j DROP");
-		return s;
-	}
-
-	
-	/////// Incluir en la documentacion algo acerca de la sintaxis de iptables
-	/////// para entender el codigo. Revisar -R, quitar -p tcp
-	// 4. 	
-	private String markPost(String vmname, String user, String password) {
-		String s;
-		// pone la marca 0x20 (POST)
-		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-				"-t mangle -R OUTPUT 1 -p tcp -j DSCP --set-dscp 32");
-		return s;
-	}
-
-	// 5. 
-	private String acceptPost(String vmname, String user, String password) {
-		String s;
-		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-		"-D INPUT 1");
-		return s;
-	}
-
-	// 6. 
-	private String noMark(String vmname, String user, String password) {
-		String s;
-		s = vmExecuteCommand(vmname, user, password, "/sbin/iptables",
-		"-t mangle -F");
-		return s;
-	}
-
 	private String vmExecuteCommand(String vmname, String username,
 			String password, String command, String parameters) {
 		return Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"

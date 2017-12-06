@@ -1,0 +1,83 @@
+12-01-2017 15:52:34,971 INFO  RTPTestManager:Name Server is running ...
+12-01-2017 16:13:41,543 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-01-2017 16:13:44,295 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-01-2017 16:13:48,244 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-01-2017 16:13:50,461 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:90:0:3000
+12-01-2017 16:15:11,691 INFO  RTPTestManager:
+The ring just started. The ring is composed by 4 instances.
+12-01-2017 16:16:00,001 INFO  RTPTestManager:Name server reset
+12-01-2017 16:19:18,622 INFO  RTPTestManager:Name Server is running ...
+12-01-2017 16:25:42,146 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-01-2017 16:25:42,606 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-01-2017 16:25:49,948 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-01-2017 16:25:52,824 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:90:0:3000
+12-01-2017 16:27:12,343 INFO  RTPTestManager:
+The ring just started. The ring is composed by 4 instances.
+12-01-2017 16:28:00,598 INFO  RTPTestManager:Name server reset
+12-01-2017 16:37:19,360 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-01-2017 16:37:21,611 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-01-2017 16:37:25,155 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-01-2017 16:37:39,382 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:90:0:3000
+12-01-2017 16:38:49,561 INFO  RTPTestManager:
+The ring just started. The ring is composed by 4 instances.
+12-01-2017 16:39:32,354 INFO  RTPTestManager:Name server reset
+12-04-2017 11:16:53,479 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 11:18:26,830 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 11:27:29,902 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-04-2017 11:27:30,605 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-04-2017 11:27:32,737 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-04-2017 11:27:33,055 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:90:0:3000
+12-04-2017 11:29:00,057 INFO  RTPTestManager:
+The ring just started. The ring is composed by 4 instances.
+12-04-2017 11:29:23,427 INFO  RTPTestManager:Name server reset
+12-04-2017 11:55:32,501 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-04-2017 11:55:36,423 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-04-2017 11:55:39,838 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-04-2017 11:57:03,022 INFO  RTPTestManager:
+The ring just started. The ring is composed by 3 instances.
+12-04-2017 11:57:25,216 INFO  RTPTestManager:Name server reset
+12-04-2017 11:59:48,977 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-04-2017 11:59:55,101 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:90:0:3000
+12-04-2017 11:59:57,833 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:90:0:3000
+12-04-2017 12:00:07,058 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:90:0:3000
+12-04-2017 12:01:19,194 INFO  RTPTestManager:
+The ring just started. The ring is composed by 4 instances.
+12-04-2017 12:01:41,164 INFO  RTPTestManager:Name server reset
+12-04-2017 13:34:05,942 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 13:39:32,231 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-04-2017 13:39:34,177 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:300:0:3000
+12-04-2017 13:39:34,845 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:300:0:3000
+12-04-2017 13:39:35,456 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:300:0:3000
+12-04-2017 13:39:36,272 INFO  RTPTestManager:Sent: OK. ProcessId:4:100000:100:300:0:3000
+12-04-2017 13:39:37,849 INFO  RTPTestManager:Sent: OK. ProcessId:5:100000:100:300:0:3000
+12-04-2017 13:39:38,696 INFO  RTPTestManager:Sent: OK. ProcessId:6:100000:100:300:0:3000
+12-04-2017 13:44:32,288 INFO  RTPTestManager:
+The ring just started. The ring is composed by 7 instances.
+12-04-2017 13:45:10,711 INFO  RTPTestManager:Name server reset
+12-04-2017 13:50:36,298 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-04-2017 13:50:36,723 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:300:0:3000
+12-04-2017 13:50:38,080 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:300:0:3000
+12-04-2017 13:55:36,330 INFO  RTPTestManager:
+The ring just started. The ring is composed by 3 instances.
+12-04-2017 13:55:57,801 INFO  RTPTestManager:Name server reset
+12-04-2017 13:58:09,542 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:02:52,544 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-04-2017 14:02:53,348 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:300:0:3000
+12-04-2017 14:02:53,475 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:300:0:3000
+12-04-2017 14:07:52,587 INFO  RTPTestManager:
+The ring just started. The ring is composed by 3 instances.
+12-04-2017 14:08:15,035 INFO  RTPTestManager:Name server reset
+12-04-2017 14:20:10,895 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:23:56,003 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-04-2017 14:29:19,763 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:33:23,386 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:90:0:3000
+12-04-2017 14:34:54,902 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:35:19,912 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:47:35,126 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 14:51:26,407 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-04-2017 14:56:26,484 INFO  RTPTestManager:
+The ring just started. The ring is composed by 1 instances.
+12-04-2017 16:51:34,025 INFO  RTPTestManager:Name Server is running ...
+12-04-2017 16:55:34,410 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-05-2017 10:14:45,353 INFO  RTPTestManager:Name Server is running ...
+12-05-2017 10:18:29,930 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000

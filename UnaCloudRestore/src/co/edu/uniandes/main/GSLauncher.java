@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import co.edu.uniandes.configuration.Configuration;
-import co.edu.uniandes.globalstate.CoordinatorProcess;
+import co.edu.uniandes.globalrestore.CoordinatorProcess;
 import co.edu.uniandes.util.CommunicationsUtil;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.NamesUtil;
@@ -19,7 +19,7 @@ public class GSLauncher {
 
 	// El constructor carga las propiedades
 	public GSLauncher() {
-		configuration = new Configuration ("us.properties");
+		configuration = new Configuration ("snapshot.properties");
 	}
 
 	
