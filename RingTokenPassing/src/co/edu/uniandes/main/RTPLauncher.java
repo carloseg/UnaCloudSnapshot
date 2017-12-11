@@ -3,10 +3,12 @@ package co.edu.uniandes.main;
 /**
  * This class launches one process in the ring token passing application. 
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import co.edu.uniandes.configuration.RingTokenPassingConfiguration;
 import co.edu.uniandes.process.Process;
@@ -28,16 +30,10 @@ public class RTPLauncher {
 		configuration = new RingTokenPassingConfiguration ("rtp.properties");
 	}
 	
-//	/**
-//	 * This is the constructor
-//	 */
-//	public RTPLauncher(String path) {
-//		// reading the configuration properties
-//		configuration = new RingTokenPassingConfiguration (path);
-//	}
 	
 	/**
 	 * This method initiates the execution of the application
+	 * 1 process per execution
 	 */
 	public void init() throws Exception {
 		// registering the process at the name server to obtain the processId
@@ -45,7 +41,6 @@ public class RTPLauncher {
 				CommunicationsUtil.myIP(), 
 				configuration.getNameServerHostName(), 
 				configuration.getNameServerPort());
-		//System.out.println(answer);
 		if(answer.equals(Constants.RING_IN_PROGRESS)){
 			throw new Exception("This instance couldn't join the ring because there is already a ring in a current execution");
 		}
@@ -83,7 +78,7 @@ public class RTPLauncher {
 			System.out.println(args[0]);
 		} else
 		{
-			System.out.println("Prueba Ring Token Passing");
+			System.out.println("Ring Token Passing Started");
 		}
 		RTPLauncher p = new RTPLauncher();
 		try {

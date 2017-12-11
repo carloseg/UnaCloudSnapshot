@@ -3,10 +3,12 @@ package co.edu.uniandes.util;
 /**
  * This class provides several methods related to the usage of the loggers.
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import java.io.File;
 import java.io.IOException;

@@ -14,10 +14,12 @@ package co.edu.uniandes.process;
  * to the value, and sends again the token to the next process in the ring. 
  * The properties have read from a properties file. This is the main class.
  * 
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -63,9 +65,6 @@ public class Process implements Runnable {
 	private PrintWriter clientSidePrintWriter;
 	private PrintWriter serverSidePrintWriter;
 
-	//	attributes used to write in a file for disk-writing intensive applications.
-//	private FileWriter file;
-//	private PrintWriter pwf;
 	
 	// other attributes.
 	private boolean nextKnownFlag;
@@ -103,13 +102,6 @@ public class Process implements Runnable {
 		expectedValue = processId;
 		errors = 0;
 
-		// this lines will be used when the application is intensive in I/O
-//		try {
-//			file = new FileWriter("tokens"+processId+".txt");
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		pwf = new PrintWriter(file);
 	}
 
 	/**
@@ -195,12 +187,7 @@ public class Process implements Runnable {
 				// sending the token
 				clientSidePrintWriter.println(newToken);
 				// write here the value of the token in the file. 
-				// this must be configurable for disk-writing intensive applications.
-				//
-				//
-				//
-				//
-				//pwf.println(value);
+			
 				benchmark();
 				
 				// if the token label is EXIT, the execution finalizes after a
@@ -223,12 +210,11 @@ public class Process implements Runnable {
 							configuration.getNameServerHostName(), 
 							configuration.getNameServerPort(), errors);
 
-					///// Notificar al TestManager el número de errores si es diferente de 0.
+					///// Notify to TestManager number of errors if different from 0.
 					
 					Util.pause(4);
 					if (clientSideSocket != null)
 						clientSideSocket.close();
-					//if (file != null) file.close();
 					Util.pause(1);
 					System.exit(0);
 				}
@@ -274,7 +260,6 @@ public class Process implements Runnable {
 		String remoteName = aServer[1];
 		int remotePort = Integer.parseInt(aServer[2]);
 
-		// se crea el socket y se obtienen los flujos
 		clientSideSocket = new Socket(remoteName, remotePort);
 		clientSideBufferedReader = new BufferedReader(new InputStreamReader(
 				clientSideSocket.getInputStream()));

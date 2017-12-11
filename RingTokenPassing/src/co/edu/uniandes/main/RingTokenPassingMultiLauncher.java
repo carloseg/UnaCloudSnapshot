@@ -4,10 +4,12 @@ package co.edu.uniandes.main;
  * This class launches the ring token passing application. In this case multiple
  * processes are launched automatically.
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import co.edu.uniandes.process.Process;
 import co.edu.uniandes.configuration.RingTokenPassingConfiguration;
@@ -28,13 +30,10 @@ public class RingTokenPassingMultiLauncher {
 	}
 
 	/**
-	 * This method initiates the execution of the application
+	 * This method initiates the execution of the application.
+	 * Initiates 8 processes of RTP
 	 */
 	public void init() throws Exception {
-		// reseting the name server
-		//		NamesUtil.nameServerRingReset(
-		//				configuration.getNameServerHostName(),
-		//				configuration.getNameServerPort());
 
 		int numberOfProcesses = 8;
 
