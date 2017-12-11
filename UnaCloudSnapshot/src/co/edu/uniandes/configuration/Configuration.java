@@ -51,8 +51,8 @@ public class Configuration {
 			base = Integer.parseInt(p.getProperty("base"));
 			offset = Integer.parseInt(p.getProperty("offset"));
 			processHostnamePrefix = p.getProperty("processHostnamePrefix");
-			nameServerHostName = p.getProperty("nameServerHostName");
-			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
+			nameServerHostName = p.getProperty("metadataServerHostName");
+			nameServerPort = Integer.parseInt(p.getProperty("metadataServerPort"));
 			vmname = p.getProperty("vmname");
 			virtualBoxHome = p.getProperty("virtualBoxHome");
 			virtualMachinesHome = p.getProperty("virtualMachinesHome");

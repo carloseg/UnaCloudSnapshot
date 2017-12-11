@@ -40,8 +40,8 @@ public class RingTokenPassingConfiguration {
 
 			p.load(is);
 
-			nameServerHostName = p.getProperty("nameServerHostName");
-			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
+			nameServerHostName = p.getProperty("testManagerHostName");
+			nameServerPort = Integer.parseInt(p.getProperty("testManagerPort"));
 			labelLogFile = p.getProperty("labelLogFile");
 			pathLog = p.getProperty("pathLog");
 			logFileName = p.getProperty("logFileName");

@@ -80,7 +80,7 @@ public class TestManager {
 		pauseBenchmark = configuration.getPauseBenchmark();
 		basePort  = configuration.getBasePort();
 		testLabel = configuration.getTestLabel();
-		log.info("Name Server is running ...");
+		log.info("Test Manager is running ...");
 		directory = new HashMap<String, String>();
 		
 		howManyFromThisIP = new HashMap<String,Integer>();
@@ -147,9 +147,16 @@ public class TestManager {
 					
 					if(base.split(":")[1].split("%")[0].trim().equals(configuration.getPercentageToStartGS())){
 						String [] dir =configuration.getAdressAndPortOfMetaDataServer().split("-");
-						sendMessage(dir[0], Integer.parseInt(dir[1]), "StartGS");
-						log.debug("GS  starting ");
-						System.out.println("Message sent to GS MetadataServer");
+						try{
+							sendMessage(dir[0], Integer.parseInt(dir[1]), "StartGS");
+							log.debug("GS  starting ");
+							System.out.println("Message sent to GS MetadataServer");
+						}
+						catch(Exception e){
+							log.debug("Trigger to GS failed. Metadata server is not listening ");
+						}
+						
+						
 					}
 					
 				}
@@ -282,23 +289,10 @@ public class TestManager {
 		
 		String result = duration+" s.     MaxTokenValue: "+maxTokenValue+". MaxBenchmarkValue: "+maxBenchmarkValue;
 		System.out.println(result);
-		File log = new File("TIMES of RTP.txt");
-		try{
-			if(log.exists()==false){
-				System.out.println("We had to make a new file.");
-				log.createNewFile();
-			}
-			PrintWriter out = new PrintWriter(new FileWriter(log, true));
-			out.append("\n"+"******* " + new Date().toString()+"     " +testLabel +"******* " );
-			out.append(result+ "\n");
-			out.close();
-		}catch(IOException e){
-			System.out.println("COULD NOT LOG!!");
-		}
 		try{
 			Workbook workbook = null;
 			try{
-				workbook = Workbook.getWorkbook(new File("resultados-Name-Server.xls"));
+				workbook = Workbook.getWorkbook(new File("Results.xls"));
 			}catch(Exception e){}
 			
 			ArrayList <String> previousValues = new ArrayList<String>();
@@ -321,7 +315,7 @@ public class TestManager {
                 workbook.close();
             }
             
-            WritableWorkbook workbookF = Workbook.createWorkbook(new File("resultados-Name-Server.xls"));
+            WritableWorkbook workbookF = Workbook.createWorkbook(new File("Results.xls"));
 
 			WritableSheet sheetF = workbookF.createSheet("Pruebas", 0);
 
@@ -604,9 +598,9 @@ public class TestManager {
 	}
 	
 	
-	private static String sendMessage(String address, int port,String m) {
+	private static String sendMessage(String address, int port,String m) throws Exception {
 		String a = "";
-		try {
+	
 			Socket socket = new Socket(address, port);
 			BufferedReader r = new BufferedReader(new InputStreamReader(
 					socket.getInputStream()));
@@ -616,9 +610,7 @@ public class TestManager {
 			r.close();
 			w.close();
 			socket.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 		return a;
 	}
 

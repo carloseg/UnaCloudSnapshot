@@ -53,7 +53,7 @@ public class RTPTestManagerConfiguration {
 			base = Integer.parseInt(p.getProperty("base"));
 			testLabel = p.getProperty("testLabel");
 			processHostnamePrefix = p.getProperty("processHostnamePrefix");
-			nameServerPort = Integer.parseInt(p.getProperty("nameServerPort"));
+			nameServerPort = Integer.parseInt(p.getProperty("metadataServerPort"));
 			labelLogFile = p.getProperty("labelLogFile");
 			pathLog = p.getProperty("pathLog");
 			logFileName = p.getProperty("logFileName");

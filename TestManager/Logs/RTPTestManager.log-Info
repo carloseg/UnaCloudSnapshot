@@ -4,3 +4,36 @@
 12-06-2017 14:25:56,813 INFO  RTPTestManager:
 The ring just started. The ring is composed by 2 instances.
 12-06-2017 14:26:43,937 INFO  RTPTestManager:Name server reset
+12-11-2017 18:05:58,566 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:06:47,429 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-11-2017 18:06:47,756 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:300:0:3001
+12-11-2017 18:06:47,846 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:300:0:3002
+12-11-2017 18:06:47,946 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:300:0:3003
+12-11-2017 18:06:48,054 INFO  RTPTestManager:Sent: OK. ProcessId:4:100000:100:300:0:3004
+12-11-2017 18:06:48,150 INFO  RTPTestManager:Sent: OK. ProcessId:5:100000:100:300:0:3005
+12-11-2017 18:06:48,236 INFO  RTPTestManager:Sent: OK. ProcessId:6:100000:100:300:0:3006
+12-11-2017 18:06:48,326 INFO  RTPTestManager:Sent: OK. ProcessId:7:100000:100:300:0:3007
+12-11-2017 18:11:21,763 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:14:34,600 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:17:23,009 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:17:33,684 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:17:57,136 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:300:0:3000
+12-11-2017 18:17:57,378 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:300:0:3001
+12-11-2017 18:17:57,480 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:300:0:3002
+12-11-2017 18:17:57,567 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:300:0:3003
+12-11-2017 18:17:57,653 INFO  RTPTestManager:Sent: OK. ProcessId:4:100000:100:300:0:3004
+12-11-2017 18:17:57,738 INFO  RTPTestManager:Sent: OK. ProcessId:5:100000:100:300:0:3005
+12-11-2017 18:17:57,833 INFO  RTPTestManager:Sent: OK. ProcessId:6:100000:100:300:0:3006
+12-11-2017 18:17:57,919 INFO  RTPTestManager:Sent: OK. ProcessId:7:100000:100:300:0:3007
+12-11-2017 18:23:05,130 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:23:18,240 INFO  RTPTestManager:Test Manager is running ...
+12-11-2017 18:23:23,102 INFO  RTPTestManager:Sent: OK. ProcessId:0:100000:100:10:0:3000
+12-11-2017 18:23:23,365 INFO  RTPTestManager:Sent: OK. ProcessId:1:100000:100:10:0:3001
+12-11-2017 18:23:23,455 INFO  RTPTestManager:Sent: OK. ProcessId:2:100000:100:10:0:3002
+12-11-2017 18:23:23,544 INFO  RTPTestManager:Sent: OK. ProcessId:3:100000:100:10:0:3003
+12-11-2017 18:23:23,631 INFO  RTPTestManager:Sent: OK. ProcessId:4:100000:100:10:0:3004
+12-11-2017 18:23:23,726 INFO  RTPTestManager:Sent: OK. ProcessId:5:100000:100:10:0:3005
+12-11-2017 18:23:23,818 INFO  RTPTestManager:Sent: OK. ProcessId:6:100000:100:10:0:3006
+12-11-2017 18:23:23,916 INFO  RTPTestManager:Sent: OK. ProcessId:7:100000:100:10:0:3007
+12-11-2017 18:23:33,926 INFO  RTPTestManager:
+The ring just started. The ring is composed by 8 instances.
