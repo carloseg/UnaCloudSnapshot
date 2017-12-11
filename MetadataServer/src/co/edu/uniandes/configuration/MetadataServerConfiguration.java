@@ -9,10 +9,12 @@ import java.util.Properties;
  * This class reads the properties that are required in the name server
  * application, which can be changed by user.
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 public class MetadataServerConfiguration {
 	private int base;
@@ -28,8 +30,7 @@ public class MetadataServerConfiguration {
 	 * This is the constructor. Loads the configuration
 	 * 
 	 * 
-	 * @param String
-	 *            The properties filename.
+	 * @param String The properties filename.
 	 */
 	public MetadataServerConfiguration(String filename) {
 		Properties p = new Properties();

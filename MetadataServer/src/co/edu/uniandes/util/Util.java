@@ -3,10 +3,12 @@ package co.edu.uniandes.util;
 /**
  * This class provides several methods that can be useful.
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

@@ -7,11 +7,12 @@ package co.edu.uniandes.main;
  * The name server assigns it a processId, which is returned into the answer.
  * The properties have read from a properties file. This is the main class. 
  * 
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
-
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -45,7 +46,7 @@ public class MetadataServer {
 	private PrintWriter printToProcess0;
 
 	/**
-	 * This is the constructor
+	 * Metadata server constructor
 	 */
 	public MetadataServer() {
 		// reading the configuration properties
@@ -137,7 +138,13 @@ public class MetadataServer {
 			closeConnection();
 		}
 	}
-	
+	/**
+	 * EndOfGS
+	 * 
+	 * This method receives all the local times and the global time of the GS.
+	 * Writes in a file the data.
+	 * @param String of local and global times of the GS
+	 */
 	private void endOfGS(String times){
 		System.out.println("\nThe GS finished.");
 		
@@ -189,23 +196,13 @@ public class MetadataServer {
 	private String insert(String line,String address) {
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
-		// INSERT --> 0
-		// address --> 1  not working
-		// localPort --> 2
 		int processId = directory.size();
 		
-		//String address = m[1];
 		int localPort = Integer.parseInt(m[2]);
-		
-//		if (add.equals("127.0.0.1") == true) {
-//			address = configuration.getMyIP();
-//		} else {
-//			address = add;
-//		}
+
 
 		String name = configuration.getProcessHostnamePrefix()
 				+ processId;
-//		int localPort = configuration.getBase() + processId;
 
 		if (directory.containsKey(name)) {
 			answer = "The server name is already registered.";
@@ -214,14 +211,11 @@ public class MetadataServer {
 			// key = the name of the process
 			// value = processId:address:localPort
 			
-//			System.out.print("address: " + address);
-//			System.out.println(" port: " + localPort);
 			directory.put(name, processId + Constants.COLON
 					+ address + Constants.COLON + localPort);
 
 			answer = "OK. ProcessId = " + processId + " name - " + address + " - " + localPort;
 			log.info("Sent: " + answer);
-//			log.info("Directory state: " + directory.toString());
 
 			long time = System.nanoTime();
 			TestTime t = new TestTime();
@@ -286,7 +280,6 @@ public class MetadataServer {
 				answer += temp + Constants.SEMICOLON;
 			}
 		}
-//		System.out.println(answer);
 		return answer;
 	}
 
@@ -329,9 +322,6 @@ public class MetadataServer {
 		TestTime t = testTime.get(name);
 		t.setInitialTime(time);
 		answer = "OK. Initial Time Registered for ProcessId = " + sender;
-//		TestTime t = new TestTime();
-//		t.setInitialTime(time);
-//		testTime.put(name, t);
 		answer = "OK. Initial Time " + time + " Registered for ProcessId = "
 				+ sender;
 		return answer;
