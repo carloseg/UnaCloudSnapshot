@@ -7,12 +7,12 @@ package co.edu.uniandes.main;
  * The name server assigns it a processId, which is returned into the answer.
  * The properties have read from a properties file. This is the main class. 
  * 
- * @author Carlos Eduardo Gomez Montoya
- * 		   Jose Gabriel Tamura L
- * 
- * 2017
- */
-
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -201,7 +201,7 @@ public class TestManager {
 		return answer;
 	}
 	
-	//nunca se llama a este metodo
+	
 	private String initialTime(String line) {
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
@@ -221,7 +221,11 @@ public class TestManager {
 				+ sender;
 		return answer;
 	}
-
+	/**
+	 * This method register each of the end events from the RTP.
+	 * 
+	 * @param String that contains the local execution time from a given RTP instance.
+	 */
 	private String endTime(String line) {
 		String answer = "";
 		String[] m = line.split(Constants.SPACE);
@@ -257,7 +261,7 @@ public class TestManager {
 		return answer;
 	}
 	/**
-	 * This method creates a new file with name : Label TODO
+	 * This method creates a new file with name : Label + Errors.txt
 	 */
 	private void printErrors(){
 		if(errorsOfTheCurrentRing.equals("")){
@@ -280,8 +284,8 @@ public class TestManager {
 	}
 
 	/**
-	 * Print total time. Selects the smallest time and the biggest time in the testTime hash.
-	 * Insert the value in TIMES of RTP.txt file (appends, not overwrite)
+	 * Print total time. 
+	 * Insert the value in Results.xls file (appends, not overwrite)
 	 * With current date
 	 */
 	private void printTotalTime(){
