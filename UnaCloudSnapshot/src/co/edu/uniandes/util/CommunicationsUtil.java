@@ -14,9 +14,27 @@ import java.net.URLConnection;
 import java.util.Enumeration;
 
 import org.apache.log4j.Logger;
-
+/**
+ * This class provides several methods related to communications.
+ *
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 public class CommunicationsUtil {
-
+	/**
+	 * This method sends a message to specified server using the TCP protocol. It does not
+	 * keep the connection nor wait for an answer. It returns a boolean value depending on
+	 * the success or failure of the procedure.
+	 * 
+	 * @param message It is the message to send.
+	 * @param hostnameServer It is the hostname of the destination server.
+	 * @param port It is the port number used by the destination server to listen to.
+	 * 
+	 * @return boolean The success of failure of the procedure.
+	 */
 	public static boolean sendMessage(String message, String hostnameServer, int port) {
 		try {
 			Socket socket = new Socket(hostnameServer, port);
@@ -42,6 +60,10 @@ public class CommunicationsUtil {
 		return true;
 	}
 
+	/**
+	 * This method uses aws API to know the public IP of the current host.
+	 * @return a String with the IP
+	 */
 	
 	public static String myIP() {
 		String result = "";

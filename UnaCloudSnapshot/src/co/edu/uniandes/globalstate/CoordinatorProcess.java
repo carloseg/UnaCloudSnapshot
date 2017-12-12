@@ -24,9 +24,12 @@ package co.edu.uniandes.globalstate;
  * The starter peer launches the method getGlobalState(), which execute the steps of the
  * algorithm. Then, the other processes behave as servers in the run () method.
  *
- * @author Carlos Eduardo Gomez Montoya
- * @since 2017
- */
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -91,14 +94,11 @@ public class CoordinatorProcess implements Runnable {
 		
 		timesOfGS = "";
 				
-//		vmname = configuration.getVmname();
-		
 		done = new boolean[configuration.getMax()];
 
 		loggerSetUp(processId);
 		serverLog.info("Process " + processId + " in charge of VM: "+vmname+" is running ...");
 		
-		// el puerto lo recibe del Launcher
 		localPort = localPort2;
 		
 		metadataServer = configuration.getNameServerHostName();
@@ -137,21 +137,8 @@ public class CoordinatorProcess implements Runnable {
 
 				// If it is the TAKE_SNAPSHOT message (it does not apply for the starter):
 				if (line.startsWith(Constants.TAKE_SNAPSHOT) == true) {
-					
-//					String answer = NamesUtil.nameInitialTime(
-//							processId,
-//							configuration.getNameServerHostName(), 
-//							configuration.getNameServerPort(), 1);
-					
-					// ***** modificar para que retorne el tiempo y enviar el tiempo local
-					// con el mensaje DONE
 					double t = step1();
-					
-					// Registrar el tiempo de terminaciÃ³n del snapshot
-//					answer = NamesUtil.nameEndTime(
-//							processId, 
-//							configuration.getNameServerHostName(), 
-//							configuration.getNameServerPort(), 1);
+					// Registrar el tiempo de terminacion del snapshot
 					
 					// It sends a DONE message to the starter process
 					String done = Constants.DONE + Constants.SPACE + processId
@@ -168,8 +155,6 @@ public class CoordinatorProcess implements Runnable {
 					send(starter, done);	
 					Util.pause(5);
 					System.exit(0);
-
-//					step2();
 				} else {
 					// If the message is a DONE. 
 					// This is only applicable for the starter process
@@ -181,12 +166,10 @@ public class CoordinatorProcess implements Runnable {
 						
 						// If all peers are marked, it execute the step 2.
 						if (numberOfDone() == systemSize) {
-//							step2();
 							serverLog.info("The global snapshot has finished.");
 
 							endTime = System.nanoTime();
 							long elapsedTime = endTime-initTime;
-//							System.out.println("Global Snapshot time: " + elapsedTime/1000000000.0 + " s");
 							
 							double elapsedTimeInSeconds=elapsedTime/1000000000.0 ;
 							serverLog.info("Global Snapshot time: " + elapsedTimeInSeconds+ " s");
@@ -196,17 +179,6 @@ public class CoordinatorProcess implements Runnable {
 							System.out.println("Sending times: "+timesOfGS);
 							
 							notifyEnd();
-							
-//							elapsedTime = ta-initTime;
-//							System.out.println("Antes del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
-							
-							
-//							elapsedTime = tc-tb;
-//							System.out.println("Después del Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
-//							
-//							elapsedTime = endTime-tc;
-//							System.out.println("Tiempo de espera time: " + elapsedTime/1000000000.0 + " s");
-							
 							
 							Util.pause(5);
 							System.exit(0);
@@ -275,15 +247,6 @@ public class CoordinatorProcess implements Runnable {
 
 		return b;
 	}
-	
-//	/**
-//	 * This method sets up the localStateFlag.
-//	 * 
-//	 * @param value The new value for the flag.
-//	 */
-//	public void setFlag(boolean value) {
-//		snapshotFlag = value;
-//	}
 
 	/**
 	 * This method marks a process indicating that its local snapshot is done.
@@ -325,10 +288,6 @@ public class CoordinatorProcess implements Runnable {
 	 */
 	public void getGlobalState() {
 		String s = "";
-
-		
-		
-		
 		// It queries the number of processes in the system
 		systemSize = Integer.parseInt(
 				NamesUtil.nameQuerySize(
@@ -366,10 +325,6 @@ public class CoordinatorProcess implements Runnable {
 		// 3. take the local snapshot
 		serverLog.info("Starting the local snapShot of "+ vmname);
 
-//		String answer = NamesUtil.nameInitialTime(
-//				processId,
-//				configuration.getNameServerHostName(), 
-//				configuration.getNameServerPort(), 1);
 		
 		ta = System.nanoTime();
 		s = vm.takeSnapshot(vmname, "snapshot");
@@ -377,12 +332,7 @@ public class CoordinatorProcess implements Runnable {
 		
 		long elapsedTime = tb-ta;
 		
-//		System.out.println("Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
 		serverLog.info("Local Snapshot time: " + elapsedTime/1000000000.0 + " s");
-		//		answer = NamesUtil.nameEndTime(
-//				processId, 
-//				configuration.getNameServerHostName(), 
-//				configuration.getNameServerPort(), 1);
 
 		serverLog.info("Ending the local snapShot of "+ vmname);
 		
@@ -391,8 +341,6 @@ public class CoordinatorProcess implements Runnable {
 
 		// 5. accept POST
 		s = acceptPost(vmname, "root", "carlos");
-//		tc = System.nanoTime();
-//		serverLog.info("Time after local snapShot of "+ vmname);
 		
 		
 		//if it is the process 0 it will add to the times his time

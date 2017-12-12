@@ -9,13 +9,13 @@ import java.util.Properties;
  * This class reads the properties that are required in the 
  * application, which can be changed by user.
  *
- * @author Carlos Eduardo Gomez Montoya
- * 
- * 2017
- */
-
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 public class Configuration {
-//	private String myIP;
 	private int base;
 	private int offset;
 	private String processHostnamePrefix;
@@ -35,6 +35,7 @@ public class Configuration {
 	/**
 	 * This is the constructor.
 	 * 
+	 * Load the configurations.
 	 * 
 	 * @param String
 	 *            The properties filename.
@@ -47,7 +48,6 @@ public class Configuration {
 			is = new FileInputStream(filename);
 
 			p.load(is);
-//			myIP = p.getProperty("myIP");
 			base = Integer.parseInt(p.getProperty("base"));
 			offset = Integer.parseInt(p.getProperty("offset"));
 			processHostnamePrefix = p.getProperty("processHostnamePrefix");
@@ -68,14 +68,7 @@ public class Configuration {
 		}
 	}
 
-	/**
-	 * This method returns the ip address of the process.
-	 * 
-	 * @return String The ip address of the physical machine.
-	 */
-//	public String getMyIP() {
-//		return myIP;
-//	}
+
 
 	/**
 	 * This method returns the base port number.

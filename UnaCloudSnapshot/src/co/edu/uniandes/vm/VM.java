@@ -1,5 +1,13 @@
 package co.edu.uniandes.vm;
-
+/**
+ * This class contains useful methods to use VBOXManage and the VMs
+ * 
+ * @author Carlos Eduardo G�mez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 import co.edu.uniandes.configuration.Configuration;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.Util;
@@ -14,12 +22,11 @@ public class VM {
 	}
 	
 	/**
-	 * Este metodo inicia la VM especficada. Si el nombre de la VM no corresponde con
-	 * una VM registrada en el hipervisor, este metodo no hace nada y retorna cadena vacia
-	 * @param vmname Es el nombre de la VM.
+	 * This method turns on an specified VM. If the VM name does not correspond to an already
+	 * registered VM in the hypervisor, this method does nothing and returns an empty string.
+	 * @param vmname 
 	 */	
 	public String turnOn(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "startvm"
@@ -29,11 +36,10 @@ public class VM {
 	}
 	
 	/**
-	 * Este metodo apaga la VM especficada.
-	 * @param vmname Es el nombre de la VM.
+	 * This method turns off the specified VM. It does not safe the state of the VM
+	 * @param vmname
 	 */	
 	public String turnOffACPI(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "controlvm"
@@ -44,11 +50,10 @@ public class VM {
 	}
 
 	/**
-	 * Este metodo apaga la VM especficada guardando el estado.
-	 * @param vmname Es el nombre de la VM.
+	 * This method turns off the specified VM. First, it safe the state of the VM
+	 * @param vmname
 	 */	
 	public String turnOff(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "controlvm"
@@ -60,11 +65,10 @@ public class VM {
 	
 
 	/**
-	 * Este metodo retorna informacion de la VM especficada.
-	 * @param vmname Es el nombre de la VM.
+	 * This method returns info of the specified VM
+	 * @param vmname
 	 */	
 	public String getInfo(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "showvminfo"
@@ -74,12 +78,10 @@ public class VM {
 	}
 
 	/**
-	 * Este metodo retorna la direccion IP de la VM especficada.
-	 * @param vmname Es el nombre de la VM.
+	 * This method returns the IP of the specified VM
+	 * @param vmname 
 	 */	
-	// Se asume que la VM tiene una sola interfaz de red con una sola direccion ip
 	public String getIP(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "guestproperty"
@@ -87,17 +89,15 @@ public class VM {
 				+ Constants.SPACE + vmname 
 				+ Constants.SPACE + "/VirtualBox/GuestInfo/Net/0/V4/IP" 
 				);
-		// Retira el prefijo "Value: " y el sufijo "\r\n" (2 caracteres).
 		String ip = output.substring(7,output.length()-2);
 		return ip;
 	}
 	
 	/**
-	 * Este metodo detiene temporalmente la ejecucion de la VM especficada.
-	 * @param vmname Es el nombre de la VM.
+	 * This method pauses the execution of the specified VM
+	 * @param vmname 
 	 */	
 	public String pause(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "controlvm"
@@ -108,11 +108,10 @@ public class VM {
 	}
 
 	/**
-	 * Este metodo reanuda la ejecucion de la VM especficada.
-	 * @param vmname Es el nombre de la VM.
+	 * This method resumes the execution of the specified VM
+	 * @param vmname 
 	 */	
 	public String resume(String vmname) {
-		// Validar los parámetros asignados
 		String output =
 		Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 				+ Constants.SPACE + "controlvm"
@@ -123,12 +122,11 @@ public class VM {
 	}
 
 	/**
-	 * Este metodo toma un snapshot de la VM especficada.
-	 * @param vmname Es el nombre de la VM.
-	 * @param snapshotName Es el nombre del snapshot.
+	 * This method takes an snapshot of the specified VM
+	 * @param vmname VM name.
+	 * @param snapshotName .
 	 */	
 	public String takeSnapshot(String vmname, String snapshotName) {
-		// Validar los parámetros asignados
 		String output =
 			Util.execute(configuration.getVirtualBoxHome() + "VBoxManage"
 					+ Constants.SPACE + "snapshot" 

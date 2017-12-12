@@ -3,6 +3,16 @@ package co.edu.uniandes.util;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * This class provides several methods that can be useful.
+ *
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
+
 public class Util {
 	private static final String SPACE = " ";
 	private static final String COLON = ":";

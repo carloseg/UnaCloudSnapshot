@@ -1,9 +1,7 @@
 package co.edu.uniandes.main;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import co.edu.uniandes.configuration.Configuration;
@@ -11,21 +9,31 @@ import co.edu.uniandes.globalstate.CoordinatorProcess;
 import co.edu.uniandes.util.CommunicationsUtil;
 import co.edu.uniandes.util.Constants;
 import co.edu.uniandes.util.NamesUtil;
-import co.edu.uniandes.util.Util;
+
+/**
+ * This class is the one that initialize the processes.
+ * One process per VM in the physical host.
+ * 
+* @author Carlos Eduardo Gómez Montoya
+* @author Jose Gabriel Tamura Lara
+* @author Harold Enrique Castro Barrera
+*
+* 2017
+*/
 
 public class GSLauncher {
 	private Configuration configuration;
 	private CoordinatorProcess process;
 
-	// El constructor carga las propiedades
 	public GSLauncher() {
 		configuration = new Configuration ("us.properties");
 	}
 
-	
+/**
+ * This method loads the configuration and creates the processes from the names of the VMs in the host.	
+ */
 	public void init() {
 
-		// carga los nombres de las VMs en un array
 		String [] namesOfVM = getNamesOfVMs();
 		
 		CoordinatorProcess[] p = new CoordinatorProcess[namesOfVM.length];
@@ -35,10 +43,9 @@ public class GSLauncher {
 		
 		for(int i=0; i< namesOfVM.length;i++){
 			
-			// hay un puerto local por cada VM
+			// One local port per  VM
 			int localPort = configuration.getBase() + i;
 			
-			// para registrarse, cada thread envía la dirección IP del host y el puerto local
 			String answer = NamesUtil.nameInsert(CommunicationsUtil.myIP(), localPort, 
 					configuration.getNameServerHostName(),
 					configuration.getNameServerPort());
@@ -72,7 +79,10 @@ public class GSLauncher {
 		}
 		
 	}
-	
+	/**
+	 * This method searches in the file vmnames.txt the names of the VM in the host.
+	 * @return Array of Strings. Each position in the array contains a name of one VM.
+	 */
 	public String [] getNamesOfVMs(){
 		ArrayList<String> names = new ArrayList<String>();
 		try {
@@ -81,7 +91,6 @@ public class GSLauncher {
 		    
 		    while (line != null) {
 		        names.add(line);
-		        //System.out.println(line);
 		        line = br.readLine();
 		    }
 		    
